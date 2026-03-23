@@ -332,7 +332,13 @@ PROJECTS = [
             "Conversion hierarchy",
             "Art direction",
         ],
-        "tools": ["Figma", "Shopify blocks", "GA4", "Copy deck"],
+        "tools": [
+            "Social media",
+            "Photography",
+            "TikTok",
+            "Cross promotion",
+            "Adobe",
+        ],
         "deliverables": [
             "Pre-drop waitlist page",
             "Live drop page",

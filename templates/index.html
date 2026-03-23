@@ -214,6 +214,18 @@
                             {% elif project.social_examples %}
                             <section class="homepage-social-carousel">
                                 <h3>Social Media</h3>
+                                {% if project.tools %}
+                                <aside class="case-ledger homepage-product-ledger">
+                                    <article class="ledger-panel">
+                                        <p class="detail-label">Tools/skills</p>
+                                        <ul class="inline-list">
+                                            {% for tool in project.tools %}
+                                            <li>{{ tool }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    </article>
+                                </aside>
+                                {% endif %}
                                 <div class="social-carousel">
                                     <div class="social-carousel-viewport">
                                         <div class="social-carousel-track">
