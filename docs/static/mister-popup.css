@@ -15,32 +15,32 @@
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(circle at top, rgba(255, 246, 235, 0.16), transparent 30%),
-        rgba(31, 20, 15, 0.62);
-    backdrop-filter: blur(12px);
+        radial-gradient(circle at top, rgba(255, 248, 239, 0.18), transparent 28%),
+        rgba(38, 28, 22, 0.5);
+    backdrop-filter: blur(8px);
 }
 
 .mister-popup__dialog {
-    --mister-ink: #2f211a;
-    --mister-soft: #6f5546;
-    --mister-line: rgba(131, 76, 56, 0.24);
-    --mister-merlot: #8c3d34;
-    --mister-peach: #f5d9be;
+    --mister-ink: #221813;
+    --mister-soft: #5f4c41;
+    --mister-line: rgba(136, 77, 61, 0.38);
+    --mister-line-soft: rgba(136, 77, 61, 0.18);
+    --mister-merlot: #9a463a;
     position: relative;
-    width: min(940px, 100%);
-    padding: 26px;
-    border: 1px solid rgba(255, 252, 247, 0.68);
-    border-radius: 28px;
+    width: min(640px, 100%);
+    padding: 30px;
+    border: 1px solid rgba(255, 250, 244, 0.9);
+    border-radius: 12px;
     background:
-        linear-gradient(180deg, rgba(255, 252, 247, 0.98), rgba(248, 238, 224, 0.98)),
-        linear-gradient(120deg, rgba(255, 255, 255, 0.42), transparent 46%);
+        radial-gradient(circle at center, rgba(255, 255, 255, 0.36), transparent 70%),
+        linear-gradient(180deg, rgba(252, 247, 239, 0.98), rgba(244, 235, 221, 0.98));
     box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.92),
-        0 34px 72px rgba(32, 20, 15, 0.32);
+        inset 0 1px 0 rgba(255, 255, 255, 0.94),
+        0 26px 60px rgba(34, 24, 19, 0.22);
     color: var(--mister-ink);
     overflow: hidden;
     opacity: 0;
-    transform: translateY(22px) scale(0.98);
+    transform: translateY(20px) scale(0.985);
     transition: opacity 320ms ease, transform 320ms ease;
 }
 
@@ -54,203 +54,153 @@
     position: absolute;
     inset: 12px;
     border: 1px solid var(--mister-line);
-    border-radius: 20px;
+    border-radius: 6px;
     pointer-events: none;
 }
 
 .mister-popup__dialog::after {
     content: "";
     position: absolute;
-    inset: 22px;
-    border: 1px solid rgba(140, 61, 52, 0.12);
-    border-radius: 14px;
+    inset: 18px;
+    border: 1px solid var(--mister-line-soft);
+    border-radius: 2px;
     pointer-events: none;
 }
 
 .mister-popup__close,
-.mister-popup__ghost,
 .mister-popup__cta {
     font: inherit;
 }
 
 .mister-popup__close {
     position: absolute;
-    top: 18px;
-    right: 18px;
+    top: 26px;
+    right: 26px;
     z-index: 2;
-    min-height: 44px;
-    padding: 0 16px;
-    border: 1px solid rgba(140, 61, 52, 0.18);
-    border-radius: 999px;
-    background: rgba(255, 252, 247, 0.86);
-    color: var(--mister-soft);
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: rgba(154, 70, 58, 0.9);
     cursor: pointer;
 }
 
-.mister-popup__sticker {
-    position: absolute;
-    top: 26px;
-    left: 34px;
-    z-index: 1;
-    padding: 10px 14px;
-    border-radius: 999px;
-    background: linear-gradient(180deg, #f2a86e, #dd7b53);
-    color: #fffaf4;
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 0.74rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    transform: rotate(-7deg);
-    box-shadow: 0 14px 24px rgba(123, 64, 44, 0.2);
+.mister-popup__close span {
+    font-size: 2.5rem;
+    line-height: 1;
+    font-weight: 300;
 }
 
-.mister-popup__layout {
+.mister-popup__inner {
     position: relative;
     z-index: 1;
     display: grid;
-    grid-template-columns: minmax(280px, 0.94fr) minmax(0, 1.06fr);
-    gap: 34px;
-    align-items: center;
-    padding-top: 24px;
-}
-
-.mister-popup__visual,
-.mister-popup__content {
-    display: grid;
-}
-
-.mister-popup__visual {
-    gap: 14px;
+    gap: 18px;
+    justify-items: center;
+    text-align: center;
+    padding: 40px 68px 24px;
 }
 
 .mister-popup__eyebrow,
-.mister-popup__badge,
-.mister-popup__caption {
+.mister-popup__lead,
+.mister-popup__body {
     margin: 0;
 }
 
-.mister-popup__eyebrow,
-.mister-popup__badge {
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 0.74rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-}
-
 .mister-popup__eyebrow {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
     color: var(--mister-merlot);
 }
 
-.mister-popup__badge {
-    color: rgba(111, 85, 70, 0.88);
-}
-
 .mister-popup__frame {
-    padding: 14px 14px 20px;
-    border: 1px solid rgba(118, 82, 61, 0.12);
-    border-radius: 22px;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid rgba(132, 93, 73, 0.2);
+    border-radius: 0;
     background:
-        linear-gradient(180deg, rgba(255, 253, 248, 0.98), rgba(243, 230, 212, 0.98));
+        linear-gradient(180deg, rgba(255, 253, 248, 0.98), rgba(242, 234, 221, 0.98));
     box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.9),
-        0 20px 34px rgba(83, 53, 39, 0.14);
+        inset 0 1px 0 rgba(255, 255, 255, 0.86),
+        0 12px 26px rgba(83, 53, 39, 0.12);
 }
 
 .mister-popup__frame img {
     width: 100%;
-    border-radius: 14px;
+    display: block;
+    border: 1px solid rgba(132, 93, 73, 0.22);
+    border-radius: 0;
     object-fit: cover;
-    box-shadow: 0 18px 28px rgba(83, 53, 39, 0.14);
+    box-shadow: 0 14px 24px rgba(83, 53, 39, 0.1);
 }
 
-.mister-popup__caption {
-    color: rgba(111, 85, 70, 0.9);
-    font-family: "Source Sans 3", "IBM Plex Sans", sans-serif;
-    font-size: 0.98rem;
-    line-height: 1.5;
-}
-
-.mister-popup__content {
-    gap: 18px;
-    padding-right: 18px;
-}
-
-.mister-popup__content h2 {
+.mister-popup__inner h2 {
     margin: 0;
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: clamp(2.8rem, 4vw, 4.4rem);
+    max-width: 12ch;
+    font-family: "Cormorant Garamond", "Baskerville", Georgia, serif;
+    font-size: clamp(3rem, 5vw, 4.3rem);
     font-weight: 600;
-    line-height: 0.92;
+    line-height: 0.96;
     letter-spacing: -0.04em;
     color: var(--mister-ink);
 }
 
-.mister-popup__content p {
-    margin: 0;
+.mister-popup__lead,
+.mister-popup__body {
     font-family: "Source Sans 3", "IBM Plex Sans", sans-serif;
-    font-size: 1.08rem;
-    line-height: 1.68;
-    color: rgba(64, 45, 34, 0.84);
+    color: rgba(64, 45, 34, 0.82);
 }
 
-.mister-popup__highlights {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+.mister-popup__lead {
+    font-family: "Cormorant Garamond", "Baskerville", Georgia, serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: rgba(94, 74, 64, 0.88);
 }
 
-.mister-popup__highlights span {
-    padding: 9px 12px;
-    border: 1px solid rgba(140, 61, 52, 0.12);
-    border-radius: 999px;
-    background: rgba(140, 61, 52, 0.05);
-    color: var(--mister-merlot);
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 0.82rem;
+.mister-popup__body {
+    max-width: 28rem;
+    font-size: 1.06rem;
+    line-height: 1.72;
 }
 
 .mister-popup__actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 6px;
-}
-
-.mister-popup__cta,
-.mister-popup__ghost {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 52px;
-    padding: 0 20px;
-    border-radius: 999px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+    width: 100%;
+    display: grid;
+    margin-top: 2px;
 }
 
 .mister-popup__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 58px;
+    padding: 0 22px;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
     border: 0;
-    background: linear-gradient(180deg, #c85544, #a23a31);
+    background: linear-gradient(180deg, #c44c3d, #a8392f);
     color: #fff8f2;
-    box-shadow: 0 16px 28px rgba(140, 61, 52, 0.24);
+    box-shadow: 0 12px 22px rgba(140, 61, 52, 0.18);
     font-family: "Source Sans 3", "IBM Plex Sans", sans-serif;
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 700;
-}
-
-.mister-popup__ghost {
-    border: 1px solid rgba(140, 61, 52, 0.18);
-    background: rgba(255, 252, 247, 0.82);
-    color: var(--mister-soft);
+    letter-spacing: 0.01em;
+    transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
 
 .mister-popup__close:hover,
 .mister-popup__close:focus-visible,
 .mister-popup__cta:hover,
-.mister-popup__cta:focus-visible,
-.mister-popup__ghost:hover,
-.mister-popup__ghost:focus-visible {
+.mister-popup__cta:focus-visible {
     transform: translateY(-1px);
 }
 
@@ -264,60 +214,64 @@ body.mister-popup-open {
     }
 
     .mister-popup__dialog {
-        padding: 18px;
+        width: min(620px, 100%);
+        padding: 22px;
     }
 
-    .mister-popup__layout {
-        grid-template-columns: 1fr;
-        gap: 24px;
-        padding-top: 54px;
-    }
-
-    .mister-popup__content {
-        padding-right: 0;
-    }
-
-    .mister-popup__sticker {
-        top: 72px;
-        left: 22px;
+    .mister-popup__inner {
+        padding: 48px 34px 18px;
     }
 }
 
 @media (max-width: 560px) {
     .mister-popup__close {
-        top: 12px;
-        right: 12px;
+        top: 18px;
+        right: 18px;
+        width: 42px;
+        height: 42px;
     }
 
-    .mister-popup__sticker {
-        left: 18px;
-        padding: 8px 12px;
-        font-size: 0.68rem;
+    .mister-popup__close span {
+        font-size: 2rem;
     }
 
-    .mister-popup__content h2 {
-        font-size: clamp(2.3rem, 13vw, 3.2rem);
+    .mister-popup__dialog {
+        padding: 18px;
     }
 
-    .mister-popup__content p,
-    .mister-popup__caption {
+    .mister-popup__dialog::before {
+        inset: 9px;
+    }
+
+    .mister-popup__dialog::after {
+        inset: 14px;
+    }
+
+    .mister-popup__inner {
+        gap: 16px;
+        padding: 38px 18px 12px;
+    }
+
+    .mister-popup__inner h2 {
+        font-size: clamp(2.35rem, 12vw, 3.1rem);
+    }
+
+    .mister-popup__lead {
         font-size: 1rem;
     }
 
-    .mister-popup__actions {
-        flex-direction: column;
+    .mister-popup__body {
+        font-size: 1rem;
     }
 
-    .mister-popup__cta,
-    .mister-popup__ghost {
-        width: 100%;
+    .mister-popup__cta {
+        min-height: 54px;
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
     .mister-popup__dialog,
     .mister-popup__cta,
-    .mister-popup__ghost,
     .mister-popup__close {
         transition: none;
     }

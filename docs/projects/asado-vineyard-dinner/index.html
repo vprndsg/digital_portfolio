@@ -187,19 +187,19 @@
                     <article class="essay-card" data-reveal>
                         <p class="detail-label">Chef partnership</p>
                         <h3>Experience built around a real culinary point of view</h3>
-                        <p>&lt;built-in method copy of dict object at 0x112cfd940&gt;</p>
+                        <p>&lt;built-in method copy of dict object at 0x10faef380&gt;</p>
                     </article>
                     
                     <article class="essay-card" data-reveal>
                         <p class="detail-label">Guest journey</p>
                         <h3>Invitation, ticketing, and communication flow</h3>
-                        <p>&lt;built-in method copy of dict object at 0x112cfd980&gt;</p>
+                        <p>&lt;built-in method copy of dict object at 0x10faef3c0&gt;</p>
                     </article>
                     
                     <article class="essay-card" data-reveal>
                         <p class="detail-label">Revenue follow-through</p>
                         <h3>Post-event follow-up tied back to wine sales</h3>
-                        <p>&lt;built-in method copy of dict object at 0x112cfd9c0&gt;</p>
+                        <p>&lt;built-in method copy of dict object at 0x10faef400&gt;</p>
                     </article>
                     
                 </div>
@@ -381,45 +381,29 @@
         aria-describedby="misterPopupBody"
     >
         <button class="mister-popup__close" type="button" data-mister-popup-close aria-label="Close Mister's picks popup">
-            Close
+            <span aria-hidden="true">&times;</span>
         </button>
 
-        <div class="mister-popup__sticker" aria-hidden="true">small dog, strong opinions</div>
+        <div class="mister-popup__inner">
+            <p class="mister-popup__eyebrow">Mister's picks</p>
+            <h2 id="misterPopupTitle">Start with Mister's Picks</h2>
 
-        <div class="mister-popup__layout">
-            <div class="mister-popup__visual">
-                <p class="mister-popup__eyebrow">Mister's picks</p>
-                <div class="mister-popup__frame">
-                    <img
-                        src="../../static/media/mister-picks.jpg"
-                        alt="Mister peeking between wine bottles like a very tiny sommelier."
-                    >
-                </div>
-                <p class="mister-popup__caption">Tiny sommelier energy. Surprisingly good taste.</p>
+            <div class="mister-popup__frame">
+                <img
+                    src="../../static/media/mister-picks.jpg"
+                    alt="Mister peeking between wine bottles like a very tiny sommelier."
+                >
             </div>
 
-            <div class="mister-popup__content">
-                <p class="mister-popup__badge">Portfolio concierge</p>
-                <h2 id="misterPopupTitle">Start with the fun stuff.</h2>
-                <p id="misterPopupBody">
-                    If you only have a minute, Mister recommends the real email campaigns, the chef-led vineyard dinner,
-                    and the live editorial demo first. No corporate fluff. Just the good parts.
-                </p>
+            <p class="mister-popup__lead">A quick recommendation from the house.</p>
+            <p class="mister-popup__body" id="misterPopupBody">
+                Begin with the real email campaigns, the vineyard dinner case study, and the live editorial demo.
+            </p>
 
-                <div class="mister-popup__highlights" aria-label="Highlighted work">
-                    <span>Real campaign work</span>
-                    <span>Event creative</span>
-                    <span>Interactive demo</span>
-                </div>
-
-                <div class="mister-popup__actions">
-                    <a class="mister-popup__cta" href="../../#work" data-mister-popup-dismiss>
-                        Show me the highlights
-                    </a>
-                    <button class="mister-popup__ghost" type="button" data-mister-popup-close>
-                        I'll wander
-                    </button>
-                </div>
+            <div class="mister-popup__actions">
+                <a class="mister-popup__cta" href="../../#work" data-mister-popup-dismiss>
+                    Explore the portfolio
+                </a>
             </div>
         </div>
     </section>
