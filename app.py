@@ -15,9 +15,7 @@ from engine import (
 )
 from journal_store import build_snapshot, init_db, save_entry
 from portfolio_data import (
-    CAPABILITY_GROUPS,
     OWNER,
-    PROCESS_PILLARS,
     PROJECTS,
     SIGNAL_STATS,
     get_project,
@@ -94,8 +92,6 @@ def portfolio_home():
         "index.html",
         owner=OWNER,
         projects=homepage_projects(),
-        capabilities=CAPABILITY_GROUPS,
-        process_pillars=PROCESS_PILLARS,
         signal_stats=SIGNAL_STATS,
         featured_project=featured_project,
         header_forecast=header_forecast,

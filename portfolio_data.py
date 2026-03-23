@@ -22,42 +22,6 @@ SIGNAL_STATS = [
 ]
 
 
-CAPABILITY_GROUPS = [
-    {
-        "title": "Lifecycle & Email",
-        "body": "Launch sequences, audience segmentation, reusable modules, and copy systems that can move from tease to conversion without losing the voice of the brand.",
-    },
-    {
-        "title": "Events & Experiences",
-        "body": "Pages, identity systems, invites, signage, and follow-up content that make a live moment feel designed before guests even arrive.",
-    },
-    {
-        "title": "Landing & Splash Pages",
-        "body": "Fast, high-impact pages built around a single decision: join, RSVP, preorder, drop an email, or explore the product story.",
-    },
-    {
-        "title": "Product Storytelling",
-        "body": "Merchandising systems, PDP layouts, photography direction, and modular content that give products a sharper point of view.",
-    },
-]
-
-
-PROCESS_PILLARS = [
-    {
-        "title": "Make the hook obvious",
-        "body": "The first screen should state the value proposition fast, then buy time for the texture and personality underneath.",
-    },
-    {
-        "title": "Design the system, not the one-off",
-        "body": "I like work that can stretch across email, web, and event surfaces without becoming a different brand every time it changes format.",
-    },
-    {
-        "title": "Give the user something to touch",
-        "body": "A good digital marketing piece should feel alive. Motion, reveal states, and media behavior matter because they signal craft.",
-    },
-]
-
-
 PROJECTS = [
     {
         "slug": "biodynamic-chronicles",

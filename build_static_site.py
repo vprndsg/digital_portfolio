@@ -15,9 +15,7 @@ from markupsafe import Markup
 from editorial import BLOG_ENTRIES
 from engine import LOS_ANGELES, build_experience, normalize_appetite, normalize_party_mode
 from portfolio_data import (
-    CAPABILITY_GROUPS,
     OWNER,
-    PROCESS_PILLARS,
     PROJECTS,
     SIGNAL_STATS,
     get_project,
@@ -188,8 +186,6 @@ def render_site(data_start: date, data_end: date) -> None:
         PurePosixPath("index.html"),
         owner=OWNER,
         projects=homepage_projects(),
-        capabilities=CAPABILITY_GROUPS,
-        process_pillars=PROCESS_PILLARS,
         signal_stats=SIGNAL_STATS,
         featured_project=get_project("biodynamic-chronicles"),
         header_forecast=header_forecast,

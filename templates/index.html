@@ -333,36 +333,6 @@
                 </div>
             </section>
 
-            <section id="capabilities" class="editorial-section">
-                <div class="section-heading" data-reveal>
-                    <p class="eyebrow">Capabilities</p>
-                    <h2>The work sits at the intersection of launch strategy, editorial packaging, and practical conversion design.</h2>
-                </div>
-                <div class="two-column-ledger">
-                    {% for capability in capabilities %}
-                    <article class="ledger-entry" data-reveal>
-                        <h3>{{ capability.title }}</h3>
-                        <p>{{ capability.body }}</p>
-                    </article>
-                    {% endfor %}
-                </div>
-            </section>
-
-            <section id="process" class="editorial-section">
-                <div class="section-heading" data-reveal>
-                    <p class="eyebrow">Approach</p>
-                    <h2>The work is meant to feel tactile and specific, but it still has to function as a system.</h2>
-                </div>
-                <div class="essay-grid">
-                    {% for item in process_pillars %}
-                    <article class="essay-card" data-reveal>
-                        <p class="detail-label">{{ loop.index }} / Principle</p>
-                        <h3>{{ item.title }}</h3>
-                        <p>{{ item.body }}</p>
-                    </article>
-                    {% endfor %}
-                </div>
-            </section>
         </main>
     </div>
 
