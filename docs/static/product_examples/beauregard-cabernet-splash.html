@@ -7,14 +7,14 @@
     <style>
         :root {
             color-scheme: light;
-            --paper: #f5efe4;
-            --paper-deep: #ece1cf;
-            --surface: rgba(255, 250, 244, 0.9);
+            --paper: #f6efe3;
+            --paper-deep: #e8ddcb;
+            --surface: rgba(255, 250, 244, 0.92);
             --ink: #211c18;
             --soft: #62564a;
             --accent: #7f2b26;
-            --line: rgba(96, 70, 49, 0.24);
-            --line-strong: rgba(96, 70, 49, 0.42);
+            --line: rgba(96, 70, 49, 0.2);
+            --line-strong: rgba(96, 70, 49, 0.36);
             --shadow: rgba(53, 38, 28, 0.12);
         }
 
@@ -25,8 +25,8 @@
         body {
             margin: 0;
             background:
-                radial-gradient(circle at 12% 16%, rgba(171, 95, 70, 0.12), transparent 22%),
-                radial-gradient(circle at 84% 12%, rgba(219, 195, 166, 0.32), transparent 20%),
+                radial-gradient(circle at 10% 14%, rgba(171, 95, 70, 0.12), transparent 22%),
+                radial-gradient(circle at 84% 14%, rgba(219, 195, 166, 0.28), transparent 20%),
                 linear-gradient(180deg, #faf5ec 0%, #f1e6d6 100%);
             color: var(--ink);
             font-family: Optima, Candara, "Noto Sans", "Trebuchet MS", sans-serif;
@@ -37,25 +37,27 @@
         }
 
         .page {
-            width: min(1360px, calc(100% - 56px));
+            width: min(1220px, calc(100% - 40px));
             margin: 0 auto;
-            padding: 48px 0 88px;
+            padding: 28px 0 34px;
         }
 
         .frame {
             position: relative;
-            padding: 44px;
+            padding: 30px;
             border: 1px solid var(--line);
-            background: rgba(255, 251, 245, 0.84);
-            box-shadow: 0 28px 80px var(--shadow);
-            overflow: clip;
+            border-radius: 28px;
+            background: rgba(255, 251, 245, 0.88);
+            box-shadow: 0 24px 72px var(--shadow);
+            overflow: hidden;
         }
 
         .frame::before {
             content: "";
             position: absolute;
-            inset: 22px;
+            inset: 18px;
             border: 1px solid rgba(127, 43, 38, 0.08);
+            border-radius: 20px;
             pointer-events: none;
         }
 
@@ -79,14 +81,14 @@
         }
 
         h1 {
-            margin-top: 18px;
-            font-size: clamp(42px, 5vw, 72px);
+            margin-top: 14px;
+            font-size: clamp(38px, 4.4vw, 62px);
             line-height: 0.96;
-            max-width: 11ch;
+            max-width: 10ch;
         }
 
         h2 {
-            font-size: clamp(32px, 4vw, 56px);
+            font-size: clamp(28px, 3vw, 42px);
             line-height: 0.98;
         }
 
@@ -95,34 +97,35 @@
         }
 
         .divider {
-            width: 176px;
+            width: 138px;
             height: 8px;
-            margin: 28px 0 0;
+            margin: 22px 0 0;
             border-top: 1px solid var(--line-strong);
             border-bottom: 1px solid rgba(96, 70, 49, 0.16);
         }
 
         .hero {
             display: grid;
-            grid-template-columns: minmax(0, 1.08fr) minmax(320px, 500px);
-            gap: 44px;
-            align-items: start;
+            grid-template-columns: minmax(0, 0.98fr) minmax(280px, 0.82fr);
+            gap: 28px;
+            align-items: center;
         }
 
         .hero-copy {
             display: grid;
-            gap: 18px;
+            gap: 16px;
             align-content: start;
+            padding-right: 8px;
             position: relative;
             z-index: 1;
         }
 
         .history {
-            max-width: 43rem;
-            margin-top: 24px;
+            max-width: 37rem;
+            margin-top: 12px;
             color: var(--soft);
-            font-size: 19px;
-            line-height: 1.78;
+            font-size: 18px;
+            line-height: 1.7;
         }
 
         .history strong {
@@ -132,30 +135,30 @@
 
         .accolades {
             display: grid;
-            gap: 12px;
-            margin-top: 20px;
-            padding: 18px 0 0 22px;
+            gap: 8px;
+            margin-top: 16px;
+            padding: 2px 0 0 18px;
             border-left: 1px solid var(--line-strong);
         }
 
         .accolades p {
             font-family: Georgia, "Times New Roman", serif;
-            font-size: 18px;
-            line-height: 1.5;
+            font-size: 17px;
+            line-height: 1.48;
         }
 
         .hero-actions {
             display: flex;
             flex-wrap: wrap;
-            gap: 14px;
+            gap: 12px;
             align-items: center;
-            margin-top: 8px;
+            margin-top: 4px;
         }
 
         .hero-note {
             color: var(--soft);
-            font-size: 14px;
-            letter-spacing: 0.06em;
+            font-size: 13px;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
         }
 
@@ -163,8 +166,7 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            min-height: 52px;
+            min-height: 48px;
             padding: 0 22px;
             border: 1px solid transparent;
             border-radius: 999px;
@@ -174,15 +176,8 @@
             font-weight: 600;
             letter-spacing: 0.2em;
             text-transform: uppercase;
-            box-shadow: 0 18px 32px rgba(111, 32, 28, 0.18);
+            box-shadow: 0 16px 28px rgba(111, 32, 28, 0.16);
             cursor: pointer;
-        }
-
-        .cta-button--ghost {
-            border-color: var(--line-strong);
-            background: transparent;
-            color: var(--ink);
-            box-shadow: none;
         }
 
         .hero-media {
@@ -191,19 +186,22 @@
 
         .hero-media img {
             width: 100%;
-            aspect-ratio: 2 / 3;
+            aspect-ratio: 6 / 5;
             object-fit: cover;
             display: block;
             border: 1px solid rgba(96, 70, 49, 0.16);
+            box-shadow: 0 20px 40px rgba(53, 38, 28, 0.12);
         }
 
         .hero-media-card {
             position: absolute;
-            right: 20px;
-            bottom: 20px;
-            padding: 10px 14px 8px;
-            border: 1px solid rgba(255, 251, 245, 0.42);
-            background: rgba(28, 23, 20, 0.62);
+            left: 18px;
+            bottom: 18px;
+            display: grid;
+            gap: 4px;
+            padding: 12px 14px 10px;
+            border: 1px solid rgba(255, 251, 245, 0.4);
+            background: rgba(28, 23, 20, 0.68);
             color: #f6ecde;
             backdrop-filter: blur(10px);
         }
@@ -212,107 +210,20 @@
             color: #f6ecde;
         }
 
-        .sticky-action {
-            position: sticky;
-            bottom: 18px;
-            z-index: 6;
-            display: flex;
-            justify-content: space-between;
+        .hero-media-card p:last-child {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 16px;
+            letter-spacing: 0.01em;
+        }
+
+        .composite {
+            position: relative;
+            display: grid;
+            grid-template-columns: minmax(0, 1.12fr) minmax(250px, 0.74fr);
             gap: 20px;
-            align-items: center;
-            margin-top: 34px;
-            padding: 18px 22px;
-            border: 1px solid var(--line-strong);
-            background: rgba(252, 247, 239, 0.94);
-            box-shadow: 0 18px 34px rgba(50, 36, 27, 0.12);
-            backdrop-filter: blur(12px);
-        }
-
-        .sticky-copy {
-            display: grid;
-            gap: 6px;
-        }
-
-        .sticky-copy strong {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 24px;
-            font-weight: 500;
-        }
-
-        .sticky-meta {
-            color: var(--soft);
-            font-size: 14px;
-            line-height: 1.55;
-        }
-
-        .section {
-            margin-top: 72px;
-        }
-
-        .specs-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 28px;
-            margin-top: 44px;
-        }
-
-        .spec {
-            display: grid;
-            gap: 16px;
-            align-content: start;
-            padding: 24px 22px 26px;
-            border: 1px solid rgba(96, 70, 49, 0.14);
-            background: rgba(255, 248, 238, 0.72);
-        }
-
-        .spec-icon {
-            width: 42px;
-            height: 42px;
-            color: var(--accent);
-        }
-
-        .spec-icon svg {
-            width: 100%;
-            height: 100%;
-            stroke: currentColor;
-            fill: none;
-            stroke-width: 1.6;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-
-        .spec h3 {
-            font-size: 17px;
-            color: var(--accent);
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-        }
-
-        .spec-body {
-            display: grid;
-            gap: 8px;
-        }
-
-        .spec-body p {
-            color: #382f28;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 17px;
-            line-height: 1.84;
-        }
-
-        .story-shell {
-            display: grid;
-            grid-template-columns: minmax(0, 1fr) minmax(320px, 430px);
             align-items: start;
-            margin-top: 44px;
-        }
-
-        .story-images {
-            grid-column: 1 / span 2;
-            display: grid;
-            grid-template-columns: minmax(0, 1.24fr) minmax(240px, 0.72fr);
-            gap: 28px;
-            align-items: end;
+            margin-top: 48px;
+            padding-bottom: 132px;
         }
 
         .story-image {
@@ -320,6 +231,7 @@
             border: 1px solid rgba(96, 70, 49, 0.14);
             overflow: hidden;
             background: #efe5d4;
+            box-shadow: 0 18px 34px rgba(53, 38, 28, 0.08);
         }
 
         .story-image img {
@@ -329,58 +241,92 @@
         }
 
         .story-image-primary img {
-            aspect-ratio: 16 / 11;
+            aspect-ratio: 16 / 10;
         }
 
         .story-image-secondary {
-            margin-top: 122px;
+            align-self: end;
+            margin-top: 38px;
         }
 
         .story-image-secondary img {
-            aspect-ratio: 5 / 7;
+            aspect-ratio: 4 / 5;
         }
 
-        .story-panel {
-            grid-column: 2;
-            grid-row: 1;
-            align-self: center;
-            position: relative;
-            z-index: 2;
-            display: grid;
-            gap: 16px;
-            max-width: 360px;
-            margin: 108px 0 0 -116px;
+        .editorial-card {
+            position: absolute;
+            right: 22px;
+            bottom: 0;
+            width: min(770px, calc(100% - 56px));
             padding: 24px 26px;
             border: 1px solid rgba(96, 70, 49, 0.16);
-            background: rgba(255, 249, 241, 0.84);
+            background: rgba(255, 249, 241, 0.92);
             box-shadow: 0 26px 48px rgba(53, 38, 28, 0.14);
             backdrop-filter: blur(10px);
         }
 
-        .profile-list {
+        .editorial-intro {
+            display: grid;
+            gap: 10px;
+            max-width: 32rem;
+        }
+
+        .editorial-summary {
+            color: var(--soft);
+            font-size: 16px;
+            line-height: 1.65;
+        }
+
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 22px;
+        }
+
+        .editorial-block {
             display: grid;
             gap: 12px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(96, 70, 49, 0.16);
+        }
+
+        .editorial-block h3 {
+            font-size: 15px;
+            color: var(--accent);
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .detail-list {
+            display: grid;
+            gap: 8px;
             margin: 0;
             padding: 0;
             list-style: none;
-            color: #3d362f;
+            color: #3b332d;
             font-family: Georgia, "Times New Roman", serif;
             font-size: 16px;
-            line-height: 1.74;
+            line-height: 1.66;
         }
 
-        .profile-list li {
+        .detail-list li strong {
+            color: var(--ink);
+            font-weight: 600;
+        }
+
+        .tasting-list li {
             position: relative;
-            padding-left: 18px;
+            padding-left: 16px;
         }
 
-        .profile-list li::before {
+        .tasting-list li::before {
             content: "";
             position: absolute;
-            top: 0.82em;
             left: 0;
-            width: 8px;
-            height: 8px;
+            top: 0.82em;
+            width: 7px;
+            height: 7px;
             border-radius: 50%;
             background: var(--accent);
             transform: translateY(-50%);
@@ -388,77 +334,89 @@
 
         @media (max-width: 1080px) {
             .hero,
-            .specs-grid,
-            .story-shell {
+            .composite {
                 grid-template-columns: 1fr;
             }
 
-            .story-images {
-                grid-column: 1;
-                grid-template-columns: 1fr;
+            .hero-copy {
+                padding-right: 0;
             }
 
             .story-image-secondary {
                 margin-top: 0;
             }
 
-            .story-panel {
-                grid-column: 1;
-                grid-row: auto;
-                margin: -48px 20px 0;
+            .editorial-card {
+                position: relative;
+                right: auto;
+                bottom: auto;
+                width: auto;
+                margin: -54px 24px 0;
             }
 
-            .sticky-action {
-                flex-direction: column;
-                align-items: stretch;
+            .composite {
+                padding-bottom: 0;
+            }
+
+            .editorial-grid {
+                grid-template-columns: 1fr 1fr;
             }
         }
 
         @media (max-width: 720px) {
             .page {
-                width: min(100%, calc(100% - 28px));
-                padding: 18px 0 64px;
+                width: min(100%, calc(100% - 20px));
+                padding: 14px 0 22px;
             }
 
             .frame {
-                padding: 26px 22px 30px;
+                padding: 18px;
             }
 
             .frame::before {
-                inset: 12px;
+                inset: 10px;
             }
 
             h1 {
                 max-width: none;
+                font-size: clamp(32px, 8vw, 48px);
             }
 
-            .history,
-            .profile-list {
-                font-size: 17px;
+            .history {
+                font-size: 16px;
+                line-height: 1.62;
             }
 
-            .hero-media-card,
-            .story-panel {
-                margin: 0;
-            }
-
-            .hero-media-card {
-                right: 14px;
-                left: 14px;
-                max-width: none;
-            }
-
-            .sticky-copy strong {
-                font-size: 20px;
+            .accolades p {
+                font-size: 16px;
             }
 
             .hero-actions {
-                justify-items: stretch;
+                flex-direction: column;
+                align-items: stretch;
             }
 
-            .cta-button,
-            .cta-button--ghost {
+            .cta-button {
                 width: 100%;
+            }
+
+            .hero-media-card {
+                left: 12px;
+                right: 12px;
+                bottom: 12px;
+            }
+
+            .editorial-card {
+                margin: -26px 12px 0;
+                padding: 20px 18px;
+            }
+
+            .editorial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .detail-list {
+                font-size: 15px;
             }
         }
     </style>
@@ -471,7 +429,7 @@
                     <p class="eyebrow">Example Page</p>
                     <h1>2021 Cabernet Sauvignon Beauregard Ranch</h1>
                     <div class="divider" aria-hidden="true"></div>
-                    <p class="history">Beauregard Vineyards was founded in <strong>1945</strong> by Amos and Cecilia Beauregard. Five generations later, the vines now span <strong>60 acres in Bonny Doon California</strong>, where coastal wind, sandstone, and Zayante sand give Cabernet a more tensile, mountain-grown profile.</p>
+                    <p class="history">Beauregard Vineyards was founded in <strong>1945</strong> by Amos and Cecilia Beauregard. Five generations later, Cabernet from the ranch in <strong>Bonny Doon, California</strong> is shaped by sandstone, Zayante sand, and the cooling Pacific just miles away.</p>
                     <div class="accolades">
                         <p><strong>Scores &amp; Accolades</strong></p>
                         <p>96 Points - Vinous</p>
@@ -479,7 +437,7 @@
                     </div>
                     <div class="hero-actions">
                         <button class="cta-button" type="button">Acquire Allocation</button>
-                        <span class="hero-note">Estate release | Pricing on request</span>
+                        <span class="hero-note">Estate release | pricing on request</span>
                     </div>
                 </div>
 
@@ -487,89 +445,53 @@
                     <img src="../media/cabernet-splash-hero.jpg" alt="2021 Cabernet Sauvignon hero image">
                     <div class="hero-media-card">
                         <p class="micro-label">Current Release</p>
+                        <p>96-point mountain Cabernet</p>
                     </div>
                 </div>
             </div>
 
-            <div class="sticky-action">
-                <div class="sticky-copy">
-                    <p class="micro-label">Estate Release</p>
-                    <strong>2021 Cabernet Sauvignon Beauregard Ranch</strong>
-                    <p class="sticky-meta">Pricing on request | 750 ml | limited mountain allocation</p>
-                </div>
-                <button class="cta-button" type="button">Acquire Allocation</button>
-            </div>
+            <section class="composite">
+                <figure class="story-image story-image-primary">
+                    <img src="../media/cabernet-splash-workers.jpg" alt="Vineyard workers at Beauregard Ranch">
+                </figure>
+                <figure class="story-image story-image-secondary">
+                    <img src="../media/cabernet-splash-grapes.jpg" alt="Cabernet grapes at Beauregard Ranch">
+                </figure>
 
-            <section class="section">
-                <p class="label">Wine Specs</p>
-                <h2 style="margin-top: 16px;">Estate detail with mountain precision</h2>
-                <div class="divider" aria-hidden="true"></div>
-
-                <div class="specs-grid">
-                    <article class="spec">
-                        <span class="spec-icon" aria-hidden="true">
-                            <svg viewBox="0 0 32 32">
-                                <path d="M4 24 12 12l4 6 4-8 8 14"></path>
-                                <path d="M3 26h26"></path>
-                            </svg>
-                        </span>
-                        <h3>Beauregard Ranch Vineyard</h3>
-                        <div class="spec-body">
-                            <p>Acres: 10</p>
-                            <p>Vine age: 2005</p>
-                            <p>Elevation: 1,740 to 1,802 feet</p>
-                        </div>
-                    </article>
-                    <article class="spec">
-                        <span class="spec-icon" aria-hidden="true">
-                            <svg viewBox="0 0 32 32">
-                                <path d="M3 22c3.2-2.2 6.4-2.2 9.6 0s6.4 2.2 9.6 0 6.4-2.2 9.6 0"></path>
-                                <path d="M6 16c2.4-1.8 4.8-1.8 7.2 0s4.8 1.8 7.2 0 4.8-1.8 7.2 0"></path>
-                                <path d="M5 10h6"></path>
-                            </svg>
-                        </span>
-                        <h3>Site</h3>
-                        <div class="spec-body">
-                            <p>Soil: Zayante Sand</p>
-                            <p>Bedrock: Sand stone</p>
-                            <p>Distance to Pacific Ocean: 4.56 miles</p>
-                        </div>
-                    </article>
-                    <article class="spec">
-                        <span class="spec-icon" aria-hidden="true">
-                            <svg viewBox="0 0 32 32">
-                                <path d="M16 27c-6 0-10-4.4-10-10.4C6 10 10.8 6 16 6c5.2 0 10 4 10 10.6C26 22.6 22 27 16 27Z"></path>
-                                <path d="M16 6c0 8-4 13-10 15"></path>
-                                <path d="M16 6c0 8 4 13 10 15"></path>
-                            </svg>
-                        </span>
-                        <h3>Ingredients</h3>
-                        <div class="spec-body">
-                            <p>Estate grown Cabernet Sauvignon grapes</p>
-                            <p>Indigenous yeast and naturally occurring malolactic bacteria</p>
-                            <p>Minimal sulphur dioxide, aged in French oak barrels</p>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <section class="section">
-                <div class="story-shell">
-                    <div class="story-images">
-                        <figure class="story-image story-image-primary">
-                            <img src="../media/cabernet-splash-workers.jpg" alt="Vineyard workers at Beauregard Ranch">
-                        </figure>
-                        <figure class="story-image story-image-secondary">
-                            <img src="../media/cabernet-splash-grapes.jpg" alt="Cabernet grapes at Beauregard Ranch">
-                        </figure>
+                <div class="editorial-card">
+                    <div class="editorial-intro">
+                        <p class="label">Wine Specs</p>
+                        <h2>Estate detail woven into the tasting story</h2>
+                        <p class="editorial-summary">The specs, cellar cues, and tasting profile now live inside the same image field so the preview feels designed as one conversion-focused product story.</p>
                     </div>
-                    <div class="story-panel">
-                        <p class="label">Tasting Notes</p>
-                        <ul class="profile-list">
-                            <li><strong>In the Glass:</strong> Dark, impenetrable garnet.</li>
-                            <li><strong>The Nose:</strong> Crushed graphite, damp redwood needles, wild mountain mint, cassis, and dark cherry.</li>
-                            <li><strong>The Palate:</strong> Lean and muscular, with blackcurrant, dark plum, cedar box, tobacco leaf, espresso, fine-grained tannins, and an electric spine of acidity.</li>
-                        </ul>
+
+                    <div class="editorial-grid">
+                        <article class="editorial-block">
+                            <h3>Vineyard</h3>
+                            <ul class="detail-list">
+                                <li>10-acre estate parcel</li>
+                                <li>Vines planted in 2005</li>
+                                <li>1,740 to 1,802 feet elevation</li>
+                            </ul>
+                        </article>
+
+                        <article class="editorial-block">
+                            <h3>Site + Cellar</h3>
+                            <ul class="detail-list">
+                                <li>Zayante sand over sandstone</li>
+                                <li>4.56 miles from the Pacific</li>
+                                <li>Native fermentation and French oak aging</li>
+                            </ul>
+                        </article>
+
+                        <article class="editorial-block">
+                            <h3>Tasting Notes</h3>
+                            <ul class="detail-list tasting-list">
+                                <li><strong>In the Glass:</strong> Dark, impenetrable garnet.</li>
+                                <li><strong>The Nose:</strong> Crushed graphite, wild mountain mint, cassis, and dark cherry.</li>
+                                <li><strong>The Palate:</strong> Lean and muscular, with blackcurrant, cedar box, espresso, and fine-grained tannins.</li>
+                            </ul>
+                        </article>
                     </div>
                 </div>
             </section>
