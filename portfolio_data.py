@@ -527,18 +527,6 @@ PROJECTS = [
                 "summary": "A Cabernet splash-page mockup built around estate history, mountain-vineyard specs, critic scores, and a more restrained luxury layout.",
                 "file": "product_examples/beauregard-cabernet-splash.html",
             },
-            {
-                "eyebrow": "HTML template 02",
-                "title": "Library Pinot Vertical",
-                "summary": "A darker library-release PDP mockup built around a collector story, bottle lineup, and cellar-style bundle logic.",
-                "file": "product_examples/library-pinot-vertical.html",
-            },
-            {
-                "eyebrow": "HTML template 03",
-                "title": "Metallique Chardonnay Trio",
-                "summary": "A bright club-release PDP mockup with mineral tone, stainless-steel positioning, and a three-bottle offer module.",
-                "file": "product_examples/metallique-chardonnay-trio.html",
-            },
         ],
         "gallery": [],
         "closing_note": "This page helps show that I care about conversion, but I want conversion to come from sharper storytelling rather than more noise.",

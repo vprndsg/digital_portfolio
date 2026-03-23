@@ -17,7 +17,7 @@ class AppRouteTests(unittest.TestCase):
         self.assertIn(b"Asado Vineyard Dinner", response.data)
         self.assertIn(b"Start with the right culinary partner", response.data)
         self.assertIn(b"Bitter Orange Lambrusco PDP", response.data)
-        self.assertIn(b"3 HTML product pages", response.data)
+        self.assertIn(b"2021 Cabernet Sauvignon Beauregard Ranch", response.data)
 
     def test_project_detail_renders(self):
         response = self.client.get("/projects/harvest-weekend-email-system")

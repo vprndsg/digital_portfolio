@@ -251,13 +251,15 @@
                                 {% endif %}
 
                                 <div class="product-carousel" data-carousel>
+                                    {% if project.product_examples|length > 1 %}
                                     <div class="product-carousel-header">
-                                        <p class="detail-label">3 HTML product pages</p>
+                                        <p class="detail-label">{{ project.product_examples|length }} HTML product pages</p>
                                         <div class="product-carousel-controls">
                                             <button class="carousel-button" type="button" data-carousel-prev aria-label="Previous product page">Prev</button>
                                             <button class="carousel-button" type="button" data-carousel-next aria-label="Next product page">Next</button>
                                         </div>
                                     </div>
+                                    {% endif %}
 
                                     <div class="product-carousel-viewport">
                                         <div class="product-carousel-track" data-carousel-track>
@@ -281,6 +283,7 @@
                                         </div>
                                     </div>
 
+                                    {% if project.product_examples|length > 1 %}
                                     <div class="product-carousel-dots" role="tablist" aria-label="Product page slides">
                                         {% for item in project.product_examples %}
                                         <button
@@ -293,6 +296,7 @@
                                         ></button>
                                         {% endfor %}
                                     </div>
+                                    {% endif %}
                                 </div>
                             </section>
                             {% else %}
