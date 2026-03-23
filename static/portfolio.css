@@ -745,7 +745,7 @@ button {
 
 .social-carousel-viewport {
     overflow: hidden;
-    padding: 18px 0 34px;
+    padding: 34px 0 42px;
 }
 
 .social-carousel-track {
@@ -800,6 +800,9 @@ button {
 }
 
 .social-post-card {
+    --social-card-lift: 0px;
+    --social-card-scale: 1;
+    appearance: none;
     position: relative;
     display: block;
     width: 100%;
@@ -810,9 +813,12 @@ button {
     box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.82),
         0 22px 44px rgba(95, 67, 49, 0.18);
-    transform: translateY(0) rotate(var(--card-rotate));
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+    transform: translateY(var(--social-card-lift)) rotate(var(--card-rotate)) scale(var(--social-card-scale));
     transform-origin: center bottom;
-    transition: transform 420ms ease, box-shadow 420ms ease;
+    transition: transform 320ms ease, box-shadow 320ms ease, border-color 320ms ease;
     isolation: isolate;
     animation: social-card-drift 8.2s ease-in-out infinite;
 }
@@ -840,7 +846,40 @@ button {
     background: rgba(225, 209, 190, 0.75);
     object-fit: contain;
     box-shadow: 0 16px 30px rgba(88, 61, 44, 0.12);
-    transition: transform 420ms ease;
+    transition: transform 320ms ease;
+}
+
+.social-post-card:focus-visible {
+    outline: 2px solid rgba(106, 47, 47, 0.34);
+    outline-offset: 8px;
+}
+
+.social-carousel.is-paused .social-carousel-track,
+.social-carousel.is-paused .social-post-card,
+.social-carousel.is-paused .social-post-card::after {
+    animation-play-state: paused;
+}
+
+.social-carousel-slide.is-selected {
+    z-index: 3;
+}
+
+.social-post-card.is-selected {
+    --social-card-lift: -24px;
+    --social-card-scale: 1.08;
+    border-color: rgba(106, 47, 47, 0.28);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.88),
+        0 30px 54px rgba(95, 67, 49, 0.24);
+}
+
+.social-post-card.is-selected::after {
+    opacity: 0.58;
+    transform: scale(0.98);
+}
+
+.social-post-card.is-selected img {
+    transform: scale(1.03);
 }
 
 .product-carousel-meta,
@@ -1139,11 +1178,11 @@ button {
 @keyframes social-card-drift {
     0%,
     100% {
-        transform: translateY(0) rotate(var(--card-rotate));
+        transform: translateY(var(--social-card-lift)) rotate(var(--card-rotate)) scale(var(--social-card-scale));
     }
 
     50% {
-        transform: translateY(-12px) rotate(calc(var(--card-rotate) + 1.2deg));
+        transform: translateY(calc(var(--social-card-lift) - 12px)) rotate(calc(var(--card-rotate) + 1.2deg)) scale(var(--social-card-scale));
     }
 }
 

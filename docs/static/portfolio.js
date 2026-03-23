@@ -1,6 +1,7 @@
 const revealItems = Array.from(document.querySelectorAll("[data-reveal]"));
 const mediaButtons = Array.from(document.querySelectorAll("[data-portfolio-media]"));
 const carousels = Array.from(document.querySelectorAll("[data-carousel]"));
+const socialCarousels = Array.from(document.querySelectorAll(".social-carousel"));
 
 const dom = {
     lightbox: document.getElementById("portfolioLightbox"),
@@ -256,6 +257,52 @@ function initCarousels() {
     });
 }
 
+function initSocialCarousels() {
+    socialCarousels.forEach((carousel) => {
+        const cards = Array.from(carousel.querySelectorAll("[data-social-card]"));
+        let activeCard = null;
+
+        if (!cards.length) {
+            return;
+        }
+
+        function setActiveCard(nextCard) {
+            activeCard = nextCard;
+            carousel.classList.toggle("is-paused", Boolean(nextCard));
+
+            cards.forEach((card) => {
+                const isActive = card === nextCard;
+                card.classList.toggle("is-selected", isActive);
+                card.closest(".social-carousel-slide")?.classList.toggle("is-selected", isActive);
+                card.setAttribute("aria-pressed", isActive ? "true" : "false");
+            });
+        }
+
+        cards.forEach((card) => {
+            card.addEventListener("click", (event) => {
+                event.stopPropagation();
+                setActiveCard(activeCard === card ? null : card);
+            });
+        });
+
+        document.addEventListener("click", (event) => {
+            if (!activeCard || carousel.contains(event.target)) {
+                return;
+            }
+
+            setActiveCard(null);
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key !== "Escape" || !activeCard) {
+                return;
+            }
+
+            setActiveCard(null);
+        });
+    });
+}
+
 function disableExternalLinks(root = document) {
     const links = Array.from(root.querySelectorAll('a[href^="http://"], a[href^="https://"]'));
 
@@ -296,5 +343,6 @@ function disableExternalLinksInIframes() {
 visibleReveal();
 initLightbox();
 initCarousels();
+initSocialCarousels();
 disableExternalLinks();
 disableExternalLinksInIframes();

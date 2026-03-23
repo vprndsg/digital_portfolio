@@ -236,9 +236,16 @@
                                             {% for repetition in range(2) %}
                                                 {% for item in project.social_examples %}
                                                 <article class="social-carousel-slide{% if repetition %} is-clone{% endif %}"{% if repetition %} aria-hidden="true"{% endif %}>
-                                                    <div class="social-post-card">
+                                                    <button
+                                                        class="social-post-card"
+                                                        type="button"
+                                                        data-social-card
+                                                        aria-pressed="false"
+                                                        aria-label="Pause carousel and focus {{ item.title }}"
+                                                        {% if repetition %}tabindex="-1"{% endif %}
+                                                    >
                                                         <img src="{{ url_for('static', filename=item.image) }}" alt="{{ item.title }}" loading="lazy">
-                                                    </div>
+                                                    </button>
                                                 </article>
                                                 {% endfor %}
                                             {% endfor %}
