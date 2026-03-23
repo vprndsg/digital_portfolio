@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='mister-popup.css') }}">
 </head>
 <body>
     <div class="starfield" aria-hidden="true"></div>
@@ -186,11 +187,14 @@
         </div>
     </div>
 
+    {% include "_mister_popup.html" %}
+
     <script>
         window.SITE_CONFIG = {{ site_config|tojson }};
         window.INITIAL_STATE = {{ initial_state|tojson }};
         window.BLOG_ENTRIES = {{ blog_entries_json|tojson }};
     </script>
     <script src="{{ url_for('static', filename='app.js') }}"></script>
+    <script src="{{ url_for('static', filename='mister-popup.js') }}"></script>
 </body>
 </html>

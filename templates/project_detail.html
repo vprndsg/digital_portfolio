@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='portfolio.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='mister-popup.css') }}">
 </head>
 <body class="portfolio-body case-body">
     <div class="portfolio-grain" aria-hidden="true"></div>
@@ -243,6 +244,9 @@
         </div>
     </div>
 
+    {% include "_mister_popup.html" %}
+
     <script src="{{ url_for('static', filename='portfolio.js') }}"></script>
+    <script src="{{ url_for('static', filename='mister-popup.js') }}"></script>
 </body>
 </html>

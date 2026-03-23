@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../static/portfolio.css">
+    <link rel="stylesheet" href="../../static/mister-popup.css">
 </head>
 <body class="portfolio-body case-body">
     <div class="portfolio-grain" aria-hidden="true"></div>
@@ -170,19 +171,19 @@
                     <article class="essay-card" data-reveal>
                         <p class="detail-label">State design</p>
                         <h3>Three launch states</h3>
-                        <p>&lt;built-in method copy of dict object at 0x1027e4240&gt;</p>
+                        <p>&lt;built-in method copy of dict object at 0x112cfdf80&gt;</p>
                     </article>
                     
                     <article class="essay-card" data-reveal>
                         <p class="detail-label">Conversion UX</p>
                         <h3>Single-decision hero</h3>
-                        <p>&lt;built-in method copy of dict object at 0x1027e4280&gt;</p>
+                        <p>&lt;built-in method copy of dict object at 0x112cfdfc0&gt;</p>
                     </article>
                     
                     <article class="essay-card" data-reveal>
                         <p class="detail-label">Content framing</p>
                         <h3>Editorial support below the fold</h3>
-                        <p>&lt;built-in method copy of dict object at 0x1027e42c0&gt;</p>
+                        <p>&lt;built-in method copy of dict object at 0x112cfe000&gt;</p>
                     </article>
                     
                 </div>
@@ -247,6 +248,61 @@
         </div>
     </div>
 
+    <div class="mister-popup" id="misterPopup" hidden>
+    <div class="mister-popup__backdrop" data-mister-popup-close></div>
+    <section
+        class="mister-popup__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="misterPopupTitle"
+        aria-describedby="misterPopupBody"
+    >
+        <button class="mister-popup__close" type="button" data-mister-popup-close aria-label="Close Mister's picks popup">
+            Close
+        </button>
+
+        <div class="mister-popup__sticker" aria-hidden="true">small dog, strong opinions</div>
+
+        <div class="mister-popup__layout">
+            <div class="mister-popup__visual">
+                <p class="mister-popup__eyebrow">Mister's picks</p>
+                <div class="mister-popup__frame">
+                    <img
+                        src="../../static/media/mister-picks.jpg"
+                        alt="Mister peeking between wine bottles like a very tiny sommelier."
+                    >
+                </div>
+                <p class="mister-popup__caption">Tiny sommelier energy. Surprisingly good taste.</p>
+            </div>
+
+            <div class="mister-popup__content">
+                <p class="mister-popup__badge">Portfolio concierge</p>
+                <h2 id="misterPopupTitle">Start with the fun stuff.</h2>
+                <p id="misterPopupBody">
+                    If you only have a minute, Mister recommends the real email campaigns, the chef-led vineyard dinner,
+                    and the live editorial demo first. No corporate fluff. Just the good parts.
+                </p>
+
+                <div class="mister-popup__highlights" aria-label="Highlighted work">
+                    <span>Real campaign work</span>
+                    <span>Event creative</span>
+                    <span>Interactive demo</span>
+                </div>
+
+                <div class="mister-popup__actions">
+                    <a class="mister-popup__cta" href="../../#work" data-mister-popup-dismiss>
+                        Show me the highlights
+                    </a>
+                    <button class="mister-popup__ghost" type="button" data-mister-popup-close>
+                        I'll wander
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
     <script src="../../static/portfolio.js"></script>
+    <script src="../../static/mister-popup.js"></script>
 </body>
 </html>
