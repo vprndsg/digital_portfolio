@@ -889,7 +889,7 @@ button {
 }
 
 .social-post-card.is-selected {
-    --social-card-lift: -24px;
+    --social-card-lift: -8px;
     --social-card-scale: 1.16;
     opacity: 1;
     filter: none;
