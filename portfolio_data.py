@@ -318,6 +318,7 @@ PROJECTS = [
         "title": "Midnight Bottle Drop",
         "subtitle": "A fast splash-page system for a timed release, balancing urgency with enough editorial framing to feel intentional.",
         "summary": "This project turns a simple drop page into something sharper: a clear action path wrapped in mood, proof, and product context.",
+        "homepage_summary": "Used social media to promote special events, new wines, and brand culture.",
         "hero_image": "media/midnight-bottle-drop.svg",
         "hero_alt": "Landing page mockup for a midnight bottle release",
         "scope": [

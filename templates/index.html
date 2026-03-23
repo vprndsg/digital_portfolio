@@ -214,6 +214,9 @@
                             {% elif project.social_examples %}
                             <section class="homepage-social-carousel">
                                 <h3>Social Media</h3>
+                                {% if project.homepage_summary is defined and project.homepage_summary %}
+                                <p class="project-summary">{{ project.homepage_summary }}</p>
+                                {% endif %}
                                 {% if project.tools %}
                                 <aside class="case-ledger homepage-product-ledger">
                                     <article class="ledger-panel">
