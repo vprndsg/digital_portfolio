@@ -7,6 +7,7 @@ import shutil
 from calendar import monthrange
 from datetime import date, datetime
 from pathlib import Path, PurePosixPath
+from urllib.parse import urlencode
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from jinja2.utils import htmlsafe_json_dumps
@@ -135,7 +136,19 @@ def render_template(template_name: str, output_rel: PurePosixPath, **context) ->
     template = env.get_template(template_name)
 
     def local_url_for(endpoint: str, **values) -> str:
-        return relative_href(output_rel, route_target(endpoint, **values))
+        route_values = dict(values)
+        if endpoint == "static":
+            target = route_target(endpoint, filename=route_values.pop("filename"))
+        elif endpoint == "project_detail":
+            target = route_target(endpoint, slug=route_values.pop("slug"))
+        else:
+            target = route_target(endpoint, **route_values)
+            route_values = {}
+
+        href = relative_href(output_rel, target)
+        if route_values:
+            href = f"{href}?{urlencode(route_values, doseq=True)}"
+        return href
 
     output_path = DOCS_DIR / output_rel
     output_path.parent.mkdir(parents=True, exist_ok=True)
