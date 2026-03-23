@@ -260,10 +260,29 @@ function initCarousels() {
 function initSocialCarousels() {
     socialCarousels.forEach((carousel) => {
         const cards = Array.from(carousel.querySelectorAll("[data-social-card]"));
+        const viewport = carousel.querySelector(".social-carousel-viewport");
         let activeCard = null;
 
         if (!cards.length) {
             return;
+        }
+
+        function positionActiveCard(card) {
+            if (!card || !viewport) {
+                return;
+            }
+
+            const slide = card.closest(".social-carousel-slide");
+            if (!slide) {
+                return;
+            }
+
+            const viewportRect = viewport.getBoundingClientRect();
+            const slideRect = slide.getBoundingClientRect();
+            const targetCenter = viewportRect.left + viewportRect.width / 2;
+            const slideCenter = slideRect.left + slideRect.width / 2;
+            const shift = Math.round(targetCenter - slideCenter);
+            slide.style.setProperty("--social-slide-shift", `${shift}px`);
         }
 
         function setActiveCard(nextCard) {
@@ -272,10 +291,16 @@ function initSocialCarousels() {
 
             cards.forEach((card) => {
                 const isActive = card === nextCard;
+                const slide = card.closest(".social-carousel-slide");
                 card.classList.toggle("is-selected", isActive);
-                card.closest(".social-carousel-slide")?.classList.toggle("is-selected", isActive);
+                slide?.classList.toggle("is-selected", isActive);
+                slide?.style.setProperty("--social-slide-shift", "0px");
                 card.setAttribute("aria-pressed", isActive ? "true" : "false");
             });
+
+            if (nextCard) {
+                window.requestAnimationFrame(() => positionActiveCard(nextCard));
+            }
         }
 
         cards.forEach((card) => {
@@ -299,6 +324,14 @@ function initSocialCarousels() {
             }
 
             setActiveCard(null);
+        });
+
+        window.addEventListener("resize", () => {
+            if (!activeCard) {
+                return;
+            }
+
+            positionActiveCard(activeCard);
         });
     });
 }
