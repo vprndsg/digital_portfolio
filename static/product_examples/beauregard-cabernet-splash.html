@@ -201,28 +201,15 @@
             position: absolute;
             right: 20px;
             bottom: 20px;
-            max-width: 240px;
-            padding: 18px 18px 16px;
+            padding: 10px 14px 8px;
             border: 1px solid rgba(255, 251, 245, 0.42);
-            background: rgba(28, 23, 20, 0.72);
+            background: rgba(28, 23, 20, 0.62);
             color: #f6ecde;
             backdrop-filter: blur(10px);
         }
 
-        .hero-media-card strong {
-            display: block;
-            margin-top: 10px;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 22px;
-            font-weight: 500;
-            line-height: 1.14;
-        }
-
-        .hero-media-card p {
-            margin-top: 10px;
-            color: rgba(246, 236, 222, 0.82);
-            font-size: 14px;
-            line-height: 1.55;
+        .hero-media-card .micro-label {
+            color: #f6ecde;
         }
 
         .sticky-action {
@@ -359,36 +346,27 @@
             align-self: center;
             position: relative;
             z-index: 2;
-            margin: 82px 0 0 -96px;
-            padding: 36px;
+            display: grid;
+            gap: 16px;
+            max-width: 360px;
+            margin: 108px 0 0 -116px;
+            padding: 24px 26px;
             border: 1px solid rgba(96, 70, 49, 0.16);
-            background: rgba(255, 249, 241, 0.96);
+            background: rgba(255, 249, 241, 0.84);
             box-shadow: 0 26px 48px rgba(53, 38, 28, 0.14);
-        }
-
-        .story-title {
-            max-width: 16ch;
-            margin-top: 16px;
-        }
-
-        .story-body {
-            margin-top: 24px;
-            color: #3d362f;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 18px;
-            line-height: 1.84;
+            backdrop-filter: blur(10px);
         }
 
         .profile-list {
             display: grid;
-            gap: 14px;
-            margin: 26px 0 0;
+            gap: 12px;
+            margin: 0;
             padding: 0;
             list-style: none;
             color: #3d362f;
             font-family: Georgia, "Times New Roman", serif;
-            font-size: 17px;
-            line-height: 1.8;
+            font-size: 16px;
+            line-height: 1.74;
         }
 
         .profile-list li {
@@ -408,50 +386,10 @@
             transform: translateY(-50%);
         }
 
-        .allocation-panel {
-            display: grid;
-            grid-template-columns: minmax(0, 1.18fr) minmax(280px, 0.82fr);
-            gap: 28px;
-            align-items: center;
-            padding: 30px 0 0;
-            border-top: 1px solid rgba(96, 70, 49, 0.18);
-        }
-
-        .allocation-copy {
-            max-width: 42rem;
-            margin-top: 18px;
-            color: var(--soft);
-            font-size: 18px;
-            line-height: 1.74;
-        }
-
-        .allocation-actions {
-            display: grid;
-            gap: 12px;
-            justify-items: start;
-        }
-
-        .footer-notes {
-            display: grid;
-            grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
-            gap: 28px;
-            margin-top: 56px;
-            padding-top: 28px;
-            border-top: 1px solid rgba(96, 70, 49, 0.2);
-        }
-
-        .footer-notes p {
-            color: var(--soft);
-            font-size: 16px;
-            line-height: 1.82;
-        }
-
         @media (max-width: 1080px) {
             .hero,
             .specs-grid,
-            .story-shell,
-            .allocation-panel,
-            .footer-notes {
+            .story-shell {
                 grid-template-columns: 1fr;
             }
 
@@ -495,8 +433,7 @@
             }
 
             .history,
-            .story-body,
-            .allocation-copy {
+            .profile-list {
                 font-size: 17px;
             }
 
@@ -515,7 +452,6 @@
                 font-size: 20px;
             }
 
-            .allocation-actions,
             .hero-actions {
                 justify-items: stretch;
             }
@@ -628,10 +564,7 @@
                         </figure>
                     </div>
                     <div class="story-panel">
-                        <p class="label">Winemaker notes</p>
-                        <h2 class="story-title">Mountain structure, framed like a magazine story</h2>
-                        <div class="divider" aria-hidden="true"></div>
-                        <p class="story-body">The Beauregard Ranch sits at an elevation where the vines are forced to struggle through ancient marine soils, cooled by Pacific air just miles away. The 2021 vintage delivered a Cabernet with a clear structural point of view: firm tannins, bright acidity, and a more tensile expression than the usual broad, plush valley style.</p>
+                        <p class="label">Tasting Notes</p>
                         <ul class="profile-list">
                             <li><strong>In the Glass:</strong> Dark, impenetrable garnet.</li>
                             <li><strong>The Nose:</strong> Crushed graphite, damp redwood needles, wild mountain mint, cassis, and dark cherry.</li>
@@ -639,23 +572,6 @@
                         </ul>
                     </div>
                 </div>
-            </section>
-
-            <section class="section allocation-panel">
-                <div>
-                    <p class="label">DTC Focus</p>
-                    <h2 style="margin-top: 16px;">From score sheet to cellar intent.</h2>
-                    <p class="allocation-copy">For the drinker who wants mountain Cabernet with precision rather than bulk, the route is clear: read the site, trust the critics, and move straight into an allocation request without leaving the estate story behind.</p>
-                </div>
-                <div class="allocation-actions">
-                    <button class="cta-button" type="button">Acquire Allocation</button>
-                    <button class="cta-button cta-button--ghost" type="button">Request Tech Sheet</button>
-                </div>
-            </section>
-
-            <section class="footer-notes">
-                <p>Grown, Produced &amp; Bottled by Beauregard Vineyards, Santa Cruz, CA</p>
-                <p>Built to balance estate heritage, terroir detail, and a direct allocation path without losing the quiet restraint of a Santa Cruz Mountains release page.</p>
             </section>
         </section>
     </main>
