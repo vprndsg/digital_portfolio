@@ -383,7 +383,6 @@
 
         @media (max-width: 1080px) {
             .hero,
-            .specs-grid,
             .story-shell {
                 grid-template-columns: 1fr;
             }
@@ -406,6 +405,12 @@
             .sticky-action {
                 flex-direction: column;
                 align-items: stretch;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .specs-grid {
+                grid-template-columns: 1fr;
             }
         }
 
