@@ -522,7 +522,7 @@ PROJECTS = [
         ],
         "product_examples": [
             {
-                "eyebrow": "HTML template 01",
+                "eyebrow": "Example Page",
                 "title": "2021 Cabernet Sauvignon Beauregard Ranch",
                 "summary": "A Cabernet splash-page mockup built around estate history, mountain-vineyard specs, critic scores, and a more restrained luxury layout.",
                 "file": "product_examples/beauregard-cabernet-splash.html",
