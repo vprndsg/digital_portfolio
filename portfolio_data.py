@@ -113,7 +113,7 @@ PROJECTS = [
         "category": "Email Campaigns",
         "eyebrow": "Real Sends / Beauregard Vineyards",
         "title": "Beauregard Vineyards Email Campaigns",
-        "subtitle": "I lead email marketing in Mailchimp and manage front-end e-commerce in Commerce7, building campaigns, segmenting audiences, launching promotions, and bundling products to drive sales.",
+        "subtitle": "I lead email marketing in Mailchimp and manage front-end e-commerce in Commerce7 by building campaigns, segmenting audiences, launching promotions, and bundling products to drive sales.",
         "summary": "This case study swaps placeholder mockups for real campaign work: two conversion emails and one event invitation with the original copy, imagery, and offer framing preserved.",
         "hero_image": "media/harvest-email-system.svg",
         "hero_alt": "Email campaign case-study mockup showing layered desktop and mobile modules",
