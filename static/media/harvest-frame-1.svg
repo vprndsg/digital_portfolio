@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 960" role="img" aria-labelledby="title desc">
+  <title id="title">Bottle glow in the parking lot</title>
+  <desc id="desc">An illustrated bottle and pizza box under sodium vapor light beside a parked car.</desc>
+  <rect width="1600" height="960" fill="#2a2344"/>
+  <rect y="620" width="1600" height="340" fill="#3c335e"/>
+  <circle cx="1270" cy="212" r="140" fill="rgba(255,192,116,.26)"/>
+  <circle cx="1270" cy="212" r="86" fill="rgba(255,220,170,.18)"/>
+  <rect x="122" y="360" width="380" height="280" rx="30" fill="#4c5568"/>
+  <rect x="160" y="396" width="302" height="206" rx="18" fill="#223147"/>
+  <path d="M624 660 h370 l86 150 h-540 z" fill="#b38d58"/>
+  <path d="M660 636 h318 l72 48 h-462 z" fill="#d5b57f"/>
+  <rect x="932" y="442" width="92" height="260" rx="20" fill="#301018"/>
+  <rect x="956" y="382" width="44" height="70" rx="10" fill="#7a312d"/>
+  <rect x="964" y="350" width="28" height="36" rx="6" fill="#c5a18a"/>
+  <path d="M1116 530 c0 -62 30 -92 74 -92 c48 0 76 34 76 90 c0 52 -22 94 -72 94 c-54 0 -78 -38 -78 -92z" fill="#631f2a" opacity=".86"/>
+  <path d="M1150 430 h98 l-20 204 c-4 30 -24 48 -58 48 c-36 0 -54 -18 -58 -48z" fill="rgba(255,255,255,.18)" stroke="#f3e3d6" stroke-width="9"/>
+  <rect x="1116" y="682" width="30" height="108" rx="14" fill="#e7ddcd"/>
+  <rect x="1188" y="682" width="30" height="108" rx="14" fill="#e7ddcd"/>
+</svg>

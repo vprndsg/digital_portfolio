@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Aroma chasing icon</title>
+  <desc id="desc">A wine glass with floral aroma swirls.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#5a3369"/>
+      <stop offset="100%" stop-color="#171520"/>
+    </linearGradient>
+    <linearGradient id="wine" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ff8cc9"/>
+      <stop offset="100%" stop-color="#8c2d62"/>
+    </linearGradient>
+  </defs>
+  <circle cx="80" cy="80" r="74" fill="url(#bg)"/>
+  <path d="M54 52 h52 l-10 46 c-2 10 -10 16 -22 16 s-20 -6 -22 -16z" fill="rgba(255,255,255,.08)" stroke="#f4edf5" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M54 74 h52 c0 12 -12 18 -26 18 s-26 -6 -26 -18z" fill="url(#wine)" opacity=".92"/>
+  <path d="M78 114 v18" stroke="#f4edf5" stroke-width="5" stroke-linecap="round"/>
+  <path d="M62 134 h34" stroke="#f4edf5" stroke-width="5" stroke-linecap="round"/>
+  <path d="M92 46 c10 -12 20 -12 28 0 c-10 4 -18 12 -20 22" fill="none" stroke="#ffd7f7" stroke-width="5" stroke-linecap="round"/>
+  <path d="M102 58 c14 -12 24 -10 28 4" fill="none" stroke="#ffbded" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="118" cy="42" r="8" fill="#ff9fe2"/>
+  <circle cx="126" cy="48" r="8" fill="#ffd3f5"/>
+  <circle cx="118" cy="54" r="8" fill="#ffc0ec"/>
+  <circle cx="110" cy="48" r="8" fill="#ffd8f8"/>
+  <circle cx="118" cy="48" r="5" fill="#ffe69f"/>
+</svg>

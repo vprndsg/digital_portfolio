@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Moon phase icon</title>
+  <desc id="desc">A moon and stars inside a round celestial badge.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#2d2f63"/>
+      <stop offset="100%" stop-color="#0d1120"/>
+    </linearGradient>
+    <linearGradient id="moon" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f7f7ff"/>
+      <stop offset="100%" stop-color="#c7cdea"/>
+    </linearGradient>
+  </defs>
+  <circle cx="80" cy="80" r="74" fill="url(#bg)"/>
+  <circle cx="104" cy="48" r="3" fill="#fff3d1"/>
+  <circle cx="44" cy="62" r="2.5" fill="#fff3d1" opacity=".75"/>
+  <circle cx="58" cy="40" r="2" fill="#ffd98f" opacity=".72"/>
+  <circle cx="112" cy="92" r="2.5" fill="#ffd98f" opacity=".72"/>
+  <circle cx="82" cy="82" r="34" fill="url(#moon)"/>
+  <circle cx="68" cy="72" r="4" fill="#acb6dd" opacity=".38"/>
+  <circle cx="92" cy="92" r="5" fill="#acb6dd" opacity=".34"/>
+  <path d="M22 116 C44 102 66 98 86 108 C108 118 128 120 138 114" fill="none" stroke="#7a85c4" stroke-width="6" stroke-linecap="round" opacity=".6"/>
+  <path d="M34 126 C60 116 88 118 120 130" fill="none" stroke="#403965" stroke-width="8" stroke-linecap="round" opacity=".64"/>
+</svg>

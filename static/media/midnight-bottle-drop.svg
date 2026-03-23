@@ -1,0 +1,33 @@
+<svg width="1600" height="1100" viewBox="0 0 1600 1100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="bg" x1="190" y1="114" x2="1420" y2="988" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0F141A"/>
+<stop offset="1" stop-color="#06080C"/>
+</linearGradient>
+<linearGradient id="browser" x1="0" y1="0" x2="0" y2="1">
+<stop stop-color="#1A242C"/>
+<stop offset="1" stop-color="#0D1116"/>
+</linearGradient>
+</defs>
+<rect width="1600" height="1100" rx="44" fill="url(#bg)"/>
+<circle cx="1286" cy="224" r="230" fill="#2FD4CB" fill-opacity=".14"/>
+<circle cx="306" cy="860" r="240" fill="#4F67D3" fill-opacity=".14"/>
+<text x="148" y="140" fill="#BFE8E5" font-size="30" font-family="Arial, sans-serif" letter-spacing="5">SPLASH PAGE SYSTEM</text>
+<text x="146" y="224" fill="#F5F3EC" font-size="84" font-family="Arial, sans-serif" font-weight="700">Midnight Bottle</text>
+<text x="146" y="298" fill="#F5F3EC" font-size="84" font-family="Arial, sans-serif" font-weight="700">Drop</text>
+<rect x="168" y="378" width="1264" height="548" rx="34" fill="url(#browser)" stroke="#E2F4F2" stroke-opacity=".16" stroke-width="2"/>
+<rect x="200" y="410" width="1200" height="42" rx="21" fill="#0A0D12"/>
+<circle cx="238" cy="431" r="8" fill="#5FB0A9"/>
+<circle cx="266" cy="431" r="8" fill="#5F7DD5"/>
+<circle cx="294" cy="431" r="8" fill="#D4B663"/>
+<rect x="226" y="492" width="1148" height="392" rx="26" fill="#10161D"/>
+<text x="270" y="584" fill="#D2FBF8" font-size="26" font-family="Arial, sans-serif" letter-spacing="4">COUNTDOWN / WAITLIST / LIVE DROP</text>
+<text x="270" y="678" fill="#F5F3EC" font-size="74" font-family="Arial, sans-serif" font-weight="700">The midnight release</text>
+<text x="270" y="748" fill="#F5F3EC" font-size="74" font-family="Arial, sans-serif" font-weight="700">should still feel branded.</text>
+<rect x="270" y="790" width="220" height="46" rx="23" fill="#2CD1C2"/>
+<rect x="1042" y="566" width="246" height="186" rx="24" fill="#18222A"/>
+<rect x="1074" y="604" width="142" height="14" rx="7" fill="#F5F3EC"/>
+<rect x="1074" y="634" width="168" height="12" rx="6" fill="#9CC8CC"/>
+<rect x="1074" y="670" width="124" height="30" rx="15" fill="#2CD1C2"/>
+<rect x="270" y="866" width="364" height="14" rx="7" fill="#6F7B88"/>
+</svg>

@@ -1,0 +1,12 @@
+.DS_Store
+.venv/
+__pycache__/
+tests/__pycache__/
+tmp/
+output/
+data/moon_table.db
+Asada Vineyard Dinner/
+Cabernet Splash Page/
+section 4 - social media/
+static/media/hero_image.png
+docs/static/media/hero_image.png

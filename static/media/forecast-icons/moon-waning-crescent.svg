@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Waning crescent icon</title>
+  <desc id="desc">A glowing waning crescent moon over a twilight sky.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#34245f"/>
+      <stop offset="100%" stop-color="#0d1022"/>
+    </linearGradient>
+    <linearGradient id="moon" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fff6cf"/>
+      <stop offset="100%" stop-color="#f0ba71"/>
+    </linearGradient>
+  </defs>
+  <circle cx="80" cy="80" r="74" fill="url(#bg)"/>
+  <circle cx="60" cy="52" r="3" fill="#fff5d8" opacity=".95"/>
+  <circle cx="102" cy="38" r="2.5" fill="#ffd98f" opacity=".7"/>
+  <circle cx="116" cy="62" r="2" fill="#fff5d8" opacity=".76"/>
+  <circle cx="46" cy="96" r="2.5" fill="#ffd98f" opacity=".65"/>
+  <circle cx="103" cy="88" r="34" fill="url(#moon)"/>
+  <circle cx="116" cy="82" r="34" fill="#171830"/>
+  <path d="M22 116 C44 102 66 100 82 112 C98 124 118 128 138 120" fill="none" stroke="#8d7bd7" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+  <path d="M34 126 C54 118 82 118 104 128" fill="none" stroke="#44386d" stroke-width="8" stroke-linecap="round" opacity=".6"/>
+</svg>

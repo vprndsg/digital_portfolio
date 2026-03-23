@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ owner.name }} / {{ owner.title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='portfolio.css') }}">
+</head>
+<body class="portfolio-body">
+    <div class="portfolio-grain" aria-hidden="true"></div>
+    <div class="portfolio-vignette" aria-hidden="true"></div>
+
+    <div class="portfolio-shell">
+        <header class="portfolio-header" data-reveal>
+            <div class="masthead">
+                <a class="brand-mark" href="{{ url_for('portfolio_home') }}">{{ owner.name }}</a>
+                <p class="brand-role">{{ owner.title }}</p>
+            </div>
+            <section class="portfolio-header-forecast" aria-label="Mini three-day biodynamic forecast">
+                <p class="detail-label">3 day biodynamic forecast</p>
+                <div class="forecast-mini-grid">
+                    {% for item in header_forecast %}
+                    <article class="forecast-mini-card forecast-mini-card-{{ item.day_type.split()[0]|lower }}">
+                        <p class="forecast-mini-date">{{ item.weekday }} {{ item.display_date }}</p>
+                        <h2>{{ item.day_type }}</h2>
+                        <p class="forecast-mini-kicker">Drinking well</p>
+                        <p class="forecast-mini-signal">{{ item.drinking_well }}</p>
+                        <p class="forecast-mini-meta">{{ item.moon_phase }} | {{ item.motion }}</p>
+                    </article>
+                    {% endfor %}
+                </div>
+            </section>
+        </header>
+
+        <main class="portfolio-main">
+            <section class="hero-band" data-reveal>
+                <button
+                    class="hero-band-frame"
+                    type="button"
+                    data-portfolio-media
+                    data-media-group="home-hero"
+                    data-media-index="0"
+                    data-media-src="{{ url_for('static', filename='media/hero_image.jpg') }}"
+                    data-media-title="Portfolio hero image"
+                    data-media-caption="Homepage hero image for the digital marketing portfolio."
+                >
+                    <img src="{{ url_for('static', filename='media/hero_image.jpg') }}" alt="Homepage hero image for the digital marketing portfolio">
+                </button>
+                <p class="hero-band-caption">Pictured above: my wedding wine, with the label and wine designed by Michael Phillips.</p>
+            </section>
+
+
+            <section id="work" class="work-section">
+                <div class="section-heading" data-reveal>
+                    <h2>Selected Work</h2>
+                </div>
+
+                <div class="project-list">
+                    {% for project in projects %}
+                    <article class="project-row" data-reveal{% if loop.index == 2 %} id="more-work"{% endif %}>
+                        <div class="project-index">{{ "%02d"|format(loop.index) }}</div>
+
+                        <div class="project-copy">
+                            {% if project.email_examples and project.slug == "harvest-weekend-email-system" %}
+                            <section class="case-intro homepage-case-intro">
+                                <div class="case-intro-copy">
+                                    <h2 class="homepage-case-title">{{ project.title }}</h2>
+                                    <p class="case-subtitle">{{ project.subtitle }}</p>
+                                </div>
+
+                                <aside class="case-ledger">
+                                    <article class="ledger-panel">
+                                        <p class="detail-label">Tools/skills</p>
+                                        <ul class="inline-list">
+                                            {% for tool in project.tools %}
+                                            <li>{{ tool }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    </article>
+                                </aside>
+                            </section>
+
+                            <section class="homepage-email-strip" aria-label="{{ project.title }} email examples">
+                                <div class="email-example-grid">
+                                    {% for item in project.email_examples %}
+                                    <article class="email-example-card">
+                                        <div class="email-example-copy">
+                                            <p class="detail-label">{{ item.eyebrow }}</p>
+                                            <h3>{{ item.title }}</h3>
+                                            <p>{{ item.summary }}</p>
+                                        </div>
+                                        <div class="email-preview-shell">
+                                            <iframe
+                                                class="email-preview"
+                                                src="{{ url_for('static', filename=item.file) }}"
+                                                title="{{ item.title }}"
+                                                loading="lazy"
+                                            ></iframe>
+                                        </div>
+                                    </article>
+                                    {% endfor %}
+                                </div>
+                            </section>
+                            {% elif project.slug == "asado-vineyard-dinner" %}
+                            <section class="homepage-event-feature">
+                                <div class="homepage-event-copy homepage-event-header">
+                                    <h3>{{ project.title }}</h3>
+                                </div>
+
+                                {% if project.tools %}
+                                <aside class="case-ledger homepage-event-ledger">
+                                    <article class="ledger-panel">
+                                        <p class="detail-label">Tools/skills</p>
+                                        <ul class="inline-list">
+                                            {% for tool in project.tools %}
+                                            <li>{{ tool }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    </article>
+                                </aside>
+                                {% endif %}
+
+                                <button
+                                    class="photo-frame photo-frame-large homepage-event-hero"
+                                    type="button"
+                                    data-portfolio-media
+                                    data-media-group="{{ project.slug }}"
+                                    data-media-index="0"
+                                    data-media-src="{{ url_for('static', filename=project.hero_image) }}"
+                                    data-media-title="{{ project.title }}"
+                                    data-media-caption="{{ project.subtitle }}"
+                                >
+                                    <img src="{{ url_for('static', filename=project.hero_image) }}" alt="{{ project.hero_alt }}">
+                                </button>
+
+                                <div class="homepage-event-copy homepage-event-body">
+                                    <p class="project-summary">{{ project.summary }}</p>
+                                </div>
+                            </section>
+
+                            {% if project.email_examples %}
+                            <section class="homepage-email-strip homepage-event-email-strip" aria-label="{{ project.title }} email example">
+                                <div class="email-example-grid">
+                                    {% set item = project.email_examples[0] %}
+                                    <article class="email-example-card">
+                                        <div class="email-example-copy">
+                                            <p class="detail-label">{{ item.eyebrow }}</p>
+                                            <h3>{{ item.title }}</h3>
+                                            <p>{{ item.summary }}</p>
+                                        </div>
+                                        <div class="email-preview-shell">
+                                            <iframe
+                                                class="email-preview"
+                                                src="{{ url_for('static', filename=item.file) }}"
+                                                title="{{ item.title }}"
+                                                loading="lazy"
+                                            ></iframe>
+                                        </div>
+                                    </article>
+                                </div>
+                            </section>
+                            {% endif %}
+
+                            <section class="homepage-event-steps">
+                                {% for item in project.approach %}
+                                <article class="essay-card">
+                                    <h3>{{ item.title }}</h3>
+                                    <p>{{ item.body }}</p>
+                                </article>
+                                {% endfor %}
+                            </section>
+
+                            <section class="homepage-event-support">
+                                <div class="homepage-event-gallery">
+                                    {% for item in project.gallery[1:] %}
+                                    <article class="gallery-entry">
+                                        <button
+                                            class="photo-frame"
+                                            type="button"
+                                            data-portfolio-media
+                                            data-media-group="{{ project.slug }}"
+                                            data-media-index="{{ loop.index }}"
+                                            data-media-src="{{ url_for('static', filename=item.image) }}"
+                                            data-media-title="{{ item.title }}"
+                                            data-media-caption="{{ item.caption }}"
+                                        >
+                                            <img src="{{ url_for('static', filename=item.image) }}" alt="{{ item.title }}">
+                                        </button>
+                                    </article>
+                                    {% endfor %}
+                                </div>
+
+                                {% if project.menu_file %}
+                                <div class="homepage-event-menu">
+                                    <button
+                                        class="photo-frame homepage-event-menu-frame"
+                                        type="button"
+                                        data-portfolio-media
+                                        data-media-group="{{ project.slug }}"
+                                        data-media-index="{{ project.gallery|length }}"
+                                        data-media-src="{{ url_for('static', filename=project.menu_file|replace('.pdf', '.png')) }}"
+                                        data-media-title="Asado dinner menu"
+                                        data-media-caption="Printed menu for the Asado Vineyard Dinner."
+                                    >
+                                        <img src="{{ url_for('static', filename=project.menu_file|replace('.pdf', '.png')) }}" alt="Asado Vineyard Dinner menu">
+                                    </button>
+                                </div>
+                                {% endif %}
+                            </section>
+                            {% elif project.social_examples %}
+                            <section class="homepage-social-carousel">
+                                <h3>Social Media</h3>
+                                <div class="social-carousel">
+                                    <div class="social-carousel-viewport">
+                                        <div class="social-carousel-track">
+                                            {% for repetition in range(2) %}
+                                                {% for item in project.social_examples %}
+                                                <article class="social-carousel-slide{% if repetition %} is-clone{% endif %}"{% if repetition %} aria-hidden="true"{% endif %}>
+                                                    <div class="social-post-card">
+                                                        <img src="{{ url_for('static', filename=item.image) }}" alt="{{ item.title }}" loading="lazy">
+                                                    </div>
+                                                </article>
+                                                {% endfor %}
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            {% elif project.product_examples %}
+                            <section class="homepage-product-carousel" data-project-title="{{ project.title }}">
+                                <div class="homepage-product-copy">
+                                    <h3>{{ project.homepage_title or project.title }}</h3>
+                                    <p class="project-subtitle">{{ project.homepage_subtitle or project.subtitle }}</p>
+                                    <p class="project-summary">{{ project.homepage_summary or project.summary }}</p>
+                                </div>
+
+                                {% if project.tools %}
+                                <aside class="case-ledger homepage-product-ledger">
+                                    <article class="ledger-panel">
+                                        <p class="detail-label">Tools/skills</p>
+                                        <ul class="inline-list">
+                                            {% for tool in project.tools %}
+                                            <li>{{ tool }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    </article>
+                                </aside>
+                                {% endif %}
+
+                                <div class="product-carousel" data-carousel>
+                                    <div class="product-carousel-header">
+                                        <p class="detail-label">3 HTML product pages</p>
+                                        <div class="product-carousel-controls">
+                                            <button class="carousel-button" type="button" data-carousel-prev aria-label="Previous product page">Prev</button>
+                                            <button class="carousel-button" type="button" data-carousel-next aria-label="Next product page">Next</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-carousel-viewport">
+                                        <div class="product-carousel-track" data-carousel-track>
+                                            {% for item in project.product_examples %}
+                                            <article class="product-carousel-slide" data-carousel-slide>
+                                                <div class="product-carousel-frame">
+                                                    <iframe
+                                                        class="product-page-preview"
+                                                        src="{{ url_for('static', filename=item.file) }}"
+                                                        title="{{ item.title }}"
+                                                        loading="lazy"
+                                                    ></iframe>
+                                                </div>
+                                                <div class="product-carousel-meta">
+                                                    <p class="detail-label">{{ item.eyebrow }}</p>
+                                                    <h4>{{ item.title }}</h4>
+                                                    <p>{{ item.summary }}</p>
+                                                </div>
+                                            </article>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+
+                                    <div class="product-carousel-dots" role="tablist" aria-label="Product page slides">
+                                        {% for item in project.product_examples %}
+                                        <button
+                                            class="product-carousel-dot{% if loop.first %} is-active{% endif %}"
+                                            type="button"
+                                            data-carousel-dot
+                                            data-carousel-index="{{ loop.index0 }}"
+                                            aria-label="Show {{ item.title }}"
+                                            aria-selected="{{ 'true' if loop.first else 'false' }}"
+                                        ></button>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </section>
+                            {% else %}
+                            <p class="card-meta">{{ project.category }} / {{ project.eyebrow }}</p>
+                            <h3>{{ project.title }}</h3>
+                            <p class="project-subtitle">{{ project.subtitle }}</p>
+                            <p class="project-summary">{{ project.summary }}</p>
+
+                            <ul class="project-points">
+                                {% for point in project.card_points %}
+                                <li>{{ point }}</li>
+                                {% endfor %}
+                            </ul>
+
+                            <div class="project-facts">
+                                {% for item in project.scope[:3] %}
+                                <span>{{ item.value }} {{ item.label }}</span>
+                                {% endfor %}
+                            </div>
+
+                            <div class="project-links">
+                                <a class="text-link text-link-strong" href="{{ url_for('project_detail', slug=project.slug) }}">Read case study</a>
+                                {% if project.live_route %}
+                                <a class="text-link" href="{{ url_for(project.live_route) }}">View live build</a>
+                                {% endif %}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </article>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <section id="capabilities" class="editorial-section">
+                <div class="section-heading" data-reveal>
+                    <p class="eyebrow">Capabilities</p>
+                    <h2>The work sits at the intersection of launch strategy, editorial packaging, and practical conversion design.</h2>
+                </div>
+                <div class="two-column-ledger">
+                    {% for capability in capabilities %}
+                    <article class="ledger-entry" data-reveal>
+                        <h3>{{ capability.title }}</h3>
+                        <p>{{ capability.body }}</p>
+                    </article>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <section id="process" class="editorial-section">
+                <div class="section-heading" data-reveal>
+                    <p class="eyebrow">Approach</p>
+                    <h2>The work is meant to feel tactile and specific, but it still has to function as a system.</h2>
+                </div>
+                <div class="essay-grid">
+                    {% for item in process_pillars %}
+                    <article class="essay-card" data-reveal>
+                        <p class="detail-label">{{ loop.index }} / Principle</p>
+                        <h3>{{ item.title }}</h3>
+                        <p>{{ item.body }}</p>
+                    </article>
+                    {% endfor %}
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="portfolio-lightbox" id="portfolioLightbox" hidden>
+        <div class="portfolio-lightbox-backdrop" data-lightbox-close></div>
+        <div class="portfolio-lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="portfolioLightboxTitle">
+            <button class="portfolio-lightbox-close" type="button" data-lightbox-close aria-label="Close media viewer">Close</button>
+            <div class="portfolio-lightbox-frame">
+                <button class="portfolio-lightbox-nav" id="portfolioLightboxPrev" type="button" aria-label="Previous image">Prev</button>
+                <figure class="portfolio-lightbox-figure">
+                    <img id="portfolioLightboxImage" src="" alt="">
+                    <figcaption>
+                        <strong id="portfolioLightboxTitle"></strong>
+                        <p id="portfolioLightboxCaption"></p>
+                    </figcaption>
+                </figure>
+                <button class="portfolio-lightbox-nav" id="portfolioLightboxNext" type="button" aria-label="Next image">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='portfolio.js') }}"></script>
+</body>
+</html>

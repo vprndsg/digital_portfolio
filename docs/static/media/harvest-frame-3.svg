@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 960" role="img" aria-labelledby="title desc">
+  <title id="title">Last slice under refrigerator light</title>
+  <desc id="desc">An illustrated refrigerator-lit kitchen scene with a single slice on a plate and an open fridge.</desc>
+  <rect width="1600" height="960" fill="#1e1d29"/>
+  <rect x="940" y="80" width="420" height="760" rx="28" fill="#d5d9de"/>
+  <rect x="982" y="122" width="336" height="676" rx="16" fill="#edf0f4"/>
+  <rect x="1004" y="146" width="292" height="144" fill="#dcecf2"/>
+  <rect x="1004" y="316" width="292" height="188" fill="#eff4f7"/>
+  <rect x="1004" y="532" width="292" height="238" fill="#f5f7f8"/>
+  <rect x="0" y="746" width="1600" height="214" fill="#5d544d"/>
+  <ellipse cx="556" cy="746" rx="220" ry="54" fill="#d7d4d0"/>
+  <ellipse cx="556" cy="746" rx="184" ry="38" fill="#f3f1ef"/>
+  <path d="M468 666 h192 l78 70 l-312 0 z" fill="#deaf5d"/>
+  <path d="M506 666 h146 l58 56 h-266 z" fill="#f5cf7c"/>
+  <path d="M468 666 h192 l-16 16 h-160 z" fill="#ab6938"/>
+  <circle cx="536" cy="706" r="16" fill="#af2d25"/>
+  <circle cx="584" cy="706" r="16" fill="#af2d25"/>
+  <circle cx="626" cy="696" r="16" fill="#af2d25"/>
+  <path d="M380 770 h344 v34 h-344 z" fill="#bcb8b3"/>
+  <rect x="286" y="560" width="144" height="212" rx="18" fill="#3a3749"/>
+  <circle cx="340" cy="626" r="18" fill="#d0b57d"/>
+  <rect x="1040" y="206" width="220" height="18" rx="9" fill="#c1d3db"/>
+  <rect x="1040" y="396" width="180" height="18" rx="9" fill="#d5dfe5"/>
+</svg>

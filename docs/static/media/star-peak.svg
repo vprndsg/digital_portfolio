@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 960" role="img" aria-labelledby="title desc">
+  <title id="title">Hiker above the fog line</title>
+  <desc id="desc">An illustrated hiker on rocky terrain overlooking mountains at sunrise.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f8cb8a"/>
+      <stop offset="38%" stop-color="#f2a46c"/>
+      <stop offset="78%" stop-color="#6d6b96"/>
+      <stop offset="100%" stop-color="#24253e"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fff1c8"/>
+      <stop offset="100%" stop-color="#ffbc70"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="960" fill="url(#sky)"/>
+  <circle cx="1180" cy="240" r="118" fill="url(#sun)" opacity=".84"/>
+  <path d="M0 620 L220 360 L410 618 L632 324 L860 640 L1088 276 L1288 594 L1450 420 L1600 640 L1600 960 L0 960 Z" fill="#5b5a7d"/>
+  <path d="M0 670 L240 450 L420 688 L630 420 L854 706 L1064 420 L1300 672 L1458 520 L1600 700 L1600 960 L0 960 Z" fill="#2e304d"/>
+  <path d="M0 760 C210 690 380 714 580 674 C800 630 1040 740 1280 698 C1420 676 1510 698 1600 680 L1600 960 L0 960 Z" fill="#1a1b2d"/>
+  <path d="M108 810 L408 714 L624 734 L866 674 L1048 730 L1240 694 L1482 772 L1600 818 L1600 960 L0 960 Z" fill="#272635"/>
+  <path d="M704 608 c20 -92 76 -148 132 -148 c72 0 100 90 64 172 l-44 118 h-96 z" fill="#1e1a1f"/>
+  <path d="M756 474 c26 -14 54 -16 80 -8 c20 6 42 18 54 32 l-26 58 c-24 -18 -60 -24 -108 -16 z" fill="#8e5a34"/>
+  <path d="M736 604 l20 -122 h64 l42 120 z" fill="#b7723e"/>
+  <path d="M844 502 l72 64 l-26 34 l-78 -58 z" fill="#8b512c"/>
+  <path d="M920 562 l52 72 l-20 16 l-56 -68 z" fill="#1a1a24"/>
+  <path d="M728 602 l-54 120 h36 l48 -104 z" fill="#1a1a24"/>
+  <path d="M846 598 l40 124 h38 l-46 -120 z" fill="#1a1a24"/>
+  <path d="M1016 686 l128 -124 l34 26 l-136 132 z" fill="#54493a" opacity=".8"/>
+  <path d="M1026 698 l126 -126 l12 12 l-122 128 z" fill="#d8b78b" opacity=".42"/>
+</svg>

@@ -1,0 +1,45 @@
+<svg width="1600" height="1100" viewBox="0 0 1600 1100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="bg" x1="194" y1="118" x2="1398" y2="982" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1B1412"/>
+<stop offset="1" stop-color="#0B0909"/>
+</linearGradient>
+<linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+<stop stop-color="#2B211E"/>
+<stop offset="1" stop-color="#141110"/>
+</linearGradient>
+</defs>
+<rect width="1600" height="1100" rx="44" fill="url(#bg)"/>
+<circle cx="1206" cy="240" r="210" fill="#E28A38" fill-opacity=".18"/>
+<circle cx="352" cy="874" r="246" fill="#8B4B31" fill-opacity=".16"/>
+<text x="150" y="142" fill="#EBCBA3" font-size="30" font-family="Arial, sans-serif" letter-spacing="5">EMAIL CAMPAIGN SYSTEM</text>
+<text x="148" y="228" fill="#FBF3E8" font-size="84" font-family="Arial, sans-serif" font-weight="700">Harvest Weekend</text>
+<text x="148" y="302" fill="#FBF3E8" font-size="84" font-family="Arial, sans-serif" font-weight="700">Email Sequence</text>
+<rect x="150" y="372" width="910" height="560" rx="34" fill="url(#card)" stroke="#F7E4C7" stroke-opacity=".18" stroke-width="2"/>
+<rect x="188" y="410" width="834" height="46" rx="23" fill="#181314"/>
+<circle cx="224" cy="433" r="8" fill="#B77757"/>
+<circle cx="252" cy="433" r="8" fill="#D2A455"/>
+<circle cx="280" cy="433" r="8" fill="#82A88B"/>
+<rect x="216" y="494" width="776" height="150" rx="22" fill="#332522"/>
+<rect x="252" y="528" width="286" height="18" rx="9" fill="#F7E4C7"/>
+<rect x="252" y="560" width="348" height="14" rx="7" fill="#D29B57"/>
+<rect x="252" y="590" width="266" height="14" rx="7" fill="#7E7267"/>
+<rect x="690" y="518" width="258" height="82" rx="18" fill="#E0A74F"/>
+<rect x="216" y="684" width="362" height="212" rx="22" fill="#201818"/>
+<rect x="614" y="684" width="378" height="212" rx="22" fill="#201818"/>
+<rect x="248" y="724" width="158" height="14" rx="7" fill="#F7E4C7"/>
+<rect x="248" y="754" width="262" height="14" rx="7" fill="#8D7A70"/>
+<rect x="248" y="784" width="194" height="38" rx="19" fill="#AD6A4A"/>
+<rect x="646" y="724" width="178" height="14" rx="7" fill="#F7E4C7"/>
+<rect x="646" y="754" width="288" height="14" rx="7" fill="#8D7A70"/>
+<rect x="646" y="784" width="208" height="38" rx="19" fill="#D29B57"/>
+<rect x="1116" y="284" width="316" height="640" rx="40" fill="url(#card)" stroke="#F7E4C7" stroke-opacity=".18" stroke-width="2"/>
+<rect x="1160" y="342" width="228" height="42" rx="21" fill="#181314"/>
+<rect x="1160" y="418" width="228" height="160" rx="24" fill="#3B2A25"/>
+<rect x="1190" y="452" width="140" height="14" rx="7" fill="#F7E4C7"/>
+<rect x="1190" y="480" width="152" height="12" rx="6" fill="#D8A45B"/>
+<rect x="1160" y="616" width="228" height="172" rx="24" fill="#241A18"/>
+<rect x="1190" y="652" width="132" height="14" rx="7" fill="#F7E4C7"/>
+<rect x="1190" y="680" width="160" height="12" rx="6" fill="#8B776E"/>
+<rect x="1190" y="716" width="148" height="30" rx="15" fill="#AD6A4A"/>
+</svg>

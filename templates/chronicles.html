@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ project.title }} / Live Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="starfield" aria-hidden="true"></div>
+    <main class="chronicle-page">
+        <header class="site-hero reveal tilt-card" data-tilt>
+            <div class="site-title-wrap">
+                <p class="site-kicker">{{ project.eyebrow }}</p>
+                <h1 class="site-title">{{ project.title }}</h1>
+                <div class="hero-moon" id="heroMoon" aria-hidden="true"></div>
+            </div>
+            <nav class="retro-nav" aria-label="Primary">
+                <a href="{{ url_for('portfolio_home') }}" class="nav-pill">Portfolio</a>
+                <a href="{{ url_for('project_detail', slug=project.slug) }}" class="nav-pill">Case Study</a>
+                <a href="#forecast" class="nav-pill">Forecast</a>
+                <a href="#feed" class="nav-pill">Stories</a>
+                <button class="nav-pill nav-pill-button" id="copyLinkButton" type="button">Copy Link</button>
+            </nav>
+            <p class="nav-status" id="copyStatus"></p>
+        </header>
+
+        <section class="content-grid">
+            <aside class="forecast-column" id="forecast">
+                <section class="retro-panel reveal delay-1 tilt-card" data-tilt id="controlsPanel">
+                    <div class="panel-header">
+                        <h2>Biodynamic Forecast</h2>
+                    </div>
+                    <div class="panel-body controls-panel">
+                        <div class="control-row">
+                            <label class="pixel-label" for="datePicker">Date</label>
+                            <input type="date" id="datePicker" name="date">
+                        </div>
+                        <div class="control-row">
+                            <span class="pixel-label">Table Mode</span>
+                            <div class="pill-row">
+                                <label class="toggle-pill"><input type="radio" name="party" value="solo"> <span>Solo</span></label>
+                                <label class="toggle-pill"><input type="radio" name="party" value="pair"> <span>Pair</span></label>
+                                <label class="toggle-pill"><input type="radio" name="party" value="crowd"> <span>Crowd</span></label>
+                            </div>
+                        </div>
+                        <div class="control-row">
+                            <span class="pixel-label">Appetite</span>
+                            <div class="pill-row">
+                                <label class="toggle-pill"><input type="radio" name="appetite" value="comfort"> <span>Comfort</span></label>
+                                <label class="toggle-pill"><input type="radio" name="appetite" value="electric"> <span>Electric</span></label>
+                                <label class="toggle-pill"><input type="radio" name="appetite" value="curious"> <span>Curious</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="retro-panel reveal delay-2 tilt-card" data-tilt id="readingPanel">
+                    <div class="panel-header">
+                        <h2>Today's Reading</h2>
+                        <span class="panel-date" id="readingDate"></span>
+                    </div>
+                    <div class="panel-body">
+                        <div class="reading-stage">
+                            <div class="moon-box">
+                                <div class="moon-disc"></div>
+                                <p class="moon-caption" id="todayPhaseName"></p>
+                            </div>
+                            <div class="signal-box">
+                                <div class="sun-burst"></div>
+                                <div class="grape-cluster"></div>
+                                <span class="signal-chip" id="todaySignal"></span>
+                            </div>
+                        </div>
+
+                        <p class="reading-ribbon" id="todayRibbon"></p>
+
+                        <div class="reading-card">
+                            <div class="reading-card-header">
+                                <div class="reading-card-copy">
+                                    <h3 id="decisionVerdict"></h3>
+                                    <p class="reading-headline" id="decisionHeadline"></p>
+                                </div>
+                            </div>
+                            <p class="reading-summary" id="decisionSummary"></p>
+                            <ul class="focus-list" id="focusList"></ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="retro-panel reveal delay-3 tilt-card" data-tilt id="futurePanel">
+                    <div class="panel-header">
+                        <h2>3-Day Forecast</h2>
+                    </div>
+                    <div class="panel-body forecast-stack" id="futureForecast"></div>
+                </section>
+            </aside>
+
+            <section class="feed-column" id="feed">
+                <section class="retro-panel feed-panel reveal delay-1">
+                    <div class="panel-header">
+                        <h2>Latest From the Chronicle Feed</h2>
+                    </div>
+                    <div class="panel-body feed-body">
+                        {% for entry in blog_entries %}
+                        <article class="feed-card feed-card-{{ entry.theme }} tilt-card" data-tilt data-story-card>
+                            <p class="feed-index">{{ loop.index }}) {{ entry.kind }}</p>
+                            <div class="feed-banner">
+                                <h3>{{ entry.card_title }}</h3>
+                            </div>
+                            <div class="media-stack" data-gallery-id="{{ loop.index0 }}">
+                                <button
+                                    class="media-stage media-stage-{{ entry.theme }}"
+                                    type="button"
+                                    data-media-open
+                                    data-media-index="0"
+                                    aria-label="Open {{ entry.media[0].title }}"
+                                >
+                                    <span class="media-layer media-layer-back" aria-hidden="true"></span>
+                                    <img
+                                        class="media-image"
+                                        data-media-main
+                                        src="{{ url_for('static', filename=entry.media[0].image) }}"
+                                        alt="{{ entry.media[0].title }}"
+                                    >
+                                    <span class="media-layer media-layer-front" aria-hidden="true"></span>
+                                    <span class="media-stage-label" data-media-title>{{ entry.media[0].title }}</span>
+                                </button>
+                                {% if entry.media|length > 1 %}
+                                <div class="media-strip" role="tablist" aria-label="{{ entry.kind }} gallery">
+                                    {% for media in entry.media %}
+                                    <button
+                                        class="media-thumb{% if loop.first %} is-active{% endif %}"
+                                        type="button"
+                                        data-media-thumb
+                                        data-media-index="{{ loop.index0 }}"
+                                        data-image="{{ url_for('static', filename=media.image) }}"
+                                        data-title="{{ media.title }}"
+                                        data-caption="{{ media.caption }}"
+                                        aria-label="Show {{ media.title }}"
+                                    >
+                                        <img src="{{ url_for('static', filename=media.image) }}" alt="{{ media.title }}">
+                                    </button>
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                            </div>
+                            <p class="feed-byline">By: {{ entry.author }} | {{ entry.teaser }}</p>
+                            <div class="feed-detail">
+                                <p class="feed-dek">{{ entry.dek }}</p>
+                                <p class="feed-media-caption" data-media-caption>{{ entry.media[0].caption }}</p>
+                                <div class="feed-story-copy">
+                                    {% for paragraph in entry.body %}
+                                    <p>{{ paragraph }}</p>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <button class="cta-button" type="button" data-expand-button aria-expanded="false">{{ entry.button_label }}</button>
+                        </article>
+                        {% endfor %}
+                    </div>
+                </section>
+            </section>
+        </section>
+    </main>
+
+    <div class="lightbox" id="lightbox" hidden>
+        <div class="lightbox-backdrop" data-lightbox-close></div>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
+            <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close image viewer">Close</button>
+            <div class="lightbox-frame">
+                <button class="lightbox-nav" id="lightboxPrev" type="button" aria-label="Previous image">Prev</button>
+                <figure class="lightbox-figure">
+                    <img id="lightboxImage" src="" alt="">
+                    <figcaption>
+                        <strong id="lightboxTitle"></strong>
+                        <p id="lightboxCaption"></p>
+                    </figcaption>
+                    <div class="lightbox-strip" id="lightboxStrip"></div>
+                </figure>
+                <button class="lightbox-nav" id="lightboxNext" type="button" aria-label="Next image">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.SITE_CONFIG = {{ site_config|tojson }};
+        window.INITIAL_STATE = {{ initial_state|tojson }};
+        window.BLOG_ENTRIES = {{ blog_entries_json|tojson }};
+    </script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodynamic Chronicles / Live Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../static/styles.css">
+</head>
+<body>
+    <div class="starfield" aria-hidden="true"></div>
+    <main class="chronicle-page">
+        <header class="site-hero reveal tilt-card" data-tilt>
+            <div class="site-title-wrap">
+                <p class="site-kicker">Live Concept / Content Lab</p>
+                <h1 class="site-title">Biodynamic Chronicles</h1>
+                <div class="hero-moon" id="heroMoon" aria-hidden="true"></div>
+            </div>
+            <nav class="retro-nav" aria-label="Primary">
+                <a href="../../../" class="nav-pill">Portfolio</a>
+                <a href="../" class="nav-pill">Case Study</a>
+                <a href="#forecast" class="nav-pill">Forecast</a>
+                <a href="#feed" class="nav-pill">Stories</a>
+                <button class="nav-pill nav-pill-button" id="copyLinkButton" type="button">Copy Link</button>
+            </nav>
+            <p class="nav-status" id="copyStatus"></p>
+        </header>
+
+        <section class="content-grid">
+            <aside class="forecast-column" id="forecast">
+                <section class="retro-panel reveal delay-1 tilt-card" data-tilt id="controlsPanel">
+                    <div class="panel-header">
+                        <h2>Biodynamic Forecast</h2>
+                    </div>
+                    <div class="panel-body controls-panel">
+                        <div class="control-row">
+                            <label class="pixel-label" for="datePicker">Date</label>
+                            <input type="date" id="datePicker" name="date">
+                        </div>
+                        <div class="control-row">
+                            <span class="pixel-label">Table Mode</span>
+                            <div class="pill-row">
+                                <label class="toggle-pill"><input type="radio" name="party" value="solo"> <span>Solo</span></label>
+                                <label class="toggle-pill"><input type="radio" name="party" value="pair"> <span>Pair</span></label>
+                                <label class="toggle-pill"><input type="radio" name="party" value="crowd"> <span>Crowd</span></label>
+                            </div>
+                        </div>
+                        <div class="control-row">
+                            <span class="pixel-label">Appetite</span>
+                            <div class="pill-row">
+                                <label class="toggle-pill"><input type="radio" name="appetite" value="comfort"> <span>Comfort</span></label>
+                                <label class="toggle-pill"><input type="radio" name="appetite" value="electric"> <span>Electric</span></label>
+                                <label class="toggle-pill"><input type="radio" name="appetite" value="curious"> <span>Curious</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="retro-panel reveal delay-2 tilt-card" data-tilt id="readingPanel">
+                    <div class="panel-header">
+                        <h2>Today's Reading</h2>
+                        <span class="panel-date" id="readingDate"></span>
+                    </div>
+                    <div class="panel-body">
+                        <div class="reading-stage">
+                            <div class="moon-box">
+                                <div class="moon-disc"></div>
+                                <p class="moon-caption" id="todayPhaseName"></p>
+                            </div>
+                            <div class="signal-box">
+                                <div class="sun-burst"></div>
+                                <div class="grape-cluster"></div>
+                                <span class="signal-chip" id="todaySignal"></span>
+                            </div>
+                        </div>
+
+                        <p class="reading-ribbon" id="todayRibbon"></p>
+
+                        <div class="reading-card">
+                            <div class="reading-card-header">
+                                <div class="reading-card-copy">
+                                    <h3 id="decisionVerdict"></h3>
+                                    <p class="reading-headline" id="decisionHeadline"></p>
+                                </div>
+                            </div>
+                            <p class="reading-summary" id="decisionSummary"></p>
+                            <ul class="focus-list" id="focusList"></ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="retro-panel reveal delay-3 tilt-card" data-tilt id="futurePanel">
+                    <div class="panel-header">
+                        <h2>3-Day Forecast</h2>
+                    </div>
+                    <div class="panel-body forecast-stack" id="futureForecast"></div>
+                </section>
+            </aside>
+
+            <section class="feed-column" id="feed">
+                <section class="retro-panel feed-panel reveal delay-1">
+                    <div class="panel-header">
+                        <h2>Latest From the Chronicle Feed</h2>
+                    </div>
+                    <div class="panel-body feed-body">
+                        
+                        <article class="feed-card feed-card-volcanic tilt-card" data-tilt data-story-card>
+                            <p class="feed-index">1) Wine Write-Up</p>
+                            <div class="feed-banner">
+                                <h3>Notes on a 1996 Merlot</h3>
+                            </div>
+                            <div class="media-stack" data-gallery-id="0">
+                                <button
+                                    class="media-stage media-stage-volcanic"
+                                    type="button"
+                                    data-media-open
+                                    data-media-index="0"
+                                    aria-label="Open Merlot after dusk"
+                                >
+                                    <span class="media-layer media-layer-back" aria-hidden="true"></span>
+                                    <img
+                                        class="media-image"
+                                        data-media-main
+                                        src="../../../static/media/merlot-nocturne.svg"
+                                        alt="Merlot after dusk"
+                                    >
+                                    <span class="media-layer media-layer-front" aria-hidden="true"></span>
+                                    <span class="media-stage-label" data-media-title>Merlot after dusk</span>
+                                </button>
+                                
+                            </div>
+                            <p class="feed-byline">By: Field Notes Desk | Ripe cherry, earth, and old oak, with enough lift to feel almost improbably alive.</p>
+                            <div class="feed-detail">
+                                <p class="feed-dek">A made-up bottle review from a night when the moon wanted bright fruit, burnt crust, and exactly one record played too loud.</p>
+                                <p class="feed-media-caption" data-media-caption>Bottle and glass at the vineyard edge, just after the light turned metallic.</p>
+                                <div class="feed-story-copy">
+                                    
+                                    <p>This imaginary Frappato came off like cherry soda poured over hot river stones. The first sip was all lift. The second sip, after a scorched edge of sausage pizza, turned serious and peppery in a way that felt almost rude.</p>
+                                    
+                                    <p>It was the kind of wine that makes a table stop talking for twelve seconds, then argue happily about whether it is flirtatious or severe. That is usually a sign that the bottle is doing real work.</p>
+                                    
+                                    <p>On a fruit day with a little charge in the air, I would chill it hard, pour it into wide glasses, and let the bottle announce the room instead of asking permission.</p>
+                                    
+                                </div>
+                            </div>
+                            <button class="cta-button" type="button" data-expand-button aria-expanded="false">Read Story</button>
+                        </article>
+                        
+                        <article class="feed-card feed-card-highway tilt-card" data-tilt data-story-card>
+                            <p class="feed-index">2) Adventure Story</p>
+                            <div class="feed-banner">
+                                <h3>Above the Fog Line</h3>
+                            </div>
+                            <div class="media-stack" data-gallery-id="1">
+                                <button
+                                    class="media-stage media-stage-highway"
+                                    type="button"
+                                    data-media-open
+                                    data-media-index="0"
+                                    aria-label="Open Above the fog line"
+                                >
+                                    <span class="media-layer media-layer-back" aria-hidden="true"></span>
+                                    <img
+                                        class="media-image"
+                                        data-media-main
+                                        src="../../../static/media/star-peak.svg"
+                                        alt="Above the fog line"
+                                    >
+                                    <span class="media-layer media-layer-front" aria-hidden="true"></span>
+                                    <span class="media-stage-label" data-media-title>Above the fog line</span>
+                                </button>
+                                
+                            </div>
+                            <p class="feed-byline">By: After Dark Bureau | A roadside detour, thin air, and a bottle that tasted cleaner the higher the road climbed.</p>
+                            <div class="feed-detail">
+                                <p class="feed-dek">A made-up roadside story about sea fog, a glowing motel sign, and the accidental pizza pilgrimage that followed.</p>
+                                <p class="feed-media-caption" data-media-caption>A made-up ascent, thin air, and the sort of view that changes what a bottle tastes like.</p>
+                                <div class="feed-story-copy">
+                                    
+                                    <p>The original plan involved a respectable dinner and a bottle with a pedigree. Instead, a wrong exit dropped us beside a bait shop, an empty arcade, and a pizza window that looked like it had survived three formats of the internet.</p>
+                                    
+                                    <p>Inside, the refrigerator held exactly four wines and all of them were colder than they needed to be. We chose the least sensible one, carried it into the parking lot, and discovered that salt air can make a mediocre bottle feel almost cinematic.</p>
+                                    
+                                    <p>That is the whole point of this site, really: some nights the moon is not telling you to be refined. It is telling you to chase the glowing sign and trust the weird little room at the end of the road.</p>
+                                    
+                                </div>
+                            </div>
+                            <button class="cta-button" type="button" data-expand-button aria-expanded="false">Field Notes</button>
+                        </article>
+                        
+                        <article class="feed-card feed-card-contact tilt-card" data-tilt data-story-card>
+                            <p class="feed-index">3) Photo Essay</p>
+                            <div class="feed-banner">
+                                <h3>Harvest Light, Three Frames</h3>
+                            </div>
+                            <div class="media-stack" data-gallery-id="2">
+                                <button
+                                    class="media-stage media-stage-contact"
+                                    type="button"
+                                    data-media-open
+                                    data-media-index="0"
+                                    aria-label="Open Frame One"
+                                >
+                                    <span class="media-layer media-layer-back" aria-hidden="true"></span>
+                                    <img
+                                        class="media-image"
+                                        data-media-main
+                                        src="../../../static/media/harvest-frame-1.svg"
+                                        alt="Frame One"
+                                    >
+                                    <span class="media-layer media-layer-front" aria-hidden="true"></span>
+                                    <span class="media-stage-label" data-media-title>Frame One</span>
+                                </button>
+                                
+                                <div class="media-strip" role="tablist" aria-label="Photo Essay gallery">
+                                    
+                                    <button
+                                        class="media-thumb is-active"
+                                        type="button"
+                                        data-media-thumb
+                                        data-media-index="0"
+                                        data-image="../../../static/media/harvest-frame-1.svg"
+                                        data-title="Frame One"
+                                        data-caption="Bottle glow in the parking lot, with the pizza box still breathing steam."
+                                        aria-label="Show Frame One"
+                                    >
+                                        <img src="../../../static/media/harvest-frame-1.svg" alt="Frame One">
+                                    </button>
+                                    
+                                    <button
+                                        class="media-thumb"
+                                        type="button"
+                                        data-media-thumb
+                                        data-media-index="1"
+                                        data-image="../../../static/media/harvest-frame-2.svg"
+                                        data-title="Frame Two"
+                                        data-caption="Countertop relics: cork, basil, and the kind of note you only leave for yourself."
+                                        aria-label="Show Frame Two"
+                                    >
+                                        <img src="../../../static/media/harvest-frame-2.svg" alt="Frame Two">
+                                    </button>
+                                    
+                                    <button
+                                        class="media-thumb"
+                                        type="button"
+                                        data-media-thumb
+                                        data-media-index="2"
+                                        data-image="../../../static/media/harvest-frame-3.svg"
+                                        data-title="Frame Three"
+                                        data-caption="The last slice under refrigerator light, long after everyone said they were done."
+                                        aria-label="Show Frame Three"
+                                    >
+                                        <img src="../../../static/media/harvest-frame-3.svg" alt="Frame Three">
+                                    </button>
+                                    
+                                </div>
+                                
+                            </div>
+                            <p class="feed-byline">By: Picture Desk | Harvest light, bottle glow, and the after-image of a long golden hour.</p>
+                            <div class="feed-detail">
+                                <p class="feed-dek">A made-up photo essay in three frames: parking lot glamour, kitchen counter archaeology, and the holy glow of the last slice.</p>
+                                <p class="feed-media-caption" data-media-caption>Bottle glow in the parking lot, with the pizza box still breathing steam.</p>
+                                <div class="feed-story-copy">
+                                    
+                                    <p>Every dinner leaves behind a small museum of evidence: bottle ring on the table, folded napkin, seed packet, burned crust, lipstick on a glass. A good photo essay is just a way of admitting that meals have afterimages.</p>
+                                    
+                                    <p>These made-up frames are about that feeling. Not the plated beauty shot. The better scene happens later, once the room is half-dismantled and the objects start speaking to each other.</p>
+                                    
+                                </div>
+                            </div>
+                            <button class="cta-button" type="button" data-expand-button aria-expanded="false">Open Essay</button>
+                        </article>
+                        
+                    </div>
+                </section>
+            </section>
+        </section>
+    </main>
+
+    <div class="lightbox" id="lightbox" hidden>
+        <div class="lightbox-backdrop" data-lightbox-close></div>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
+            <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close image viewer">Close</button>
+            <div class="lightbox-frame">
+                <button class="lightbox-nav" id="lightboxPrev" type="button" aria-label="Previous image">Prev</button>
+                <figure class="lightbox-figure">
+                    <img id="lightboxImage" src="" alt="">
+                    <figcaption>
+                        <strong id="lightboxTitle"></strong>
+                        <p id="lightboxCaption"></p>
+                    </figcaption>
+                    <div class="lightbox-strip" id="lightboxStrip"></div>
+                </figure>
+                <button class="lightbox-nav" id="lightboxNext" type="button" aria-label="Next image">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.SITE_CONFIG = {"forecast_data_base_url":"../../../site-data/forecast","supported_min_date":"2025-01-01","supported_max_date":"2030-12-31","time_zone":"America/Los_Angeles"};
+        window.INITIAL_STATE = {"requested_date":"2026-03-22","party_mode":"pair","appetite":"curious","decision":{"verdict":"Split the Difference","headline":"The signal barely moves overnight.","summary":"Treat this as a tasting experiment, not a hunt for fake precision. Floral is higher tomorrow, Mineral is lower tomorrow."},"today":{"date":"2026-03-22","day_type":"Root Day","moon_phase":"Waxing Crescent","motion":"Ascending","signal_name":"Stone Seed","palette_primary":"#7a6650","pizza_name":"Sunchoke, onion jam, smoked scamorza","wine_name":"Blaufrankisch"},"future_forecast":[{"date":"2026-03-23","day_type":"Flower Day","moon_phase":"Waxing Crescent","drinking_well":"Aromatic lifted white","top_axis":"Floral","motion":"Descending"},{"date":"2026-03-24","day_type":"Flower Day","moon_phase":"Waxing Crescent","drinking_well":"Aromatic lifted white","top_axis":"Floral","motion":"Descending"},{"date":"2026-03-25","day_type":"Leaf Day","moon_phase":"First Quarter","drinking_well":"Skin-contact / orange wine","top_axis":"Herbal","motion":"Descending"}]};
+        window.BLOG_ENTRIES = [{"kind":"Wine Write-Up","slug":"moonlit-frappato","card_title":"Notes on a 1996 Merlot","title":"The Frappato That Tasted Like a Fire Escape at Midnight","dek":"A made-up bottle review from a night when the moon wanted bright fruit, burnt crust, and exactly one record played too loud.","date":"March 17, 2026","author":"Field Notes Desk","theme":"volcanic","eyebrow":"Cellar Dispatch 01","button_label":"Read Story","teaser":"Ripe cherry, earth, and old oak, with enough lift to feel almost improbably alive.","body":["This imaginary Frappato came off like cherry soda poured over hot river stones. The first sip was all lift. The second sip, after a scorched edge of sausage pizza, turned serious and peppery in a way that felt almost rude.","It was the kind of wine that makes a table stop talking for twelve seconds, then argue happily about whether it is flirtatious or severe. That is usually a sign that the bottle is doing real work.","On a fruit day with a little charge in the air, I would chill it hard, pour it into wide glasses, and let the bottle announce the room instead of asking permission."],"media":[{"image":"../../../static/media/merlot-nocturne.svg","title":"Merlot after dusk","caption":"Bottle and glass at the vineyard edge, just after the light turned metallic."}],"figure":{"mode":"single","caption":"Imagined still life: a ruby bottle sweating beside a pizza box, a silver lighter, and a receipt from nowhere."},"footer":"Forecast pairing: pepperoni, charred onion, and a song that sounds expensive on cheap speakers."},{"kind":"Adventure Story","slug":"fog-line-detour","card_title":"Above the Fog Line","title":"We Missed the Turnoff and Found the Best Slice of the Night","dek":"A made-up roadside story about sea fog, a glowing motel sign, and the accidental pizza pilgrimage that followed.","date":"March 14, 2026","author":"After Dark Bureau","theme":"highway","eyebrow":"Road Story 02","button_label":"Field Notes","teaser":"A roadside detour, thin air, and a bottle that tasted cleaner the higher the road climbed.","body":["The original plan involved a respectable dinner and a bottle with a pedigree. Instead, a wrong exit dropped us beside a bait shop, an empty arcade, and a pizza window that looked like it had survived three formats of the internet.","Inside, the refrigerator held exactly four wines and all of them were colder than they needed to be. We chose the least sensible one, carried it into the parking lot, and discovered that salt air can make a mediocre bottle feel almost cinematic.","That is the whole point of this site, really: some nights the moon is not telling you to be refined. It is telling you to chase the glowing sign and trust the weird little room at the end of the road."],"media":[{"image":"../../../static/media/star-peak.svg","title":"Above the fog line","caption":"A made-up ascent, thin air, and the sort of view that changes what a bottle tastes like."}],"figure":{"mode":"single","caption":"Imagined roadside frame: fog in the headlights, fluorescent menu board, paper plate balanced on a dashboard."},"footer":"Lesson learned: adventure nights are built on one wrong turn and a bottle that can keep up."},{"kind":"Photo Essay","slug":"three-pictures-of-a-good-night","card_title":"Harvest Light, Three Frames","title":"Three Pictures of a Good Night That Never Happened","dek":"A made-up photo essay in three frames: parking lot glamour, kitchen counter archaeology, and the holy glow of the last slice.","date":"March 9, 2026","author":"Picture Desk","theme":"contact","eyebrow":"Photo Essay 03","button_label":"Open Essay","teaser":"Harvest light, bottle glow, and the after-image of a long golden hour.","body":["Every dinner leaves behind a small museum of evidence: bottle ring on the table, folded napkin, seed packet, burned crust, lipstick on a glass. A good photo essay is just a way of admitting that meals have afterimages.","These made-up frames are about that feeling. Not the plated beauty shot. The better scene happens later, once the room is half-dismantled and the objects start speaking to each other."],"media":[{"image":"../../../static/media/harvest-frame-1.svg","title":"Frame One","caption":"Bottle glow in the parking lot, with the pizza box still breathing steam."},{"image":"../../../static/media/harvest-frame-2.svg","title":"Frame Two","caption":"Countertop relics: cork, basil, and the kind of note you only leave for yourself."},{"image":"../../../static/media/harvest-frame-3.svg","title":"Frame Three","caption":"The last slice under refrigerator light, long after everyone said they were done."}],"figure":{"mode":"triptych","frames":[{"title":"Frame One","caption":"Chrome wheel, pizza box steam, and a bottle glowing under a sodium lamp."},{"title":"Frame Two","caption":"Countertop relics: cork, matches, basil stems, and a half-finished note in blue ink."},{"title":"Frame Three","caption":"The last slice under refrigerator light, after everyone else has stopped pretending to be polite."}]},"footer":"Photo essays should feel like evidence recovered from a very stylish minor disaster."}];
+    </script>
+    <script src="../../../static/app.js"></script>
+</body>
+</html>

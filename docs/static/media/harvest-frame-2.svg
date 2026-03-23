@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 960" role="img" aria-labelledby="title desc">
+  <title id="title">Countertop relics</title>
+  <desc id="desc">An illustrated countertop scene with a cork, matchbook, basil stems, and a handwritten note.</desc>
+  <rect width="1600" height="960" fill="#252436"/>
+  <rect y="280" width="1600" height="680" fill="#88735e"/>
+  <rect y="320" width="1600" height="640" fill="#b79d80"/>
+  <rect x="180" y="164" width="620" height="480" rx="22" fill="#f0eadc" transform="rotate(-6 490 404)"/>
+  <rect x="222" y="214" width="546" height="8" fill="#d0c8ba" transform="rotate(-6 490 404)"/>
+  <rect x="222" y="274" width="486" height="6" fill="#d8d0c3" transform="rotate(-6 490 404)"/>
+  <rect x="222" y="334" width="506" height="6" fill="#d8d0c3" transform="rotate(-6 490 404)"/>
+  <rect x="222" y="394" width="446" height="6" fill="#d8d0c3" transform="rotate(-6 490 404)"/>
+  <ellipse cx="1120" cy="616" rx="108" ry="78" fill="#7e5841"/>
+  <ellipse cx="1120" cy="616" rx="90" ry="60" fill="#a37652"/>
+  <rect x="972" y="488" width="58" height="208" rx="16" fill="#3f2122"/>
+  <rect x="988" y="438" width="26" height="60" rx="8" fill="#7e3a33"/>
+  <path d="M1310 474 h148 v232 h-148 z" fill="#7d5238"/>
+  <rect x="1322" y="492" width="124" height="208" fill="#b38b66"/>
+  <rect x="1322" y="620" width="124" height="32" fill="#5a3725"/>
+  <ellipse cx="878" cy="730" rx="112" ry="28" fill="#ede2d2"/>
+  <ellipse cx="878" cy="730" rx="84" ry="18" fill="#ffffff"/>
+  <path d="M514 734 c56 -80 74 -124 54 -134 c-16 -8 -48 18 -92 86 c-34 52 -74 114 -112 140 c64 -8 108 -34 150 -92z" fill="#72b45c"/>
+  <path d="M614 770 c48 -66 60 -106 42 -116 c-14 -8 -42 14 -82 70 c-30 42 -64 92 -98 114 c58 -6 96 -28 138 -68z" fill="#5f9d50"/>
+</svg>

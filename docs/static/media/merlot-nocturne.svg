@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 960" role="img" aria-labelledby="title desc">
+  <title id="title">Merlot on a barrel at dusk</title>
+  <desc id="desc">An illustrated wine bottle and glass against vineyard hills in evening light.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#b4bfd3"/>
+      <stop offset="40%" stop-color="#d7c5b0"/>
+      <stop offset="100%" stop-color="#79664c"/>
+    </linearGradient>
+    <linearGradient id="field" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#6f8c5b"/>
+      <stop offset="100%" stop-color="#91a85e"/>
+    </linearGradient>
+    <linearGradient id="wine" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#a5282e"/>
+      <stop offset="100%" stop-color="#55151a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="960" fill="url(#sky)"/>
+  <rect y="520" width="1600" height="440" fill="#7d6a4f"/>
+  <path d="M0 560 C180 500 320 520 500 470 C720 408 900 540 1120 488 C1320 438 1490 520 1600 490 L1600 960 L0 960 Z" fill="url(#field)"/>
+  <path d="M0 618 C190 560 360 600 540 540 C760 466 980 618 1190 560 C1390 506 1510 584 1600 548" fill="none" stroke="#bcd08c" stroke-width="12" opacity=".4"/>
+  <path d="M0 668 C210 612 380 644 556 592 C760 528 980 670 1190 606 C1372 550 1510 620 1600 594" fill="none" stroke="#b8cc82" stroke-width="12" opacity=".45"/>
+  <ellipse cx="774" cy="740" rx="468" ry="80" fill="#4e3d29"/>
+  <ellipse cx="774" cy="728" rx="452" ry="68" fill="#8b6b47"/>
+  <rect x="562" y="340" width="118" height="330" rx="20" fill="#4a181b"/>
+  <rect x="592" y="272" width="58" height="102" rx="12" fill="#6f2b28"/>
+  <rect x="602" y="238" width="38" height="46" rx="8" fill="#ac9588"/>
+  <rect x="578" y="378" width="86" height="252" rx="12" fill="#1f1516"/>
+  <rect x="578" y="468" width="86" height="162" rx="12" fill="url(#wine)"/>
+  <ellipse cx="948" cy="372" rx="58" ry="36" fill="rgba(255,255,255,.32)"/>
+  <path d="M910 372 h76 l-24 186 c-4 28 -24 44 -52 44 s-48 -16 -52 -44 z" fill="rgba(255,255,255,.2)" stroke="#f6f0e2" stroke-width="10"/>
+  <path d="M876 464 h68 c38 0 54 84 14 122 c-14 14 -28 18 -48 18 c-16 0 -28 -2 -40 -10 c-44 -26 -38 -130 6 -130 z" fill="url(#wine)" opacity=".88"/>
+  <rect x="904" y="600" width="14" height="104" rx="7" fill="#e9ded0"/>
+  <ellipse cx="912" cy="714" rx="82" ry="18" fill="rgba(244,235,220,.72)"/>
+  <circle cx="1200" cy="220" r="110" fill="rgba(255,240,208,.24)"/>
+  <circle cx="1200" cy="220" r="70" fill="rgba(255,245,222,.18)"/>
+</svg>

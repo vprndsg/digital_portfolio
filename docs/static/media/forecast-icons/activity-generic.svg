@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Forecast activity icon</title>
+  <desc id="desc">A bright spark and motion trail.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#39456e"/>
+      <stop offset="100%" stop-color="#171a28"/>
+    </linearGradient>
+  </defs>
+  <circle cx="80" cy="80" r="74" fill="url(#bg)"/>
+  <path d="M80 34 l8 24 l24 8 l-24 8 l-8 24 l-8 -24 l-24 -8 l24 -8z" fill="#ffd68f"/>
+  <path d="M50 110 c14 -8 30 -8 44 0 c18 10 28 12 40 6" fill="none" stroke="#8bc2ff" stroke-width="7" stroke-linecap="round" opacity=".72"/>
+  <path d="M34 126 c16 -8 40 -8 62 2" fill="none" stroke="#46588a" stroke-width="8" stroke-linecap="round" opacity=".72"/>
+</svg>

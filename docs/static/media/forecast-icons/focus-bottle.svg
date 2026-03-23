@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Bottle mood icon</title>
+  <desc id="desc">A wine bottle with a glowing glass.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#4f2e45"/>
+      <stop offset="100%" stop-color="#17161b"/>
+    </linearGradient>
+    <linearGradient id="wine" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#912043"/>
+      <stop offset="100%" stop-color="#511524"/>
+    </linearGradient>
+  </defs>
+  <circle cx="80" cy="80" r="74" fill="url(#bg)"/>
+  <rect x="46" y="50" width="24" height="62" rx="6" fill="#1d1a1d"/>
+  <rect x="53" y="36" width="10" height="18" rx="3" fill="#7f6b63"/>
+  <rect x="46" y="76" width="24" height="36" rx="6" fill="url(#wine)"/>
+  <path d="M92 60 h24 l-6 36 c-2 9 -8 14 -16 14 s-14 -5 -16 -14z" fill="rgba(255,255,255,.08)" stroke="#f4edf0" stroke-width="4"/>
+  <path d="M88 74 h32 c0 9 -8 14 -16 14 s-16 -5 -16 -14z" fill="#d26a86" opacity=".92"/>
+  <path d="M102 110 v16" stroke="#f4edf0" stroke-width="4" stroke-linecap="round"/>
+  <path d="M88 128 h28" stroke="#f4edf0" stroke-width="4" stroke-linecap="round"/>
+</svg>

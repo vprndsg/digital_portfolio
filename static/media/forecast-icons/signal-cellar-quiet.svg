@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Cellar quiet icon</title>
+  <desc id="desc">A quiet cellar arch with a wine bottle under moonlight.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#3c295f"/>
+      <stop offset="100%" stop-color="#151424"/>
+    </linearGradient>
+    <linearGradient id="stone" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f3c88a"/>
+      <stop offset="100%" stop-color="#8c6545"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#8a4ef6"/>
+      <stop offset="100%" stop-color="#43216f"/>
+    </linearGradient>
+  </defs>
+  <circle cx="80" cy="80" r="74" fill="url(#bg)"/>
+  <circle cx="114" cy="44" r="13" fill="#ffe6a4" opacity=".92"/>
+  <path d="M28 126 h104" fill="none" stroke="#43324f" stroke-width="10" stroke-linecap="round"/>
+  <path d="M44 126 V92 C44 60 60 42 80 42 s36 18 36 50 v34" fill="#1b1729" stroke="url(#stone)" stroke-width="11" stroke-linejoin="round"/>
+  <path d="M56 126 V94 C56 69 66 56 80 56 s24 13 24 38 v32" fill="#0f1020" stroke="#6e5468" stroke-width="4" stroke-linejoin="round"/>
+  <rect x="68" y="78" width="16" height="34" rx="4" fill="#1d1b1f"/>
+  <rect x="72" y="67" width="8" height="15" rx="3" fill="#3d2e2e"/>
+  <rect x="68" y="92" width="16" height="20" rx="4" fill="url(#glass)"/>
+  <circle cx="102" cy="86" r="4" fill="#ffe6a4" opacity=".72"/>
+  <circle cx="114" cy="96" r="3" fill="#ffd98f" opacity=".56"/>
+</svg>

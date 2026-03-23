@@ -1,0 +1,81 @@
+<svg width="1600" height="1100" viewBox="0 0 1600 1100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="bg" x1="180" y1="120" x2="1380" y2="980" gradientUnits="userSpaceOnUse">
+<stop stop-color="#181227"/>
+<stop offset="1" stop-color="#09080F"/>
+</linearGradient>
+<radialGradient id="haloA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(363 273) rotate(37.3) scale(430 327)">
+<stop stop-color="#8B63FF" stop-opacity=".7"/>
+<stop offset="1" stop-color="#8B63FF" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="haloB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1228 282) rotate(134.4) scale(358 282)">
+<stop stop-color="#3FCED1" stop-opacity=".58"/>
+<stop offset="1" stop-color="#3FCED1" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+<stop stop-color="#21192F"/>
+<stop offset="1" stop-color="#120F1A"/>
+</linearGradient>
+<linearGradient id="stroke" x1="0" y1="0" x2="1" y2="1">
+<stop stop-color="#F6E8D1" stop-opacity=".36"/>
+<stop offset="1" stop-color="#F6E8D1" stop-opacity=".06"/>
+</linearGradient>
+</defs>
+<rect width="1600" height="1100" rx="44" fill="url(#bg)"/>
+<rect width="1600" height="1100" rx="44" fill="url(#haloA)"/>
+<rect width="1600" height="1100" rx="44" fill="url(#haloB)"/>
+<g opacity=".22" stroke="#F6F1E8">
+<path d="M0 146H1600"/>
+<path d="M0 292H1600"/>
+<path d="M0 438H1600"/>
+<path d="M0 584H1600"/>
+<path d="M0 730H1600"/>
+<path d="M0 876H1600"/>
+<path d="M229 0V1100"/>
+<path d="M458 0V1100"/>
+<path d="M687 0V1100"/>
+<path d="M916 0V1100"/>
+<path d="M1145 0V1100"/>
+<path d="M1374 0V1100"/>
+</g>
+<ellipse cx="804" cy="560" rx="404" ry="242" stroke="#C7B7F4" stroke-opacity=".36" stroke-width="2"/>
+<ellipse cx="804" cy="560" rx="520" ry="320" stroke="#C7B7F4" stroke-opacity=".18" stroke-width="2"/>
+<rect x="534" y="403" width="532" height="300" rx="36" fill="url(#card)" stroke="url(#stroke)" stroke-width="2"/>
+<text x="580" y="468" fill="#D6C9F6" font-size="28" font-family="Arial, sans-serif" letter-spacing="6">LIVE PROJECT</text>
+<text x="580" y="553" fill="#FAF3E8" font-size="68" font-weight="700" font-family="Arial, sans-serif">Biodynamic</text>
+<text x="580" y="629" fill="#FAF3E8" font-size="68" font-weight="700" font-family="Arial, sans-serif">Chronicles</text>
+<rect x="580" y="664" width="220" height="18" rx="9" fill="#A879FF"/>
+<rect x="580" y="713" width="364" height="14" rx="7" fill="#6B617E"/>
+<rect x="580" y="740" width="284" height="14" rx="7" fill="#4F8998"/>
+<g>
+<rect x="181" y="226" width="278" height="180" rx="28" fill="url(#card)" stroke="url(#stroke)" stroke-width="2"/>
+<text x="215" y="274" fill="#FFCE78" font-size="24" font-family="Arial, sans-serif" letter-spacing="4">EMAIL CAMPAIGNS</text>
+<rect x="215" y="304" width="212" height="16" rx="8" fill="#7C667A"/>
+<rect x="215" y="342" width="212" height="18" rx="9" fill="#F4A04B"/>
+<rect x="215" y="378" width="148" height="14" rx="7" fill="#7C667A"/>
+</g>
+<g>
+<rect x="1130" y="212" width="288" height="188" rx="28" fill="url(#card)" stroke="url(#stroke)" stroke-width="2"/>
+<text x="1166" y="264" fill="#73E7E2" font-size="24" font-family="Arial, sans-serif" letter-spacing="4">SPLASH PAGES</text>
+<rect x="1164" y="304" width="220" height="92" rx="18" fill="#1F3E49"/>
+<rect x="1186" y="326" width="114" height="13" rx="6.5" fill="#E7F6F6"/>
+<rect x="1186" y="354" width="168" height="14" rx="7" fill="#79C6C8"/>
+</g>
+<g>
+<rect x="170" y="728" width="298" height="192" rx="28" fill="url(#card)" stroke="url(#stroke)" stroke-width="2"/>
+<text x="206" y="778" fill="#F0ABD5" font-size="24" font-family="Arial, sans-serif" letter-spacing="4">PRODUCT PAGES</text>
+<rect x="208" y="818" width="94" height="62" rx="16" fill="#66283F"/>
+<rect x="324" y="808" width="110" height="14" rx="7" fill="#F6E8D1"/>
+<rect x="324" y="838" width="102" height="14" rx="7" fill="#C987A9"/>
+<rect x="324" y="868" width="84" height="32" rx="16" fill="#9D375F"/>
+</g>
+<g>
+<rect x="1125" y="714" width="304" height="208" rx="28" fill="url(#card)" stroke="url(#stroke)" stroke-width="2"/>
+<text x="1163" y="768" fill="#CBB9FF" font-size="24" font-family="Arial, sans-serif" letter-spacing="4">EVENT DESIGN</text>
+<circle cx="1218" cy="842" r="54" fill="#2A203C"/>
+<path d="M1218 796L1230 832L1268 832L1238 854L1250 890L1218 868L1186 890L1198 854L1168 832L1206 832L1218 796Z" fill="#F8C66C"/>
+<rect x="1298" y="806" width="88" height="12" rx="6" fill="#F6E8D1"/>
+<rect x="1298" y="834" width="78" height="12" rx="6" fill="#A48CE6"/>
+<rect x="1298" y="862" width="96" height="12" rx="6" fill="#77D2E0"/>
+</g>
+</svg>

@@ -1,0 +1,65 @@
+<svg width="1600" height="1100" viewBox="0 0 1600 1100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="bg" x1="182" y1="114" x2="1450" y2="982" gradientUnits="userSpaceOnUse">
+<stop stop-color="#171127"/>
+<stop offset="1" stop-color="#09080E"/>
+</linearGradient>
+<linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+<stop stop-color="#231A34"/>
+<stop offset="1" stop-color="#13101B"/>
+</linearGradient>
+<linearGradient id="stroke" x1="0" y1="0" x2="1" y2="1">
+<stop stop-color="#FFF1DB" stop-opacity=".34"/>
+<stop offset="1" stop-color="#FFF1DB" stop-opacity=".08"/>
+</linearGradient>
+</defs>
+<rect width="1600" height="1100" rx="44" fill="url(#bg)"/>
+<g opacity=".22" stroke="#F0E9DF">
+<path d="M0 174H1600"/>
+<path d="M0 348H1600"/>
+<path d="M0 522H1600"/>
+<path d="M0 696H1600"/>
+<path d="M0 870H1600"/>
+<path d="M228 0V1100"/>
+<path d="M456 0V1100"/>
+<path d="M684 0V1100"/>
+<path d="M912 0V1100"/>
+<path d="M1140 0V1100"/>
+<path d="M1368 0V1100"/>
+</g>
+<text x="160" y="138" fill="#D5C5FF" font-size="30" font-family="Arial, sans-serif" letter-spacing="5">LIVE CASE STUDY</text>
+<text x="158" y="222" fill="#FAF4EA" font-size="88" font-weight="700" font-family="Arial, sans-serif">Biodynamic Chronicles</text>
+<rect x="128" y="272" width="1344" height="716" rx="34" fill="rgba(255,255,255,0.04)" stroke="url(#stroke)" stroke-width="2"/>
+<rect x="160" y="308" width="530" height="642" rx="28" fill="url(#panel)" stroke="url(#stroke)" stroke-width="2"/>
+<rect x="724" y="308" width="718" height="642" rx="28" fill="url(#panel)" stroke="url(#stroke)" stroke-width="2"/>
+<text x="198" y="366" fill="#F8E9D4" font-size="34" font-family="Arial, sans-serif" font-weight="700">Today's Reading</text>
+<rect x="198" y="398" width="454" height="226" rx="22" fill="#0E0D14" stroke="#A877FF" stroke-width="2"/>
+<circle cx="312" cy="511" r="82" fill="#CBC8D7"/>
+<circle cx="312" cy="511" r="82" fill="#2B243C" fill-opacity=".52"/>
+<circle cx="497" cy="492" r="62" fill="#FFD46C"/>
+<path d="M551 548C532 536 509 532 482 534" stroke="#A3E2A0" stroke-width="5" stroke-linecap="round"/>
+<text x="230" y="598" fill="#F2EFE8" font-size="26" font-family="Arial, sans-serif">Waxing Gibbous</text>
+<text x="198" y="684" fill="#F8D06F" font-size="28" font-family="Arial, sans-serif" font-weight="700">ASCENDING MOON</text>
+<text x="492" y="684" fill="#F49E75" font-size="28" font-family="Arial, sans-serif" font-weight="700">FRUIT DAY</text>
+<rect x="198" y="728" width="454" height="174" rx="22" fill="#17131F"/>
+<rect x="226" y="760" width="246" height="18" rx="9" fill="#F0E9DF"/>
+<rect x="226" y="798" width="378" height="14" rx="7" fill="#8D80A6"/>
+<rect x="226" y="826" width="326" height="14" rx="7" fill="#74C7B3"/>
+<rect x="226" y="854" width="292" height="14" rx="7" fill="#D78973"/>
+<text x="762" y="366" fill="#F8E9D4" font-size="34" font-family="Arial, sans-serif" font-weight="700">Latest From the Chronicle Feed</text>
+<rect x="762" y="404" width="642" height="148" rx="22" fill="#17131F" stroke="#4CC9CF" stroke-width="2"/>
+<rect x="790" y="434" width="208" height="88" rx="16" fill="#34263E"/>
+<rect x="1026" y="438" width="318" height="18" rx="9" fill="#F4DD94"/>
+<rect x="1026" y="470" width="266" height="14" rx="7" fill="#A48FD4"/>
+<rect x="1026" y="498" width="198" height="14" rx="7" fill="#78D5DF"/>
+<rect x="762" y="576" width="642" height="148" rx="22" fill="#17131F" stroke="#B48AFF" stroke-width="2"/>
+<rect x="790" y="606" width="208" height="88" rx="16" fill="#283141"/>
+<rect x="1026" y="610" width="330" height="18" rx="9" fill="#F6E8D1"/>
+<rect x="1026" y="642" width="278" height="14" rx="7" fill="#8EC6E0"/>
+<rect x="1026" y="670" width="222" height="14" rx="7" fill="#A48FD4"/>
+<rect x="762" y="748" width="642" height="148" rx="22" fill="#17131F" stroke="#EE8FB5" stroke-width="2"/>
+<rect x="790" y="778" width="208" height="88" rx="16" fill="#4A1F32"/>
+<rect x="1026" y="782" width="322" height="18" rx="9" fill="#FFD47E"/>
+<rect x="1026" y="814" width="280" height="14" rx="7" fill="#D993BC"/>
+<rect x="1026" y="842" width="198" height="14" rx="7" fill="#A48FD4"/>
+</svg>

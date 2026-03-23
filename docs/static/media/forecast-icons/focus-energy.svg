@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Root energy icon</title>
+  <desc id="desc">A root bulb with radiating energy rings.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#4f3627"/>
+      <stop offset="100%" stop-color="#181517"/>
+    </linearGradient>
+  </defs>
+  <circle cx="80" cy="80" r="74" fill="url(#bg)"/>
+  <circle cx="80" cy="80" r="42" fill="none" stroke="#8f6f57" stroke-width="6" opacity=".5"/>
+  <circle cx="80" cy="80" r="26" fill="none" stroke="#c49a68" stroke-width="6" opacity=".7"/>
+  <path d="M80 56 c16 0 28 12 28 26 c0 18 -14 34 -28 34 s-28 -16 -28 -34 c0 -14 12 -26 28 -26z" fill="#f0c26f"/>
+  <path d="M80 110 v20" stroke="#f1e0c4" stroke-width="6" stroke-linecap="round"/>
+  <path d="M80 124 c-10 0 -18 6 -22 14" fill="none" stroke="#f1e0c4" stroke-width="5" stroke-linecap="round"/>
+  <path d="M80 124 c8 0 16 6 20 14" fill="none" stroke="#f1e0c4" stroke-width="5" stroke-linecap="round"/>
+</svg>

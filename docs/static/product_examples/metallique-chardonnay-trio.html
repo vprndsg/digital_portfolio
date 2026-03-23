@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metallique Chardonnay Trio</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --bg: #f3f6f7;
+            --surface: rgba(255, 255, 255, 0.92);
+            --ink: #162229;
+            --soft: #5c6a70;
+            --line: rgba(22, 34, 41, 0.1);
+            --accent: #3f7f91;
+            --accent-soft: #d8eaef;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at 15% 14%, rgba(63, 127, 145, 0.12), transparent 24%),
+                linear-gradient(180deg, #f7fafb 0%, #eef3f4 100%);
+            color: var(--ink);
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .page {
+            width: min(1180px, calc(100% - 48px));
+            margin: 0 auto;
+            padding: 38px 0 56px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);
+            gap: 24px;
+        }
+
+        .panel,
+        .offer-card,
+        .module {
+            border: 1px solid var(--line);
+            border-radius: 28px;
+            background: var(--surface);
+            box-shadow: 0 18px 42px rgba(48, 73, 84, 0.08);
+        }
+
+        .panel,
+        .offer-card,
+        .module {
+            padding: 28px;
+        }
+
+        .eyebrow,
+        .label {
+            margin: 0;
+            font-size: 12px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--soft);
+        }
+
+        h1,
+        h2 {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: 600;
+            letter-spacing: -0.03em;
+        }
+
+        h1 {
+            margin-top: 10px;
+            font-size: clamp(42px, 7vw, 78px);
+            line-height: 0.94;
+        }
+
+        .intro {
+            max-width: 33rem;
+            margin: 18px 0 0;
+            color: var(--soft);
+            font-size: 18px;
+            line-height: 1.72;
+        }
+
+        .hero-layout {
+            display: grid;
+            grid-template-columns: 240px minmax(0, 1fr);
+            gap: 28px;
+            align-items: center;
+            margin-top: 28px;
+        }
+
+        .bottle-set {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .bottle {
+            position: relative;
+            width: 68px;
+            height: 250px;
+        }
+
+        .bottle::before,
+        .bottle::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 999px;
+        }
+
+        .bottle::before {
+            top: 0;
+            width: 24px;
+            height: 66px;
+            background: linear-gradient(180deg, #bbc8cc, #81969d);
+        }
+
+        .bottle::after {
+            top: 54px;
+            width: 68px;
+            height: 188px;
+            background:
+                linear-gradient(180deg, rgba(255,255,255,0.9) 0 28%, transparent 28%),
+                linear-gradient(180deg, #f0e49b, #d7c56f);
+        }
+
+        .callout {
+            padding: 24px;
+            border-radius: 24px;
+            background: linear-gradient(180deg, #edf7f9, #e2eef1);
+        }
+
+        .callout strong {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--accent);
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .chips span {
+            padding: 10px 12px;
+            border: 1px solid rgba(63, 127, 145, 0.14);
+            border-radius: 999px;
+            background: rgba(63, 127, 145, 0.05);
+            color: var(--accent);
+        }
+
+        .offer-card {
+            display: grid;
+            gap: 16px;
+            align-content: start;
+        }
+
+        .offer-card strong {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 40px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 52px;
+            border-radius: 999px;
+            background: var(--accent);
+            color: #f5fbfd;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .offer-card ul {
+            display: grid;
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .offer-card li {
+            padding: 10px 12px;
+            border-radius: 16px;
+            background: rgba(63, 127, 145, 0.05);
+            color: var(--soft);
+        }
+
+        .modules {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            margin-top: 24px;
+        }
+
+        .module h2 {
+            margin-top: 10px;
+            font-size: 28px;
+            line-height: 1;
+        }
+
+        .module p {
+            margin: 14px 0 0;
+            color: var(--soft);
+            line-height: 1.72;
+        }
+
+        @media (max-width: 920px) {
+            .hero,
+            .hero-layout,
+            .modules {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <section class="hero">
+            <article class="panel">
+                <p class="eyebrow">Product page template / club release</p>
+                <h1>Metallique<br>Chardonnay Trio</h1>
+                <p class="intro">A cleaner club-release PDP mockup built around stainless-steel energy, mineral language, and a three-bottle offer that feels bright instead of salesy.</p>
+
+                <div class="hero-layout">
+                    <div class="bottle-set" aria-hidden="true">
+                        <div class="bottle"></div>
+                        <div class="bottle"></div>
+                        <div class="bottle"></div>
+                    </div>
+                    <div class="callout">
+                        <strong>Positioning block</strong>
+                        Chardonnay stripped down to citrus, salt, and steel. The page puts freshness, not oak shorthand, at the center of the offer.
+                        <div class="chips">
+                            <span>Meyer lemon</span>
+                            <span>Green apple</span>
+                            <span>Crushed shell</span>
+                            <span>Cold finish</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <aside class="offer-card">
+                <p class="eyebrow">Club offer mockup</p>
+                <strong>$126</strong>
+                <p style="margin: 0; color: var(--soft); line-height: 1.7;">Three bottles positioned as a clean-fridge, late-summer default rather than a generic quantity break.</p>
+                <a class="button" href="#">Claim trio</a>
+                <ul>
+                    <li>Three bottles / club priority</li>
+                    <li>Summer seafood pairing note</li>
+                    <li>Inline add-on for oysters and glasses</li>
+                </ul>
+            </aside>
+        </section>
+
+        <section class="modules">
+            <article class="module">
+                <p class="label">Value framing</p>
+                <h2>Lead with freshness</h2>
+                <p>The top of the page sells clarity and mood before it ever drops into vineyard facts or technical winemaking detail.</p>
+            </article>
+            <article class="module">
+                <p class="label">Occasion module</p>
+                <h2>Make the trio make sense</h2>
+                <p>The bundle is framed as weekend utility: cold bottle now, cold bottle tomorrow, and one bottle left for whoever shows up late.</p>
+            </article>
+            <article class="module">
+                <p class="label">Add-on logic</p>
+                <h2>Cross-sell as hospitality</h2>
+                <p>Supplementary offers are structured around the same moment of use, so the merchandising feels host-minded instead of extractive.</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

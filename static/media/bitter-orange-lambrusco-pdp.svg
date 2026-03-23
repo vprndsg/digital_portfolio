@@ -1,0 +1,33 @@
+<svg width="1600" height="1100" viewBox="0 0 1600 1100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="bg" x1="194" y1="116" x2="1396" y2="986" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1A1014"/>
+<stop offset="1" stop-color="#08070A"/>
+</linearGradient>
+<linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+<stop stop-color="#241419"/>
+<stop offset="1" stop-color="#120E12"/>
+</linearGradient>
+</defs>
+<rect width="1600" height="1100" rx="44" fill="url(#bg)"/>
+<circle cx="1246" cy="246" r="224" fill="#FF8FB3" fill-opacity=".14"/>
+<circle cx="326" cy="864" r="248" fill="#FFB25E" fill-opacity=".12"/>
+<text x="148" y="140" fill="#F0B7CA" font-size="30" font-family="Arial, sans-serif" letter-spacing="5">PRODUCT PAGE SYSTEM</text>
+<text x="146" y="224" fill="#FAF2EA" font-size="84" font-family="Arial, sans-serif" font-weight="700">Bitter Orange</text>
+<text x="146" y="298" fill="#FAF2EA" font-size="84" font-family="Arial, sans-serif" font-weight="700">Lambrusco PDP</text>
+<rect x="166" y="372" width="1268" height="574" rx="34" fill="url(#panel)" stroke="#F7E8DA" stroke-opacity=".18" stroke-width="2"/>
+<rect x="214" y="420" width="430" height="478" rx="28" fill="#181116"/>
+<rect x="366" y="486" width="122" height="282" rx="61" fill="#3C202A"/>
+<rect x="396" y="442" width="62" height="78" rx="20" fill="#2C1A22"/>
+<rect x="714" y="454" width="530" height="22" rx="11" fill="#F7E8DA"/>
+<rect x="714" y="496" width="386" height="16" rx="8" fill="#D6A0B3"/>
+<rect x="714" y="544" width="272" height="18" rx="9" fill="#F2B45F"/>
+<rect x="714" y="584" width="164" height="48" rx="24" fill="#AF466C"/>
+<rect x="714" y="678" width="530" height="164" rx="24" fill="#181116"/>
+<rect x="748" y="718" width="174" height="14" rx="7" fill="#F7E8DA"/>
+<rect x="748" y="748" width="238" height="12" rx="6" fill="#C89BB0"/>
+<rect x="748" y="778" width="210" height="12" rx="6" fill="#8D7681"/>
+<rect x="1000" y="714" width="208" height="94" rx="18" fill="#2A171F"/>
+<rect x="1028" y="746" width="116" height="12" rx="6" fill="#F7E8DA"/>
+<rect x="1028" y="774" width="148" height="12" rx="6" fill="#F2B45F"/>
+</svg>

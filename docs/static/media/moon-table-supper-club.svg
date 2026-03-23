@@ -1,0 +1,40 @@
+<svg width="1600" height="1100" viewBox="0 0 1600 1100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="bg" x1="188" y1="116" x2="1404" y2="984" gradientUnits="userSpaceOnUse">
+<stop stop-color="#14111D"/>
+<stop offset="1" stop-color="#09080E"/>
+</linearGradient>
+<linearGradient id="poster" x1="0" y1="0" x2="1" y2="1">
+<stop stop-color="#2A1F3B"/>
+<stop offset="1" stop-color="#120F1A"/>
+</linearGradient>
+</defs>
+<rect width="1600" height="1100" rx="44" fill="url(#bg)"/>
+<circle cx="1228" cy="250" r="220" fill="#8C6BFF" fill-opacity=".16"/>
+<circle cx="284" cy="832" r="254" fill="#366E98" fill-opacity=".14"/>
+<text x="148" y="140" fill="#D6CAFF" font-size="30" font-family="Arial, sans-serif" letter-spacing="5">EVENT IDENTITY / RSVP FLOW</text>
+<text x="146" y="224" fill="#F8F2E8" font-size="84" font-family="Arial, sans-serif" font-weight="700">Moon Table</text>
+<text x="146" y="298" fill="#F8F2E8" font-size="84" font-family="Arial, sans-serif" font-weight="700">Supper Club</text>
+<rect x="164" y="376" width="522" height="592" rx="34" fill="url(#poster)" stroke="#F7E6C7" stroke-opacity=".18" stroke-width="2"/>
+<circle cx="426" cy="548" r="116" fill="#F1E7D7"/>
+<circle cx="426" cy="548" r="116" fill="#1C1830" fill-opacity=".5"/>
+<path d="M366 712H486" stroke="#E8D5A9" stroke-width="6" stroke-linecap="round"/>
+<text x="256" y="778" fill="#F8F2E8" font-size="44" font-family="Arial, sans-serif" font-weight="700">One long table.</text>
+<text x="256" y="832" fill="#D0C4E8" font-size="32" font-family="Arial, sans-serif">October 26 / One night only</text>
+<rect x="820" y="430" width="292" height="182" rx="28" fill="#1A1525" stroke="#F7E6C7" stroke-opacity=".18" stroke-width="2"/>
+<text x="856" y="482" fill="#F8F2E8" font-size="28" font-family="Arial, sans-serif" font-weight="700">RSVP Ticket</text>
+<rect x="856" y="520" width="164" height="14" rx="7" fill="#8F7AB5"/>
+<rect x="856" y="552" width="126" height="14" rx="7" fill="#5EB8D4"/>
+<rect x="856" y="584" width="192" height="12" rx="6" fill="#D1C5E6"/>
+<rect x="1142" y="350" width="304" height="286" rx="28" fill="#1A1525" stroke="#F7E6C7" stroke-opacity=".18" stroke-width="2"/>
+<text x="1178" y="404" fill="#F8F2E8" font-size="28" font-family="Arial, sans-serif" font-weight="700">Room Plan</text>
+<circle cx="1224" cy="488" r="34" fill="#6E5AB8"/>
+<circle cx="1312" cy="488" r="34" fill="#4DB7C7"/>
+<circle cx="1268" cy="560" r="34" fill="#D39466"/>
+<rect x="836" y="664" width="610" height="240" rx="30" fill="#1A1525" stroke="#F7E6C7" stroke-opacity=".18" stroke-width="2"/>
+<text x="874" y="718" fill="#F8F2E8" font-size="28" font-family="Arial, sans-serif" font-weight="700">Post-event follow-up</text>
+<rect x="874" y="756" width="250" height="14" rx="7" fill="#E5D8BC"/>
+<rect x="874" y="788" width="320" height="12" rx="6" fill="#8F7AB5"/>
+<rect x="874" y="818" width="282" height="12" rx="6" fill="#5EB8D4"/>
+<rect x="1222" y="744" width="186" height="118" rx="18" fill="#2A203C"/>
+</svg>

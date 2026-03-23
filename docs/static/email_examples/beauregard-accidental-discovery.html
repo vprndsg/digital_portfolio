@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An accidental discovery</title>
+    <style>
+        :root {
+            color-scheme: light;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #d0d0d0;
+            color: #222222;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        .canvas {
+            width: min(660px, 100%);
+            margin: 0 auto;
+            background: #ffffff;
+        }
+
+        .section {
+            padding: 24px;
+        }
+
+        .browser-link {
+            padding-top: 44px;
+            padding-bottom: 10px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        .logo {
+            width: min(78%, 480px);
+            margin: 0 auto;
+        }
+
+        .bottle {
+            width: min(30%, 198px);
+            margin: 32px auto 0;
+        }
+
+        .copy {
+            padding: 48px 48px 24px;
+            color: #222222;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 13px;
+            line-height: 1.75;
+        }
+
+        .copy p {
+            margin: 0 0 18px;
+        }
+
+        .quote {
+            margin: 18px 0;
+            padding: 18px 20px;
+            background: #f9f9f9;
+            color: #444444;
+            font-size: 15px;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .quote-attribution {
+            margin-top: -6px;
+            color: #e28f34;
+            font-weight: 700;
+        }
+
+        .offer {
+            padding-top: 22px;
+            text-align: center;
+        }
+
+        .offer h1,
+        .offer h2,
+        .offer p {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        .offer h1,
+        .offer h2 {
+            color: #000000;
+            font-size: clamp(34px, 6vw, 41px);
+            line-height: 1.05;
+        }
+
+        .offer .price {
+            margin-top: 10px;
+            color: #631100;
+            font-size: clamp(34px, 6vw, 45px);
+            line-height: 1.08;
+        }
+
+        .offer .retail {
+            margin-top: 6px;
+            color: #631100;
+            font-size: 24px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 22px;
+            padding: 15px 30px;
+            border: 1px solid #631100;
+            border-radius: 5px;
+            background: #631100;
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .promo {
+            margin-top: 18px;
+            font-size: 19px;
+            letter-spacing: 0.08em;
+            text-decoration: underline;
+        }
+
+        .help {
+            margin-top: 28px;
+            text-align: center;
+            letter-spacing: 0.08em;
+            line-height: 1.9;
+        }
+
+        .social-band {
+            padding: 42px 24px 24px;
+            background: #000000;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 22px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .social-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .social-band hr {
+            margin: 22px auto;
+            border: 0;
+            border-top: 2px solid #ffffff;
+            width: calc(100% - 48px);
+        }
+
+        .footer-logo {
+            width: 58px;
+            margin: 0 auto;
+        }
+
+        .legal {
+            padding: 18px 16px 34px;
+            text-align: center;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 640px) {
+            .copy {
+                padding: 40px 24px 24px;
+            }
+
+            .help {
+                letter-spacing: 0.03em;
+            }
+
+            .social-band hr {
+                width: calc(100% - 24px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="canvas">
+        <section class="section browser-link">
+            <a href="https://mailchi.mp/beauregardvineyards.com/happy-holidays-sale-3251991" target="_blank" rel="noreferrer">View this email in your browser</a>
+        </section>
+
+        <section class="section" style="padding-top: 0;">
+            <img class="logo" src="https://mcusercontent.com/354812cdefa4934d82aaad253/images/55a0a1a3-97f3-32fc-5a04-15e788c4a45c.jpg" alt="Beauregard Vineyards logo">
+            <img class="bottle" src="https://mcusercontent.com/354812cdefa4934d82aaad253/images/315d457b-4921-69bb-e67e-331f752d83da.jpg" alt="2021 Pinot Noir Santa Cruz Mountains bottle">
+        </section>
+
+        <section class="copy">
+            <p>Dear &lt;&lt; Test First Name &gt;&gt;,</p>
+            <p>While doing a physical inventory in the cellar, we realized that we had been counting our Santa Cruz Mountains Pinot Noir incorrectly, which is good news for you.</p>
+            <p>Lo and behold, I now have just a bit more of this wine than I want to save for the library and the winery is bursting at the seams. I need room to bottle, badly. Therefore, in order to make some space I am offering the 2021 Pinot Noir Santa Cruz Mountains at an extreme discount.</p>
+            <p>We have been selling the 2022 Santa Cruz Mountains for the last year or so, and the 2021 has been off of the flight for nearly two years. The aging in the coolest part of the cellar has made it even more magnificent.</p>
+            <p><strong>This wine received 94 points from Wine Enthusiast Magazine, so it has a great reputation.</strong></p>
+
+            <div class="quote">
+                "For a brilliant sip of what's one of the most exciting and reinvigorated regions on this planet, look no further than this appellation blend. Light in the glass and brisk on the nose, this shows raspberry, pomegranate and blood orange aromas before dropping into a flashy palate of similar fruits, white pepper and eucalyptus leafy. Easy and intellectual at once."
+            </div>
+            <p class="quote-attribution">Matt Kettmann</p>
+
+            <p>When we were selling this on the tasting bar, it sold out quickly at $50.00 per bottle.</p>
+            <p>My offering to you is 50% off on six bottles. My accident is your benefit :)</p>
+            <p>Cheers!</p>
+            <p>Ryan Beauregard</p>
+
+            <div class="offer">
+                <h1>2021 Pinot Noir</h1>
+                <h2>Santa Cruz Mountains</h2>
+                <p class="price">$25 a bottle 6 packs</p>
+                <p class="retail">Retails @ $50.00</p>
+                <a class="button" href="https://www.beauregardvineyards.com/product/2021-pinot-noir-santa-cruz-mountains" target="_blank" rel="noreferrer">PURCHASE ONLINE</a>
+                <p class="promo"><strong>PROMO CODE: 6packPinot</strong></p>
+            </div>
+
+            <div class="help">
+                <p><strong>Need help with your order?</strong> We can assist.</p>
+                <p>Purchase in the tasting room.</p>
+                <p>Send us an email with your order or call us: 831.425.7777</p>
+            </div>
+        </section>
+
+        <section class="social-band">
+            <ul class="social-links">
+                <li><a href="https://facebook.com/beauregard.vineyards" target="_blank" rel="noreferrer">Facebook</a></li>
+                <li><a href="https://instagram.com/beauregard.vineyards" target="_blank" rel="noreferrer">Instagram</a></li>
+            </ul>
+            <hr>
+            <img class="footer-logo" src="https://mcusercontent.com/354812cdefa4934d82aaad253/images/55a0a1a3-97f3-32fc-5a04-15e788c4a45c.jpg" alt="Beauregard Vineyards logo">
+        </section>
+
+        <section class="legal">
+            <p>Want to change how you receive these emails?</p>
+            <p>
+                You can
+                <a href="https://beauregardvineyards.us3.list-manage.com/profile?u=354812cdefa4934d82aaad253&id=616bcc465b" target="_blank" rel="noreferrer">update your preferences</a>
+                or
+                <a href="https://beauregardvineyards.us3.list-manage.com/unsubscribe?u=354812cdefa4934d82aaad253&id=616bcc465b&t=b" target="_blank" rel="noreferrer">unsubscribe</a>.
+            </p>
+        </section>
+    </main>
+</body>
+</html>
