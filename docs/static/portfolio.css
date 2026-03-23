@@ -138,13 +138,14 @@ button {
 
 .brand-contact {
     margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 20px;
     font-family: "IBM Plex Mono", monospace;
     font-size: 0.82rem;
     line-height: 1.6;
     color: var(--ink-soft);
+}
+
+.brand-contact-line {
+    display: block;
 }
 
 .portfolio-nav {

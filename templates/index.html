@@ -20,8 +20,8 @@
                 <a class="brand-mark" href="{{ url_for('portfolio_home') }}">{{ owner.name }}</a>
                 <p class="brand-role">{{ owner.title }}</p>
                 <p class="brand-contact">
-                    <span>Cell | 831.431.0028</span>
-                    <span>E-mail | michael.phillips.a@gmail.com</span>
+                    <span class="brand-contact-line">Cell | 831.431.0028</span>
+                    <span class="brand-contact-line">E-mail | michael.phillips.a@gmail.com</span>
                 </p>
             </div>
             <section class="portfolio-header-forecast" aria-label="Mini three-day biodynamic forecast">
@@ -113,6 +113,7 @@
                             <section class="homepage-event-feature">
                                 <div class="homepage-event-copy homepage-event-header">
                                     <h3>{{ project.title }}</h3>
+                                    <p class="project-summary">{{ project.summary }}</p>
                                 </div>
 
                                 {% if project.tools %}
@@ -140,10 +141,6 @@
                                 >
                                     <img src="{{ url_for('static', filename=project.hero_image) }}" alt="{{ project.hero_alt }}">
                                 </button>
-
-                                <div class="homepage-event-copy homepage-event-body">
-                                    <p class="project-summary">{{ project.summary }}</p>
-                                </div>
                             </section>
 
                             {% if project.email_examples %}
