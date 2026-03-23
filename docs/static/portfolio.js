@@ -256,6 +256,45 @@ function initCarousels() {
     });
 }
 
+function disableExternalLinks(root = document) {
+    const links = Array.from(root.querySelectorAll('a[href^="http://"], a[href^="https://"]'));
+
+    links.forEach((link) => {
+        if (link.dataset.externalDisabled === "true") {
+            return;
+        }
+
+        const originalHref = link.getAttribute("href");
+        link.dataset.externalDisabled = "true";
+        link.dataset.originalHref = originalHref || "";
+        link.removeAttribute("href");
+        link.removeAttribute("target");
+        link.removeAttribute("rel");
+        link.setAttribute("aria-disabled", "true");
+        link.setAttribute("tabindex", "-1");
+        link.addEventListener("click", (event) => event.preventDefault());
+    });
+}
+
+function disableExternalLinksInIframes() {
+    document.querySelectorAll("iframe").forEach((frame) => {
+        const apply = () => {
+            try {
+                if (frame.contentDocument) {
+                    disableExternalLinks(frame.contentDocument);
+                }
+            } catch {
+                // Ignore cross-origin frames.
+            }
+        };
+
+        frame.addEventListener("load", apply);
+        apply();
+    });
+}
+
 visibleReveal();
 initLightbox();
 initCarousels();
+disableExternalLinks();
+disableExternalLinksInIframes();
