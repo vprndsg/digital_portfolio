@@ -5,6 +5,9 @@
     }
 
     const sessionKey = "mister-popup-dismissed";
+    const form = popup.querySelector("[data-mister-popup-form]");
+    const emailInput = popup.querySelector("#misterPopupEmail");
+    const message = popup.querySelector("#misterPopupMessage");
     const closeTriggers = Array.from(
         popup.querySelectorAll("[data-mister-popup-close], [data-mister-popup-dismiss]")
     );
@@ -38,6 +41,15 @@
         writeSessionFlag();
     }
 
+    function setMessage(text, isError = false) {
+        if (!message || !form) {
+            return;
+        }
+
+        message.textContent = text;
+        form.classList.toggle("is-error", isError);
+    }
+
     function openPopup() {
         if (readSessionFlag() || !popup.hidden) {
             return;
@@ -61,6 +73,27 @@
         trigger.addEventListener("click", () => {
             closePopup();
         });
+    });
+
+    form?.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const email = emailInput?.value.trim() || "";
+        const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        if (!valid) {
+            setMessage("Please enter a valid email address.", true);
+            emailInput?.focus();
+            return;
+        }
+
+        setMessage("Thank you. Mister will be in touch.", false);
+        if (emailInput) {
+            emailInput.disabled = true;
+        }
+
+        window.setTimeout(() => {
+            closePopup();
+        }, 900);
     });
 
     document.addEventListener("keydown", (event) => {

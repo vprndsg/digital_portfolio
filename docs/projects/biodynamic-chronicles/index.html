@@ -179,19 +179,19 @@
                     <article class="essay-card" data-reveal>
                         <p class="detail-label">Forecast UX</p>
                         <h3>Daily reading desk</h3>
-                        <p>&lt;built-in method copy of dict object at 0x10faeeb00&gt;</p>
+                        <p>&lt;built-in method copy of dict object at 0x10b7ee280&gt;</p>
                     </article>
                     
                     <article class="essay-card" data-reveal>
                         <p class="detail-label">Editorial system</p>
                         <h3>Three content modes</h3>
-                        <p>&lt;built-in method copy of dict object at 0x10faede80&gt;</p>
+                        <p>&lt;built-in method copy of dict object at 0x10b7ee3c0&gt;</p>
                     </article>
                     
                     <article class="essay-card" data-reveal>
                         <p class="detail-label">Interaction layer</p>
                         <h3>Media that feels handled</h3>
-                        <p>&lt;built-in method copy of dict object at 0x10fb1fa80&gt;</p>
+                        <p>&lt;built-in method copy of dict object at 0x10b7fc940&gt;</p>
                     </article>
                     
                 </div>
@@ -337,8 +337,8 @@
         </button>
 
         <div class="mister-popup__inner">
-            <p class="mister-popup__eyebrow">Mister's picks</p>
-            <h2 id="misterPopupTitle">Start with Mister's Picks</h2>
+            <p class="mister-popup__eyebrow">Mister's newsletter</p>
+            <h2 id="misterPopupTitle">Join Mister's Newsletter</h2>
 
             <div class="mister-popup__frame">
                 <img
@@ -347,16 +347,27 @@
                 >
             </div>
 
-            <p class="mister-popup__lead">A quick recommendation from the house.</p>
             <p class="mister-popup__body" id="misterPopupBody">
-                Begin with the real email campaigns, the vineyard dinner case study, and the live editorial demo.
+                occasional notes on new work, campaigns, and strange little experiments
             </p>
 
-            <div class="mister-popup__actions">
-                <a class="mister-popup__cta" href="../../#work" data-mister-popup-dismiss>
-                    Explore the portfolio
-                </a>
-            </div>
+            <form class="mister-popup__form" data-mister-popup-form novalidate>
+                <label class="mister-popup__sr-only" for="misterPopupEmail">Email address</label>
+                <input
+                    class="mister-popup__input"
+                    id="misterPopupEmail"
+                    name="email"
+                    type="email"
+                    inputmode="email"
+                    autocomplete="email"
+                    placeholder="Enter your email address"
+                    aria-describedby="misterPopupMessage"
+                    required
+                >
+                <button class="mister-popup__cta" type="submit">Subscribe</button>
+            </form>
+
+            <p class="mister-popup__message" id="misterPopupMessage" aria-live="polite"></p>
         </div>
     </section>
 </div>
