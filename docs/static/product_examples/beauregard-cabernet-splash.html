@@ -310,9 +310,8 @@
         .story-images {
             grid-column: 1 / span 2;
             display: grid;
-            grid-template-columns: minmax(0, 1.24fr) minmax(240px, 0.72fr);
-            gap: 28px;
-            align-items: end;
+            grid-template-columns: minmax(0, 760px);
+            justify-content: end;
         }
 
         .story-image {
@@ -328,16 +327,12 @@
             object-fit: cover;
         }
 
-        .story-image-primary img {
-            aspect-ratio: 16 / 11;
-        }
-
         .story-image-secondary {
-            margin-top: 122px;
+            margin-top: 0;
         }
 
         .story-image-secondary img {
-            aspect-ratio: 5 / 7;
+            aspect-ratio: 16 / 11;
         }
 
         .story-panel {
@@ -556,9 +551,6 @@
             <section class="section">
                 <div class="story-shell">
                     <div class="story-images">
-                        <figure class="story-image story-image-primary">
-                            <img src="../media/cabernet-splash-workers.jpg" alt="Vineyard workers at Beauregard Ranch">
-                        </figure>
                         <figure class="story-image story-image-secondary">
                             <img src="../media/cabernet-splash-grapes.jpg" alt="Cabernet grapes at Beauregard Ranch">
                         </figure>
