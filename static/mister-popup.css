@@ -28,8 +28,8 @@
     --mister-merlot: #a14b3d;
     --mister-paper: #fbf6ee;
     position: relative;
-    width: min(760px, 100%);
-    padding: 28px;
+    width: min(380px, 100%);
+    padding: 16px;
     border: 1px solid rgba(255, 250, 244, 0.92);
     border-radius: 8px;
     background:
@@ -76,13 +76,13 @@
 
 .mister-popup__close {
     position: absolute;
-    top: 26px;
-    right: 30px;
+    top: 14px;
+    right: 14px;
     z-index: 2;
     display: grid;
     place-items: center;
-    width: 48px;
-    height: 48px;
+    width: 34px;
+    height: 34px;
     padding: 0;
     border: 0;
     background: transparent;
@@ -91,7 +91,7 @@
 }
 
 .mister-popup__close span {
-    font-size: 2.9rem;
+    font-size: 1.9rem;
     line-height: 1;
     font-weight: 200;
 }
@@ -100,10 +100,10 @@
     position: relative;
     z-index: 1;
     display: grid;
-    gap: 18px;
+    gap: 10px;
     justify-items: center;
     text-align: center;
-    padding: 34px 72px 26px;
+    padding: 22px 14px 10px;
 }
 
 .mister-popup__eyebrow,
@@ -114,8 +114,8 @@
 
 .mister-popup__eyebrow {
     font-family: "IBM Plex Mono", monospace;
-    font-size: 0.76rem;
-    letter-spacing: 0.22em;
+    font-size: 0.58rem;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--mister-merlot);
     opacity: 0.92;
@@ -123,8 +123,8 @@
 
 .mister-popup__frame {
     width: 100%;
-    max-width: 452px;
-    padding: 8px;
+    max-width: 230px;
+    padding: 5px;
     border: 1px solid rgba(143, 84, 66, 0.24);
     border-radius: 0;
     background:
@@ -146,7 +146,7 @@
     margin: 0;
     max-width: 13ch;
     font-family: "Cormorant Garamond", "Baskerville", Georgia, serif;
-    font-size: clamp(3.35rem, 5vw, 4.9rem);
+    font-size: clamp(2rem, 4.2vw, 2.6rem);
     font-weight: 600;
     line-height: 0.94;
     letter-spacing: -0.04em;
@@ -160,18 +160,18 @@
 
 .mister-popup__body {
     max-width: 26rem;
-    font-size: 1.02rem;
+    font-size: 0.82rem;
     line-height: 1.5;
     font-family: "Cormorant Garamond", "Baskerville", Georgia, serif;
-    font-size: 1.3rem;
+    font-size: 0.95rem;
 }
 
 .mister-popup__form {
     width: 100%;
-    max-width: 452px;
+    max-width: 230px;
     display: grid;
-    gap: 14px;
-    margin-top: 2px;
+    gap: 8px;
+    margin-top: 0;
 }
 
 .mister-popup__sr-only {
@@ -188,14 +188,14 @@
 
 .mister-popup__input {
     width: 100%;
-    min-height: 62px;
-    padding: 0 22px;
+    min-height: 40px;
+    padding: 0 14px;
     border: 1px solid rgba(182, 160, 136, 0.95);
     border-radius: 4px;
     background: rgba(255, 252, 246, 0.96);
     color: var(--mister-ink);
     font-family: "Source Sans 3", sans-serif;
-    font-size: 1.03rem;
+    font-size: 0.82rem;
     box-shadow: inset 0 1px 2px rgba(118, 91, 72, 0.06);
 }
 
@@ -208,8 +208,8 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    min-height: 60px;
-    padding: 0 22px;
+    min-height: 42px;
+    padding: 0 14px;
     border-radius: 4px;
     text-decoration: none;
     cursor: pointer;
@@ -218,7 +218,7 @@
     color: #fff8f2;
     box-shadow: 0 12px 22px rgba(140, 61, 52, 0.2);
     font-family: "Source Sans 3", "IBM Plex Sans", sans-serif;
-    font-size: 1.02rem;
+    font-size: 0.84rem;
     font-weight: 800;
     letter-spacing: 0.01em;
     transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
@@ -226,9 +226,9 @@
 
 .mister-popup__message {
     min-height: 1.4rem;
-    max-width: 452px;
+    max-width: 230px;
     font-family: "IBM Plex Mono", monospace;
-    font-size: 0.76rem;
+    font-size: 0.6rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: rgba(116, 89, 74, 0.84);
@@ -266,29 +266,29 @@ body.mister-popup-open {
     }
 
     .mister-popup__dialog {
-        width: min(680px, 100%);
-        padding: 22px;
+        width: min(380px, 100%);
+        padding: 16px;
     }
 
     .mister-popup__inner {
-        padding: 40px 34px 20px;
+        padding: 22px 14px 10px;
     }
 }
 
 @media (max-width: 560px) {
     .mister-popup__close {
-        top: 14px;
-        right: 14px;
-        width: 42px;
-        height: 42px;
+        top: 12px;
+        right: 12px;
+        width: 32px;
+        height: 32px;
     }
 
     .mister-popup__close span {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .mister-popup__dialog {
-        padding: 18px;
+        padding: 14px;
     }
 
     .mister-popup__dialog::before {
@@ -300,30 +300,30 @@ body.mister-popup-open {
     }
 
     .mister-popup__inner {
-        gap: 14px;
-        padding: 34px 16px 12px;
+        gap: 10px;
+        padding: 20px 10px 8px;
     }
 
     .mister-popup__inner h2 {
-        font-size: clamp(2.65rem, 12vw, 3.3rem);
+        font-size: clamp(1.9rem, 9vw, 2.3rem);
     }
 
     .mister-popup__body {
-        font-size: 1.15rem;
+        font-size: 0.9rem;
     }
 
     .mister-popup__form {
-        gap: 12px;
+        gap: 8px;
     }
 
     .mister-popup__input,
     .mister-popup__cta {
-        min-height: 56px;
+        min-height: 40px;
     }
 
     .mister-popup__message {
-        min-height: 2.4rem;
-        font-size: 0.7rem;
+        min-height: 1.4rem;
+        font-size: 0.58rem;
     }
 }
 
