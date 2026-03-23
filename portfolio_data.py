@@ -335,7 +335,6 @@ PROJECTS = [
         "tools": [
             "Social media",
             "Photography",
-            "TikTok",
             "Cross promotion",
             "Adobe",
         ],
