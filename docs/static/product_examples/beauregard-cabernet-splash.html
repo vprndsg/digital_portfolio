@@ -7,12 +7,15 @@
     <style>
         :root {
             color-scheme: light;
-            --paper: #f6f0e4;
-            --paper-deep: #eee4d2;
-            --ink: #1f1d1b;
-            --soft: #66584e;
-            --accent: #c52a1d;
-            --line: rgba(96, 70, 49, 0.32);
+            --paper: #f5efe4;
+            --paper-deep: #ece1cf;
+            --surface: rgba(255, 250, 244, 0.9);
+            --ink: #211c18;
+            --soft: #62564a;
+            --accent: #7f2b26;
+            --line: rgba(96, 70, 49, 0.24);
+            --line-strong: rgba(96, 70, 49, 0.42);
+            --shadow: rgba(53, 38, 28, 0.12);
         }
 
         * {
@@ -22,26 +25,43 @@
         body {
             margin: 0;
             background:
-                radial-gradient(circle at 12% 18%, rgba(201, 102, 65, 0.08), transparent 24%),
-                linear-gradient(180deg, #f8f3e9 0%, #f2e8d9 100%);
+                radial-gradient(circle at 12% 16%, rgba(171, 95, 70, 0.12), transparent 22%),
+                radial-gradient(circle at 84% 12%, rgba(219, 195, 166, 0.32), transparent 20%),
+                linear-gradient(180deg, #faf5ec 0%, #f1e6d6 100%);
             color: var(--ink);
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family: Optima, Candara, "Noto Sans", "Trebuchet MS", sans-serif;
+        }
+
+        button {
+            font: inherit;
         }
 
         .page {
-            width: min(1280px, calc(100% - 56px));
+            width: min(1360px, calc(100% - 56px));
             margin: 0 auto;
-            padding: 56px 0 72px;
+            padding: 48px 0 88px;
         }
 
         .frame {
+            position: relative;
             padding: 44px;
             border: 1px solid var(--line);
-            background: rgba(255, 251, 244, 0.84);
+            background: rgba(255, 251, 245, 0.84);
+            box-shadow: 0 28px 80px var(--shadow);
+            overflow: clip;
+        }
+
+        .frame::before {
+            content: "";
+            position: absolute;
+            inset: 22px;
+            border: 1px solid rgba(127, 43, 38, 0.08);
+            pointer-events: none;
         }
 
         .eyebrow,
-        .label {
+        .label,
+        .micro-label {
             margin: 0;
             color: var(--accent);
             font-size: 12px;
@@ -60,13 +80,14 @@
 
         h1 {
             margin-top: 18px;
-            font-size: clamp(54px, 8vw, 108px);
-            line-height: 0.92;
+            font-size: clamp(42px, 5vw, 72px);
+            line-height: 0.96;
+            max-width: 11ch;
         }
 
         h2 {
-            font-size: clamp(34px, 4vw, 62px);
-            line-height: 0.96;
+            font-size: clamp(32px, 4vw, 56px);
+            line-height: 0.98;
         }
 
         p {
@@ -75,13 +96,15 @@
 
         .divider {
             width: 176px;
+            height: 8px;
             margin: 28px 0 0;
-            border-top: 6px dotted #2b2724;
+            border-top: 1px solid var(--line-strong);
+            border-bottom: 1px solid rgba(96, 70, 49, 0.16);
         }
 
         .hero {
             display: grid;
-            grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
+            grid-template-columns: minmax(0, 1.08fr) minmax(320px, 500px);
             gap: 44px;
             align-items: start;
         }
@@ -90,14 +113,16 @@
             display: grid;
             gap: 18px;
             align-content: start;
+            position: relative;
+            z-index: 1;
         }
 
         .history {
-            max-width: 42rem;
+            max-width: 43rem;
             margin-top: 24px;
             color: var(--soft);
-            font-size: 20px;
-            line-height: 1.7;
+            font-size: 19px;
+            line-height: 1.78;
         }
 
         .history strong {
@@ -105,19 +130,12 @@
             font-weight: 600;
         }
 
-        .hero-media img {
-            width: 100%;
-            aspect-ratio: 2 / 3;
-            object-fit: cover;
-            border: 1px solid rgba(96, 70, 49, 0.16);
-        }
-
         .accolades {
             display: grid;
             gap: 12px;
-            margin-top: 22px;
-            padding-left: 20px;
-            border-left: 1px solid rgba(96, 70, 49, 0.26);
+            margin-top: 20px;
+            padding: 18px 0 0 22px;
+            border-left: 1px solid var(--line-strong);
         }
 
         .accolades p {
@@ -126,78 +144,251 @@
             line-height: 1.5;
         }
 
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            align-items: center;
+            margin-top: 8px;
+        }
+
+        .hero-note {
+            color: var(--soft);
+            font-size: 14px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 52px;
+            padding: 0 22px;
+            border: 1px solid transparent;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #8f322d 0%, #6d201c 100%);
+            color: #fff9f2;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            box-shadow: 0 18px 32px rgba(111, 32, 28, 0.18);
+            cursor: pointer;
+        }
+
+        .cta-button--ghost {
+            border-color: var(--line-strong);
+            background: transparent;
+            color: var(--ink);
+            box-shadow: none;
+        }
+
+        .hero-media {
+            position: relative;
+        }
+
+        .hero-media img {
+            width: 100%;
+            aspect-ratio: 2 / 3;
+            object-fit: cover;
+            display: block;
+            border: 1px solid rgba(96, 70, 49, 0.16);
+        }
+
+        .hero-media-card {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            max-width: 240px;
+            padding: 18px 18px 16px;
+            border: 1px solid rgba(255, 251, 245, 0.42);
+            background: rgba(28, 23, 20, 0.72);
+            color: #f6ecde;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-media-card strong {
+            display: block;
+            margin-top: 10px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 1.14;
+        }
+
+        .hero-media-card p {
+            margin-top: 10px;
+            color: rgba(246, 236, 222, 0.82);
+            font-size: 14px;
+            line-height: 1.55;
+        }
+
+        .sticky-action {
+            position: sticky;
+            bottom: 18px;
+            z-index: 6;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: center;
+            margin-top: 34px;
+            padding: 18px 22px;
+            border: 1px solid var(--line-strong);
+            background: rgba(252, 247, 239, 0.94);
+            box-shadow: 0 18px 34px rgba(50, 36, 27, 0.12);
+            backdrop-filter: blur(12px);
+        }
+
+        .sticky-copy {
+            display: grid;
+            gap: 6px;
+        }
+
+        .sticky-copy strong {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .sticky-meta {
+            color: var(--soft);
+            font-size: 14px;
+            line-height: 1.55;
+        }
+
         .section {
-            margin-top: 64px;
+            margin-top: 72px;
         }
 
         .specs-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 42px 28px;
+            gap: 28px;
             margin-top: 44px;
         }
 
         .spec {
             display: grid;
-            gap: 14px;
+            gap: 16px;
             align-content: start;
+            padding: 24px 22px 26px;
+            border: 1px solid rgba(96, 70, 49, 0.14);
+            background: rgba(255, 248, 238, 0.72);
+        }
+
+        .spec-icon {
+            width: 42px;
+            height: 42px;
+            color: var(--accent);
+        }
+
+        .spec-icon svg {
+            width: 100%;
+            height: 100%;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 1.6;
+            stroke-linecap: round;
+            stroke-linejoin: round;
         }
 
         .spec h3 {
-            font-size: 18px;
+            font-size: 17px;
             color: var(--accent);
             letter-spacing: 0.16em;
             text-transform: uppercase;
         }
 
-        .spec p {
-            color: #342f2a;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 18px;
-            line-height: 1.6;
+        .spec-body {
+            display: grid;
+            gap: 8px;
         }
 
-        .story-grid {
+        .spec-body p {
+            color: #382f28;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 17px;
+            line-height: 1.84;
+        }
+
+        .story-shell {
             display: grid;
-            grid-template-columns: 280px minmax(0, 1fr) 420px;
-            gap: 34px;
-            align-items: center;
+            grid-template-columns: minmax(0, 1fr) minmax(320px, 430px);
+            align-items: start;
             margin-top: 44px;
         }
 
-        .story-grid img {
+        .story-images {
+            grid-column: 1 / span 2;
+            display: grid;
+            grid-template-columns: minmax(0, 1.24fr) minmax(240px, 0.72fr);
+            gap: 28px;
+            align-items: end;
+        }
+
+        .story-image {
+            margin: 0;
+            border: 1px solid rgba(96, 70, 49, 0.14);
+            overflow: hidden;
+            background: #efe5d4;
+        }
+
+        .story-image img {
             width: 100%;
             display: block;
+            object-fit: cover;
+        }
+
+        .story-image-primary img {
+            aspect-ratio: 16 / 11;
+        }
+
+        .story-image-secondary {
+            margin-top: 122px;
+        }
+
+        .story-image-secondary img {
+            aspect-ratio: 5 / 7;
         }
 
         .story-panel {
-            padding: 34px;
-            background: rgba(255, 248, 238, 0.84);
+            grid-column: 2;
+            grid-row: 1;
+            align-self: center;
+            position: relative;
+            z-index: 2;
+            margin: 82px 0 0 -96px;
+            padding: 36px;
+            border: 1px solid rgba(96, 70, 49, 0.16);
+            background: rgba(255, 249, 241, 0.96);
+            box-shadow: 0 26px 48px rgba(53, 38, 28, 0.14);
         }
 
         .story-title {
-            max-width: 18ch;
+            max-width: 16ch;
             margin-top: 16px;
         }
 
         .story-body {
-            margin-top: 26px;
+            margin-top: 24px;
             color: #3d362f;
             font-family: Georgia, "Times New Roman", serif;
             font-size: 18px;
-            line-height: 1.8;
+            line-height: 1.84;
         }
 
         .profile-list {
             display: grid;
-            gap: 16px;
+            gap: 14px;
             margin: 26px 0 0;
             padding: 0;
             list-style: none;
             color: #3d362f;
             font-family: Georgia, "Times New Roman", serif;
-            font-size: 18px;
-            line-height: 1.72;
+            font-size: 17px;
+            line-height: 1.8;
         }
 
         .profile-list li {
@@ -206,10 +397,38 @@
         }
 
         .profile-list li::before {
-            content: "•";
+            content: "";
             position: absolute;
+            top: 0.82em;
             left: 0;
-            color: var(--accent);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+            transform: translateY(-50%);
+        }
+
+        .allocation-panel {
+            display: grid;
+            grid-template-columns: minmax(0, 1.18fr) minmax(280px, 0.82fr);
+            gap: 28px;
+            align-items: center;
+            padding: 30px 0 0;
+            border-top: 1px solid rgba(96, 70, 49, 0.18);
+        }
+
+        .allocation-copy {
+            max-width: 42rem;
+            margin-top: 18px;
+            color: var(--soft);
+            font-size: 18px;
+            line-height: 1.74;
+        }
+
+        .allocation-actions {
+            display: grid;
+            gap: 12px;
+            justify-items: start;
         }
 
         .footer-notes {
@@ -224,19 +443,86 @@
         .footer-notes p {
             color: var(--soft);
             font-size: 16px;
-            line-height: 1.8;
+            line-height: 1.82;
         }
 
         @media (max-width: 1080px) {
             .hero,
-            .story-grid,
-            .footer-notes,
-            .specs-grid {
+            .specs-grid,
+            .story-shell,
+            .allocation-panel,
+            .footer-notes {
                 grid-template-columns: 1fr;
             }
 
-            .hero-media {
-                max-width: 520px;
+            .story-images {
+                grid-column: 1;
+                grid-template-columns: 1fr;
+            }
+
+            .story-image-secondary {
+                margin-top: 0;
+            }
+
+            .story-panel {
+                grid-column: 1;
+                grid-row: auto;
+                margin: -48px 20px 0;
+            }
+
+            .sticky-action {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+
+        @media (max-width: 720px) {
+            .page {
+                width: min(100%, calc(100% - 28px));
+                padding: 18px 0 64px;
+            }
+
+            .frame {
+                padding: 26px 22px 30px;
+            }
+
+            .frame::before {
+                inset: 12px;
+            }
+
+            h1 {
+                max-width: none;
+            }
+
+            .history,
+            .story-body,
+            .allocation-copy {
+                font-size: 17px;
+            }
+
+            .hero-media-card,
+            .story-panel {
+                margin: 0;
+            }
+
+            .hero-media-card {
+                right: 14px;
+                left: 14px;
+                max-width: none;
+            }
+
+            .sticky-copy strong {
+                font-size: 20px;
+            }
+
+            .allocation-actions,
+            .hero-actions {
+                justify-items: stretch;
+            }
+
+            .cta-button,
+            .cta-button--ghost {
+                width: 100%;
             }
         }
     </style>
@@ -249,17 +535,35 @@
                     <p class="eyebrow">Marked Parcels | 2021</p>
                     <h1>2021 Cabernet Sauvignon Beauregard Ranch</h1>
                     <div class="divider" aria-hidden="true"></div>
-                    <p class="history">Beauregard Vineyards was founded in <strong>1945</strong> by Amos and Cecilia Beauregard. Five generations later, the vines now span <strong>60 acres in Bonny Doon California</strong>.</p>
+                    <p class="history">Beauregard Vineyards was founded in <strong>1945</strong> by Amos and Cecilia Beauregard. Five generations later, the vines now span <strong>60 acres in Bonny Doon California</strong>, where coastal wind, sandstone, and Zayante sand give Cabernet a more tensile, mountain-grown profile.</p>
                     <div class="accolades">
                         <p><strong>Scores &amp; Accolades</strong></p>
                         <p>96 Points - Vinous</p>
                         <p>92 Points - Wine Enthusiast</p>
                     </div>
+                    <div class="hero-actions">
+                        <button class="cta-button" type="button">Acquire Allocation</button>
+                        <span class="hero-note">Estate release | Pricing on request</span>
+                    </div>
                 </div>
 
                 <div class="hero-media">
                     <img src="../media/cabernet-splash-hero.jpg" alt="2021 Cabernet Sauvignon hero image">
+                    <div class="hero-media-card">
+                        <p class="micro-label">Current Release</p>
+                        <strong>Mountain Cabernet with coastal lift</strong>
+                        <p>Dark-fruited Cabernet shaped by sandstone, Zayante sand, and the cooling pull of the Pacific.</p>
+                    </div>
                 </div>
+            </div>
+
+            <div class="sticky-action">
+                <div class="sticky-copy">
+                    <p class="micro-label">Estate Release</p>
+                    <strong>2021 Cabernet Sauvignon Beauregard Ranch</strong>
+                    <p class="sticky-meta">Pricing on request | 750 ml | limited mountain allocation</p>
+                </div>
+                <button class="cta-button" type="button">Acquire Allocation</button>
             </div>
 
             <section class="section">
@@ -269,41 +573,91 @@
 
                 <div class="specs-grid">
                     <article class="spec">
+                        <span class="spec-icon" aria-hidden="true">
+                            <svg viewBox="0 0 32 32">
+                                <path d="M4 24 12 12l4 6 4-8 8 14"></path>
+                                <path d="M3 26h26"></path>
+                            </svg>
+                        </span>
                         <h3>Beauregard Ranch Vineyard</h3>
-                        <p>Acres: 10<br>Vine age: 2005<br>Elevation: 1,740 to 1,802 feet</p>
+                        <div class="spec-body">
+                            <p>Acres: 10</p>
+                            <p>Vine age: 2005</p>
+                            <p>Elevation: 1,740 to 1,802 feet</p>
+                        </div>
                     </article>
                     <article class="spec">
+                        <span class="spec-icon" aria-hidden="true">
+                            <svg viewBox="0 0 32 32">
+                                <path d="M3 22c3.2-2.2 6.4-2.2 9.6 0s6.4 2.2 9.6 0 6.4-2.2 9.6 0"></path>
+                                <path d="M6 16c2.4-1.8 4.8-1.8 7.2 0s4.8 1.8 7.2 0 4.8-1.8 7.2 0"></path>
+                                <path d="M5 10h6"></path>
+                            </svg>
+                        </span>
                         <h3>Site</h3>
-                        <p>Soil: Zayante Sand<br>Bedrock: Sand stone<br>Distance to Pacific Ocean: 4.56 miles</p>
+                        <div class="spec-body">
+                            <p>Soil: Zayante Sand</p>
+                            <p>Bedrock: Sand stone</p>
+                            <p>Distance to Pacific Ocean: 4.56 miles</p>
+                        </div>
                     </article>
                     <article class="spec">
+                        <span class="spec-icon" aria-hidden="true">
+                            <svg viewBox="0 0 32 32">
+                                <path d="M16 27c-6 0-10-4.4-10-10.4C6 10 10.8 6 16 6c5.2 0 10 4 10 10.6C26 22.6 22 27 16 27Z"></path>
+                                <path d="M16 6c0 8-4 13-10 15"></path>
+                                <path d="M16 6c0 8 4 13 10 15"></path>
+                            </svg>
+                        </span>
                         <h3>Ingredients</h3>
-                        <p>Estate grown Cabernet Sauvignon grapes, indigenous yeast, naturally occurring malolactic bacteria, minimal Sulphur Dioxide. Aged in French Oak Barrels.</p>
+                        <div class="spec-body">
+                            <p>Estate grown Cabernet Sauvignon grapes</p>
+                            <p>Indigenous yeast and naturally occurring malolactic bacteria</p>
+                            <p>Minimal sulphur dioxide, aged in French oak barrels</p>
+                        </div>
                     </article>
                 </div>
             </section>
 
             <section class="section">
-                <div class="story-grid">
-                    <img src="../media/cabernet-splash-workers.jpg" alt="Vineyard workers at Beauregard Ranch">
+                <div class="story-shell">
+                    <div class="story-images">
+                        <figure class="story-image story-image-primary">
+                            <img src="../media/cabernet-splash-workers.jpg" alt="Vineyard workers at Beauregard Ranch">
+                        </figure>
+                        <figure class="story-image story-image-secondary">
+                            <img src="../media/cabernet-splash-grapes.jpg" alt="Cabernet grapes at Beauregard Ranch">
+                        </figure>
+                    </div>
                     <div class="story-panel">
                         <p class="label">Winemaker notes</p>
-                        <h2 class="story-title">Mountain Structure Meets Coastal Elegance</h2>
+                        <h2 class="story-title">Mountain structure, framed like a magazine story</h2>
                         <div class="divider" aria-hidden="true"></div>
-                        <p class="story-body">The Beauregard Ranch sits at an elevation where the vines are forced to struggle through ancient marine soils, battered by the cooling influence of the Pacific Ocean just miles away. This is mountain viticulture. The 2021 vintage delivered a wine of profound structural integrity. It is Cabernet Sauvignon with a backbone, built on a framework of firm tannins and searing, brilliant acidity.</p>
+                        <p class="story-body">The Beauregard Ranch sits at an elevation where the vines are forced to struggle through ancient marine soils, cooled by Pacific air just miles away. The 2021 vintage delivered a Cabernet with a clear structural point of view: firm tannins, bright acidity, and a more tensile expression than the usual broad, plush valley style.</p>
                         <ul class="profile-list">
                             <li><strong>In the Glass:</strong> Dark, impenetrable garnet.</li>
                             <li><strong>The Nose:</strong> Crushed graphite, damp redwood needles, wild mountain mint, cassis, and dark cherry.</li>
                             <li><strong>The Palate:</strong> Lean and muscular, with blackcurrant, dark plum, cedar box, tobacco leaf, espresso, fine-grained tannins, and an electric spine of acidity.</li>
                         </ul>
                     </div>
-                    <img src="../media/cabernet-splash-grapes.jpg" alt="Cabernet grapes at Beauregard Ranch">
+                </div>
+            </section>
+
+            <section class="section allocation-panel">
+                <div>
+                    <p class="label">DTC Focus</p>
+                    <h2 style="margin-top: 16px;">From score sheet to cellar intent.</h2>
+                    <p class="allocation-copy">For the drinker who wants mountain Cabernet with precision rather than bulk, the route is clear: read the site, trust the critics, and move straight into an allocation request without leaving the estate story behind.</p>
+                </div>
+                <div class="allocation-actions">
+                    <button class="cta-button" type="button">Acquire Allocation</button>
+                    <button class="cta-button cta-button--ghost" type="button">Request Tech Sheet</button>
                 </div>
             </section>
 
             <section class="footer-notes">
                 <p>Grown, Produced &amp; Bottled by Beauregard Vineyards, Santa Cruz, CA</p>
-                <p>The page concept is built to feel estate-driven and restrained, with the vineyard facts, critic scores, and structural tasting notes doing the persuasion work.</p>
+                <p>Built to balance estate heritage, terroir detail, and a direct allocation path without losing the quiet restraint of a Santa Cruz Mountains release page.</p>
             </section>
         </section>
     </main>
