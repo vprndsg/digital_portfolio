@@ -745,7 +745,7 @@ button {
 
 .social-carousel-viewport {
     overflow: hidden;
-    padding: 56px 0 64px;
+    padding: 90px 0 64px;
 }
 
 .social-carousel-track {
@@ -1329,7 +1329,7 @@ body.portfolio-lightbox-open {
     }
 
     .social-carousel-viewport {
-        padding: 40px 0 44px;
+        padding: 72px 0 44px;
     }
 
     .social-carousel-track {
