@@ -459,7 +459,7 @@ PROJECTS = [
         "summary": "This page treats the product detail page like editorial merchandising, not a warehouse shelf with a button under it.",
         "homepage_title": "Website Updates",
         "homepage_subtitle": "Product, splash page, and event page website updates built to support merchandising, launches, and hospitality moments.",
-        "homepage_summary": "This section highlights website updates across product pages, splash pages, and event pages, with an emphasis on conversion, inventory movement, and visual presentation.",
+        "homepage_summary": "",
         "hero_image": "media/bitter-orange-lambrusco-pdp.svg",
         "hero_alt": "Product page mockup featuring bottle photography, tasting notes, and bundle modules",
         "scope": [

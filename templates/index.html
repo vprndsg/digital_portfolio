@@ -234,7 +234,10 @@
                                 <div class="homepage-product-copy">
                                     <h3>{{ project.homepage_title or project.title }}</h3>
                                     <p class="project-subtitle">{{ project.homepage_subtitle or project.subtitle }}</p>
-                                    <p class="project-summary">{{ project.homepage_summary or project.summary }}</p>
+                                    {% set homepage_product_summary = project.homepage_summary if project.homepage_summary is defined else project.summary %}
+                                    {% if homepage_product_summary %}
+                                    <p class="project-summary">{{ homepage_product_summary }}</p>
+                                    {% endif %}
                                 </div>
 
                                 {% if project.tools %}
