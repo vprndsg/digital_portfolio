@@ -195,6 +195,14 @@ button {
     display: grid;
 }
 
+.forecast-mini-note {
+    margin: 6px 0 14px;
+    max-width: 34rem;
+    font-size: 0.96rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+}
+
 .forecast-mini-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
